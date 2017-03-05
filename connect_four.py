@@ -16,22 +16,23 @@ class connect_four(object):
 
     def make_move(self, color, column):
         print("a", color, "piece was placed in column", column)
-        for row in range(self.size):
-            while(self.board[column][row] == 0 and row == 4):
-                row+=1
-            if(color == 'red'):
-                self.board[column][row-1] == 1
-            elif(color == 'black'):
-                self.board[column][row-1] == 2
-            else:
-                print("color error")
+        row = 0
+        while(self.board[row][column] == 0 and row < 6):
+            row+=1
+        if(color == 'red'):
+            self.board[row-1][column] = 1
+        elif(color == 'black'):
+            self.board[row-1][column] = 2
+        else:
+            print("color error")
         print("this is the new board state")
         self.print_board()
 
 def main():
     cf_board = connect_four()
     cf_board.print_board()
-    cf_board.make_move('red', 4)
+    cf_board.make_move('red', 3)
+    cf_board.make_move('red', 3)
 
 
 
