@@ -20,23 +20,54 @@ class connect_four(object):
         row = 0
         while(self.board[row][column] == 0 and row < 6):
             row+=1
-        if (row == 6 and self.board[row][column] == 0): # case of the first piece in the column
-            if(color == 'red'):
-                self.board[row][column] = 1
-            elif(color == 'black'):
-                self.board[row][column] = 2
-            else:
-                print("color error")
-        else: # not the first piece of the column
-            print("entered else")
-            if(color == 'red'):
-                self.board[row-1][column] = 1
-            elif(color == 'black'):
-                self.board[row-1][column] = 2
-            else:
-                print("color error")
+        if (row == 0 and self.board[row][column] != 0): # condition for a full column
+            print("this column is full, please choose another!")
+        else: # not full column
+            if (row == 6 and self.board[row][column] == 0): # case of the first piece in the column
+                if(color == 'red'):
+                    self.board[row][column] = 1
+                elif(color == 'black'):
+                    self.board[row][column] = 2
+                else:
+                    print("color error")
+            else: # not the first piece of the column
+                print("entered else")
+                if(color == 'red'):
+                    self.board[row-1][column] = 1
+                elif(color == 'black'):
+                    self.board[row-1][column] = 2
+                else:
+                    print("color error")
         print("this is the new board state")
         self.print_board()
+
+    def check_win(self):
+        for row in range(self.size): # checking for win along each row
+            for column in range(self.size - 3):
+                if(self.board[row][column] == self.board[row][column+1] == self.board[row][column+2]
+                == self.board[row][column+3] != 0):
+                    if(self.board[row][column] == 1):
+                        print("red wins! four are connected on row", row + 1)
+                        return True
+                    elif(self.board[row][column] == 2):
+                        print("black wins! four are connected on row", row + 1)
+                        return True
+                    else:
+                        print("error 1")
+        for column in range(self.size): # checking for win along each column
+            for row in range(self.size - 3):
+                if(self.board[row][column] == self.board[row+1][column] == self.board[row+2][column]
+                == self.board[row+3][column] != 0):
+                    if(self.board[row][column] == 1):
+                        print("red wins! four are connected on column", column + 1)
+                        return True
+                    elif(self.board[row][column] == 2):
+                        print("black wins! four are connected on row", column + 1)
+                        return True
+                    else:
+                        print("error 2")
+
+        return False
 
 def main():
     cf_board = connect_four()
@@ -58,6 +89,8 @@ def main():
             else:
                 cf_board.make_move('black', column_int - 1)
                 cf_board.move_number += 1
+            if(cf_board.check_win()):
+                quit()
 
 
 if (__name__ == "__main__"):
