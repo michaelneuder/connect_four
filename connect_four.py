@@ -6,6 +6,18 @@ class connect_four(object):
         self.size = 7
         self.board = [[0 for x in range(self.size)] for y in range(self.size)]
         self.move_number = 1
+        # self.right_diagonal1 = [0 for x in range(4)] # diagonals that start at the right side and move left
+        # self.right_diagonal2 = [0 for x in range(5)]
+        # self.right_diagonal3 = [0 for x in range(6)]
+        # self.right_diagonal4 = [0 for x in range(6)]
+        # self.right_diagonal5 = [0 for x in range(5)]
+        # self.right_diagonal6 = [0 for x in range(4)]
+        # self.left_diagonal1 = [0 for x in range(4)]
+        # self.left_diagonal2 = [0 for x in range(5)]
+        # self.left_diagonal3 = [0 for x in range(6)]
+        # self.left_diagonal4 = [0 for x in range(6)]
+        # self.left_diagonal5 = [0 for x in range(5)]
+        # self.left_diagonal6 = [0 for x in range(4)]
 
     def print_board(self):
         print("    "+"-"*17)
@@ -41,7 +53,27 @@ class connect_four(object):
         print("this is the new board state")
         self.print_board()
 
-    def check_win(self):
+
+    def check_win_diag(self):
+        row = 3
+        column = 0
+        if(self.board[row][column] == self.board[row-1][column+1] == self.board[row-2][column+2]
+        == self.board[row-3][column+3] != 0): # left diag 1
+            print("we have a winner")
+            return True
+        #print("left diagonal 1 is", self.left_diagonal1[0], self.left_diagonal1[1], self.left_diagonal1[2])
+        for i in range(2):
+            print(i)
+        row = 4
+        column = 0
+        # for i in range(5):
+        #     self.left_diagonal2[i] = self.board[row][column]
+        #     row -= 1
+        #     column += 1
+        # print("left diagonal 2 is", self.left_diagonal2[0], self.left_diagonal2[1], self.left_diagonal2[2])
+
+
+    def check_win_rc(self):
         for row in range(self.size): # checking for win along each row
             for column in range(self.size - 3):
                 if(self.board[row][column] == self.board[row][column+1] == self.board[row][column+2]
@@ -66,7 +98,6 @@ class connect_four(object):
                         return True
                     else:
                         print("error 2")
-
         return False
 
 def main():
@@ -89,7 +120,7 @@ def main():
             else:
                 cf_board.make_move('black', column_int - 1)
                 cf_board.move_number += 1
-            if(cf_board.check_win()):
+            if(cf_board.check_win_rc() or cf_board.check_win_diag()):
                 quit()
 
 
