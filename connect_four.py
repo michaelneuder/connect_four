@@ -61,11 +61,13 @@ class connect_four(object):
         == self.board[row-3][column+3] != 0): # left diag 1
             print("we have a winner")
             return True
-        #print("left diagonal 1 is", self.left_diagonal1[0], self.left_diagonal1[1], self.left_diagonal1[2])
-        for i in range(2):
-            print(i)
         row = 4
         column = 0
+        for i in range(2): #left diag 2
+            if(self.board[row-i][column+i] == self.board[row-1-i][column+1+i] == self.board[row-2-i][column+2+i]
+            == self.board[row-3-i][column+3+i] != 0): # left diag 1
+                print("we have a winner")
+                return True
         # for i in range(5):
         #     self.left_diagonal2[i] = self.board[row][column]
         #     row -= 1
