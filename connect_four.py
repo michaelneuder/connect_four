@@ -21,10 +21,12 @@ class connect_four(object):
         row = 0
         while(self.board[row][column] == 0 and row < 6):
             row+=1
+            print(row)
         if (row == 0 and self.board[column][row] != 0): # condition for a full column
             print("this column is full, please choose another!")
         else: # not full column
-            if (column == 6 and self.board[column][row] == 0): # case of the first piece in the column
+            if (row == 5 and self.board[row][column] == 0): # case of the first piece in the column
+                print('here')
                 if(color == 'red'):
                     self.board[column][row] = 1
                 elif(color == 'black'):
