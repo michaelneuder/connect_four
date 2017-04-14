@@ -11,6 +11,13 @@ class pvp_main_widget(QWidget):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
 
+    # # ------- connect four stuff --------- # #
+        self.test = cf()
+        self.keep_going = True
+        self.move_number = 1
+        self.num_rows = 6
+        self.num_cols = 7
+
     # # -------- widget declaration -------- # #
         # main title
         self.title_label = QLabel("connect four")
@@ -32,26 +39,13 @@ class pvp_main_widget(QWidget):
         self.pvp_label = QLabel("player vs player")
         self.pvp_font = QFont("Times",25)
         self.pvp_label.setFont(self.pvp_font)
-        # self.main_menu_push_button = QPushButton("main menu")
-        # self.close_save_push_button = QPushButton("save && close")
-
-        # # column selection widgets
-        # self.turn_label_p1 = QLabel("P1 turn")
-        # self.turn_label_p2 = QLabel("P2 turn")
-        # self.column_1_select_button = QPushButton("1")
-        # self.column_2_select_button = QPushButton("2")
-        # self.column_3_select_button = QPushButton("3")
-        # self.column_4_select_button = QPushButton("4")
-        # self.column_5_select_button = QPushButton("5")
-        # self.column_6_select_button = QPushButton("6")
-        # self.column_7_select_button = QPushButton("7")
 
         # table for representing board state
         self.board = QTableWidget()
         self.board.setWindowTitle("game state")
         self.board.setFixedSize(QDesktopWidget().width()*.4, QDesktopWidget().width()*(2.4/7))
-        self.board.setRowCount(6)
-        self.board.setColumnCount(7)
+        self.board.setRowCount(self.num_rows)
+        self.board.setColumnCount(self.num_cols)
         self.initialize_board()
         self.board.horizontalHeader().setDefaultSectionSize(self.board.width()*(1/7.001))
         self.board.verticalHeader().setDefaultSectionSize(self.board.height()*(1/6.001))
@@ -63,7 +57,6 @@ class pvp_main_widget(QWidget):
         self.undo_button = QPushButton("undo")
         self.reset_push_button = QPushButton("reset")
         self.save_push_button = QPushButton("save current board")
-
 
     # # -------- layout declaration -------- # #
         self.header_layout = QHBoxLayout()
@@ -92,18 +85,12 @@ class pvp_main_widget(QWidget):
         self.main_layout.addWidget(self.board, alignment=Qt.AlignCenter)
         self.main_layout.addLayout(self.footer_layout)
 
+    # # ------- actions --------- # #
         self.board.cellClicked.connect(self.column_clicked)
-
-        self.test = cf()
-        self.keep_going = True
-        self.move_number = 1
 
 
     def exit_app(self):
         exit()
-
-    def main_menu_clicked(self):
-        self.home_clicked_signal.emit()
 
     def initialize_board(self):
         for i in range(7):
@@ -115,23 +102,38 @@ class pvp_main_widget(QWidget):
 
     def column_clicked(self, row, col):
         if(self.move_number % 2 == 1 ):
+            print(self.test.is_col_empty(col))
             row_index = self.test.make_move('red', col)
+            if(row_index == -1):
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Information)
+                msg.setText('this column is full, please choose another')
+                msg.setWindowTitle("full column")
+                msg.setStandardButtons(QMessageBox.Ok)
+                retval = msg.exec_()
+            else:
+                cell = QLabel()
+                cell.setPixmap(self.red_cell)
+                cell.setScaledContents(True)
+                self.board.setCellWidget(row_index,col,cell)
+                self.move_number+=1
             self.test.print_board()
-            # self.update_graphic()
-            cell = QLabel()
-            cell.setPixmap(self.red_cell)
-            cell.setScaledContents(True)
-            self.board.setCellWidget(row_index,col,cell)
-            self.move_number+=1
 
         else:
             row_index = self.test.make_move('black', col)
+            if(row_index == -1):
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Information)
+                msg.setText('this column is full, please choose another')
+                msg.setWindowTitle("full column")
+                msg.setStandardButtons(QMessageBox.Ok)
+                retval = msg.exec_()
+            else:
+                cell = QLabel()
+                cell.setPixmap(self.black_cell)
+                cell.setScaledContents(True)
+                self.board.setCellWidget(row_index,col,cell)
+                self.move_number+=1
             self.test.print_board()
-            # self.update_graphic()
-            cell = QLabel()
-            cell.setPixmap(self.black_cell)
-            cell.setScaledContents(True)
-            self.board.setCellWidget(row_index,col,cell)
-            self.move_number+=1
 
         print(self.test.check_win_rc())

@@ -29,31 +29,8 @@ class rules_main_widget(QWidget):
         'color in one of the seven columns, until four are connected. Play vs the '
         'computer to see how it works!')
 
-        # footer widgets
-        self.main_menu_push_button = QPushButton("main menu")
-        self.quit_push_button = QPushButton("quit")
-
-    # # -------- layout declaration -------- # #
-        self.footer_layout = QHBoxLayout()
-
-    # # -------- adding widgets to layouts -------- # #
-        self.footer_layout.addStretch(0)
-        self.footer_layout.addWidget(self.main_menu_push_button)
-        self.footer_layout.addWidget(self.quit_push_button)
-        self.footer_layout.addStretch(0)
-
     # # -------- adding widgets and layouts to main layout -------- # #
+        self.main_layout.addStretch(0)
         self.main_layout.addWidget(self.title_label, alignment=Qt.AlignCenter)
         self.main_layout.addWidget(self.description, alignment=Qt.AlignCenter)
-        self.main_layout.addLayout(self.footer_layout)
-
-
-    # # -------- actions -------- # #
-        self.quit_push_button.clicked.connect(self.exit_app)
-        self.main_menu_push_button.clicked.connect(self.home_clicked)
-
-    def exit_app(self):
-        exit()
-
-    def home_clicked(self):
-        self.home_clicked_signal.emit()
+        self.main_layout.addStretch(0)

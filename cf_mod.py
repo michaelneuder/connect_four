@@ -24,12 +24,15 @@ class cf(object):
             row+=1
         if (row == 0 and self.board[row,column] != 0): # condition for a full column
             print("this column is full, please choose another!")
+            return -1
         else: # not full column
             if (row == 5 and self.board[row, column] == 0): # case of the first piece in the column
                 if(color == 'red'):
                     self.board[row,column] = 1
+                    return -2
                 elif(color == 'black'):
                     self.board[row,column] = 2
+                    return -3
                 else:
                     print("color error")
             else: # not the first piece of the column
@@ -40,6 +43,13 @@ class cf(object):
                 else:
                     print("color error")
         return row
+
+    def is_col_empty(self, col):
+        if (self.board[5, col] == 0):
+            return True
+        return False
+
+
 
     def check_win_rc(self):
         for row in range(6): # checking for win along each row

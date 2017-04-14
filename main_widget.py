@@ -29,6 +29,7 @@ class main_widget(QWidget):
     # # -------- layout declaration -------- # #
         self.stack_layout = QStackedLayout()
         self.footer_layout = QHBoxLayout()
+        self.footer_widget = QWidget()
 
     # # -------- widget declaration -------- # #
         # window widgets
@@ -39,9 +40,9 @@ class main_widget(QWidget):
 
         # footer widgets
         self.main_menu_push_button = QPushButton("main menu")
+        self.rules_push_button = QPushButton("how to play")
         self.pvp_push_button = QPushButton("player v. player")
         self.pvai_push_button = QPushButton("player v. ai")
-        self.rules_push_button = QPushButton("how to play")
         self.quit_push_button = QPushButton("quit")
 
     # # -------- add to layouts -------- # #
@@ -54,9 +55,9 @@ class main_widget(QWidget):
         # footer layout
         self.footer_layout.addStretch(0)
         self.footer_layout.addWidget(self.main_menu_push_button)
+        self.footer_layout.addWidget(self.rules_push_button)
         self.footer_layout.addWidget(self.pvp_push_button)
         self.footer_layout.addWidget(self.pvai_push_button)
-        self.footer_layout.addWidget(self.rules_push_button)
         self.footer_layout.addWidget(self.quit_push_button)
         self.footer_layout.addStretch(0)
 
@@ -71,6 +72,11 @@ class main_widget(QWidget):
         self.rules_push_button.clicked.connect(self.rules_clicked)
         self.quit_push_button.clicked.connect(self.quit_clicked)
         self.quit_action.triggered.connect(self.quit_clicked)
+        self.home_widget.rules_push_button.clicked.connect(self.rules_clicked)
+        self.home_widget.pvp_push_button.clicked.connect(self.pvp_clicked)
+        self.home_widget.pvai_push_button.clicked.connect(self.pvai_clicked)
+        self.home_widget.game_history_push_button.clicked.connect(self.game_history_clicked)
+        self.home_widget.quit_push_button.clicked.connect(self.quit_clicked)
 
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
@@ -87,6 +93,9 @@ class main_widget(QWidget):
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)
         self.menu_bar.show()
+
+    def game_history_clicked(self):
+        print("game history")
 
     def quit_clicked(self):
         exit()
