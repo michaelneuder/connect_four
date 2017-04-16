@@ -61,6 +61,13 @@ class main_widget(QWidget):
         self.footer_layout.addWidget(self.quit_push_button)
         self.footer_layout.addStretch(0)
 
+        # hiding upon opening bc menu
+        self.main_menu_push_button.hide()
+        self.pvp_push_button.hide()
+        self.pvai_push_button.hide()
+        self.rules_push_button.hide()
+        self.quit_push_button.hide()
+
         # main layout
         self.main_layout.addLayout(self.stack_layout)
         self.main_layout.addLayout(self.footer_layout)
@@ -81,21 +88,53 @@ class main_widget(QWidget):
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
         self.menu_bar.hide()
+        self.main_menu_push_button.hide()
+        self.pvp_push_button.hide()
+        self.pvai_push_button.hide()
+        self.rules_push_button.hide()
+        self.quit_push_button.hide()
 
     def pvp_clicked(self):
         self.stack_layout.setCurrentIndex(2)
         self.menu_bar.show()
+        self.main_menu_push_button.show()
+        self.pvp_push_button.show()
+        self.pvai_push_button.show()
+        self.rules_push_button.show()
+        self.quit_push_button.show()
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText('welcome to the player vs player game. red goes first, and '
+        'you can simply click on the column where you want to place your piece!')
+        msg.setWindowTitle("player vs player")
+        msg.setStandardButtons(QMessageBox.Ok)
+        retval = msg.exec_()
 
     def pvai_clicked(self):
         self.stack_layout.setCurrentIndex(3)
         self.menu_bar.show()
+        self.main_menu_push_button.show()
+        self.pvp_push_button.show()
+        self.pvai_push_button.show()
+        self.rules_push_button.show()
+        self.quit_push_button.show()
 
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)
         self.menu_bar.show()
+        self.main_menu_push_button.show()
+        self.pvp_push_button.show()
+        self.pvai_push_button.show()
+        self.rules_push_button.show()
+        self.quit_push_button.show()
 
     def game_history_clicked(self):
         print("game history")
+        self.main_menu_push_button.show()
+        self.pvp_push_button.show()
+        self.pvai_push_button.show()
+        self.rules_push_button.show()
+        self.quit_push_button.show()
 
     def quit_clicked(self):
         exit()

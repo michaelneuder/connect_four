@@ -26,17 +26,32 @@ class pvp_main_widget(QWidget):
         self.title_label.setFont(self.title_font)
 
         # cell images
-        self.file = "empty_cell.png"
+        self.file = "images/empty_cell.png"
         self.empty_cell = QPixmap(self.file)
-        self.file_red = "red.png"
+        self.file_red = "images/red.png"
         self.red_cell = QPixmap(self.file_red)
-        self.file_black = "black.png"
+        self.file_black = "images/black.png"
         self.black_cell = QPixmap(self.file_black)
 
+        # player images
+        self.p1_file = 'images/r_p1.png'
+        self.p1_image = QPixmap(self.p1_file)
+        self.p2_file = 'images/b_p2.png'
+        self.p2_image = QPixmap(self.p2_file)
+        self.g_file = 'images/g.png'
+        self.g_image = QPixmap(self.g_file)
 
 
         # header widgets
-        self.pvp_label = QLabel("player vs player")
+        self.p1_label = QLabel()
+        self.p1_label.setFixedSize(self.width() * .2, self.height() * .1)
+        self.p1_label.setPixmap(self.p1_image)
+        self.p1_label.setScaledContents(True)
+        self.p2_label = QLabel()
+        self.p2_label.setFixedSize(self.width() * .2, self.height() * .1)
+        self.p2_label.setPixmap(self.p2_image)
+        self.p2_label.setScaledContents(True)
+        self.pvp_label = QLabel(" vs ")
         self.pvp_font = QFont("Times",25)
         self.pvp_label.setFont(self.pvp_font)
 
@@ -65,11 +80,12 @@ class pvp_main_widget(QWidget):
 
     # # -------- adding widgets to layouts -------- # #
         # header layout
-        # self.header_layout.addWidget(self.main_menu_push_button)
         self.header_layout.addStretch(0)
+        self.header_layout.addWidget(self.p1_label)
         self.header_layout.addWidget(self.pvp_label)
+        self.header_layout.addWidget(self.p2_label)
         self.header_layout.addStretch(0)
-        # self.header_layout.addWidget(self.close_save_push_button)
+
 
         # footer layout
         self.footer_layout.addWidget(self.move_number_label)
@@ -87,6 +103,8 @@ class pvp_main_widget(QWidget):
 
     # # ------- actions --------- # #
         self.board.cellClicked.connect(self.column_clicked)
+        self.reset_push_button.clicked.connect(self.reset_clicked)
+        self.undo_button.clicked.connect(self.undo_clicked)
 
 
     def exit_app(self):
@@ -101,39 +119,81 @@ class pvp_main_widget(QWidget):
                 self.board.setCellWidget(j,i, cell)
 
     def column_clicked(self, row, col):
-        if(self.move_number % 2 == 1 ):
-            print(self.test.is_col_empty(col))
-            row_index = self.test.make_move('red', col)
-            if(row_index == -1):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setText('this column is full, please choose another')
-                msg.setWindowTitle("full column")
-                msg.setStandardButtons(QMessageBox.Ok)
-                retval = msg.exec_()
-            else:
+        if(self.test.is_col_full(col)):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('this column is full, please choose another')
+            msg.setWindowTitle("full column")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+            return
+        elif(self.test.is_col_empty(col)):
+            if(self.move_number % 2 == 1):
+                self.test.board[5,col] = 1
                 cell = QLabel()
                 cell.setPixmap(self.red_cell)
                 cell.setScaledContents(True)
-                self.board.setCellWidget(row_index,col,cell)
+                self.board.setCellWidget(5,col,cell)
                 self.move_number+=1
-            self.test.print_board()
-
-        else:
-            row_index = self.test.make_move('black', col)
-            if(row_index == -1):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setText('this column is full, please choose another')
-                msg.setWindowTitle("full column")
-                msg.setStandardButtons(QMessageBox.Ok)
-                retval = msg.exec_()
+                self.move_number_label.setText("move number: " + str(self.move_number -1))
             else:
+                self.test.board[5,col] = 2
                 cell = QLabel()
                 cell.setPixmap(self.black_cell)
                 cell.setScaledContents(True)
-                self.board.setCellWidget(row_index,col,cell)
+                self.board.setCellWidget(5,col,cell)
                 self.move_number+=1
-            self.test.print_board()
+                self.move_number_label.setText("move number: " + str(self.move_number -1))
+        else:
+            row = self.test.find_row(col)
+            if(self.move_number % 2 == 1):
+                self.test.board[row,col] = 1
+                cell = QLabel()
+                cell.setPixmap(self.red_cell)
+                cell.setScaledContents(True)
+                self.board.setCellWidget(row,col,cell)
+                self.move_number+=1
+                self.move_number_label.setText("move number: " + str(self.move_number -1))
+            else:
+                self.test.board[row,col] = 2
+                cell = QLabel()
+                cell.setPixmap(self.black_cell)
+                cell.setScaledContents(True)
+                self.board.setCellWidget(row,col,cell)
+                self.move_number+=1
+                self.move_number_label.setText("move number: " + str(self.move_number -1))
+        self.update_turn_graphic(self.move_number)
 
-        print(self.test.check_win_rc())
+    def reset_clicked(self):
+        self.test.print_board()
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText('are you sure you want to reset?  this action cannot be undone')
+        msg.setWindowTitle("confirm")
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        retval = msg.exec_()
+        if (retval == QMessageBox.Yes):
+            self.initialize_board()
+            self.test.__init__()
+            self.move_number = 1
+            self.move_number_label.setText("move number: " + str(self.move_number))
+            self.p2_label.setPixmap(self.g_image)
+            self.p2_label.setScaledContents(True)
+            self.p1_label.setPixmap(self.p1_image)
+            self.p1_label.setScaledContents(True)
+
+
+    def undo_clicked(self):
+        pass
+
+    def update_turn_graphic(self, move):
+        if(move % 2 == 0):
+            self.p1_label.setPixmap(self.g_image)
+            self.p1_label.setScaledContents(True)
+            self.p2_label.setPixmap(self.p2_image)
+            self.p2_label.setScaledContents(True)
+        else:
+            self.p2_label.setPixmap(self.g_image)
+            self.p2_label.setScaledContents(True)
+            self.p1_label.setPixmap(self.p1_image)
+            self.p1_label.setScaledContents(True)
