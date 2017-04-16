@@ -17,31 +17,32 @@ class home_main_widget(QWidget):
         self.title_label.setFont(self.title_font)
 
         # menu buttons
-        self.menu_button_font = QFont("Helvetica",30)
+        self.menu_button_font = QFont("Helvetica",35)
         self.rules_push_button = QPushButton("how to play")
-        self.rules_push_button.setFixedSize(QDesktopWidget().width() * .21, QDesktopWidget().height()*.07)
+        self.rules_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.rules_push_button.setFont(self.menu_button_font)
         self.pvp_push_button = QPushButton("player vs player")
-        self.pvp_push_button.setFixedSize(QDesktopWidget().width() * .21, QDesktopWidget().height()*.07)
+        self.pvp_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.pvp_push_button.setFont(self.menu_button_font)
         self.pvai_push_button = QPushButton("player vs ai")
-        self.pvai_push_button.setFixedSize(QDesktopWidget().width() * .21, QDesktopWidget().height()*.07)
+        self.pvai_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.pvai_push_button.setFont(self.menu_button_font)
         self.game_history_push_button = QPushButton("game history")
-        self.game_history_push_button.setFixedSize(QDesktopWidget().width() * .21, QDesktopWidget().height()*.07)
+        self.game_history_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.game_history_push_button.setFont(self.menu_button_font)
         self.quit_push_button = QPushButton("quit")
-        self.quit_push_button.setFixedSize(QDesktopWidget().width() * .21, QDesktopWidget().height()*.07)
+        self.quit_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.quit_push_button.setFont(self.menu_button_font)
 
     # # -------- adding widgets and layouts to main layout -------- # #
         self.main_layout.addWidget(self.title_label, alignment=Qt.AlignCenter)
+        self.main_layout.addStretch(0)
         self.main_layout.addWidget(self.rules_push_button, alignment=Qt.AlignCenter)
         self.main_layout.addWidget(self.pvp_push_button, alignment=Qt.AlignCenter)
         self.main_layout.addWidget(self.pvai_push_button, alignment=Qt.AlignCenter)
         self.main_layout.addWidget(self.game_history_push_button, alignment=Qt.AlignCenter)
         self.main_layout.addWidget(self.quit_push_button, alignment=Qt.AlignCenter)
-
+        self.main_layout.addStretch(0)
 
     def exit_app(self):
         exit()
