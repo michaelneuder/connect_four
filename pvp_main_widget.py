@@ -128,6 +128,7 @@ class pvp_main_widget(QWidget):
             retval = msg.exec_()
             return
         elif(self.test.is_col_empty(col)):
+            row_landed = 5
             if(self.move_number % 2 == 1):
                 self.test.board[5,col] = 1
                 cell = QLabel()
@@ -145,24 +146,25 @@ class pvp_main_widget(QWidget):
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
         else:
-            row = self.test.find_row(col)
+            row_landed = self.test.find_row(col)
             if(self.move_number % 2 == 1):
-                self.test.board[row,col] = 1
+                self.test.board[row_landed,col] = 1
                 cell = QLabel()
                 cell.setPixmap(self.red_cell)
                 cell.setScaledContents(True)
-                self.board.setCellWidget(row,col,cell)
+                self.board.setCellWidget(row_landed,col,cell)
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
             else:
-                self.test.board[row,col] = 2
+                self.test.board[row_landed,col] = 2
                 cell = QLabel()
                 cell.setPixmap(self.black_cell)
                 cell.setScaledContents(True)
-                self.board.setCellWidget(row,col,cell)
+                self.board.setCellWidget(row_landed,col,cell)
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
         self.update_turn_graphic(self.move_number)
+        print(self.test.check_win(row_landed, col))
 
     def reset_clicked(self):
         self.test.print_board()

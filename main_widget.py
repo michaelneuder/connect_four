@@ -108,7 +108,7 @@ class main_widget(QWidget):
         'you can simply click on the column where you want to place your piece!')
         msg.setWindowTitle("player vs player")
         msg.setStandardButtons(QMessageBox.Ok)
-        retval = msg.exec_()
+        # retval = msg.exec_()
 
     def pvai_clicked(self):
         self.stack_layout.setCurrentIndex(3)

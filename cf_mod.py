@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-## connect four using numpy because it is nice
+# class file used to keep track of connect four board and check for wins
 import numpy as np
 
 class cf(object):
@@ -8,6 +8,19 @@ class cf(object):
         self.board = np.array([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0],[0,0,0,0,0,0,0]])
         self.move_number=1
+        self.right_diag_1 = []
+        self.right_diag_2 = []
+        self.right_diag_3 = []
+        self.right_diag_4 = []
+        self.right_diag_5 = []
+        self.right_diag_6 = []
+        self.left_diag_1 = []
+        self.left_diag_2 = []
+        self.left_diag_3 = []
+        self.left_diag_4 = []
+        self.left_diag_5 = []
+        self.left_diag_6 = []
+        self.diag_dict = {}
 
     def print_board(self):
         print("    "+"-"*17)
@@ -33,31 +46,125 @@ class cf(object):
             row+=1
         return row-1
 
+    def update_diags(self):
+        self.right_diag_1 = [self.board[3,0],self.board[2,1],self.board[1,2],self.board[0,3]]
+        self.right_diag_2 = [self.board[4,0],self.board[3,1],self.board[2,2],self.board[1,3],
+        self.board[0,4]]
+        self.right_diag_3 = [self.board[5,0],self.board[4,1],self.board[3,2],self.board[2,3],
+        self.board[1,4],self.board[0,5]]
+        self.right_diag_4 = [self.board[5,1],self.board[4,2],self.board[3,3],self.board[2,4],
+        self.board[1,5],self.board[0,6]]
+        self.right_diag_5 = [self.board[5,2],self.board[4,2],self.board[3,4],self.board[2,5],
+        self.board[1,6]]
+        self.right_diag_6 = [self.board[5,3],self.board[4,4],self.board[3,5],self.board[2,6]]
+
+        self.left_diag_1 = [self.board[3,6],self.board[2,5],self.board[1,4],self.board[0,3]]
+        self.left_diag_2 = [self.board[4,6],self.board[3,5],self.board[2,4],self.board[1,3],
+        self.board[0,2]]
+        self.left_diag_3 = [self.board[5,6],self.board[4,5],self.board[3,4],self.board[2,3],
+        self.board[1,2],self.board[0,1]]
+        self.left_diag_4 = [self.board[5,5],self.board[4,4],self.board[3,3],self.board[2,2],
+        self.board[1,1],self.board[0,0]]
+        self.left_diag_5 = [self.board[5,4],self.board[4,3],self.board[3,2],self.board[2,1],
+        self.board[1,0]]
+        self.left_diag_6 = [self.board[5,3],self.board[4,2],self.board[3,1],self.board[2,0]]
+
+        self.update_dict()
+
+    def update_dict(self):
+        self.diag_dict = {
+        # row 1
+        (0,0) : [self.left_diag_4] ,
+        (0,1) : [self.left_diag_3] ,
+        (0,2) : [self.left_diag_2] ,
+        (0,3) : [self.left_diag_1, self.right_diag_1] ,
+        (0,4) : [self.right_diag_2] ,
+        (0,5) : [self.right_diag_3] ,
+        (0,6) : [self.right_diag_4] ,
+
+        # row 2
+        (1,0) : [self.left_diag_5] ,
+        (1,1) : [self.left_diag_4] ,
+        (1,2) : [self.left_diag_3, self.right_diag_1] ,
+        (1,3) : [self.left_diag_2, self.right_diag_2] ,
+        (1,4) : [self.left_diag_1, self.right_diag_3] ,
+        (1,5) : [self.right_diag_4] ,
+        (1,6) : [self.right_diag_5] ,
+
+        # row 3
+        (2,0) : [self.left_diag_6] ,
+        (2,1) : [self.left_diag_5, self.right_diag_1] ,
+        (2,2) : [self.left_diag_4, self.right_diag_2] ,
+        (2,3) : [self.left_diag_3, self.right_diag_3] ,
+        (2,4) : [self.left_diag_2, self.right_diag_4] ,
+        (2,5) : [self.left_diag_1, self.right_diag_5] ,
+        (2,6) : [self.right_diag_6] ,
+
+        # row 4
+        (3,0) : [self.right_diag_1] ,
+        (3,1) : [self.right_diag_2, self.left_diag_6] ,
+        (3,2) : [self.right_diag_3, self.left_diag_5] ,
+        (3,3) : [self.right_diag_4, self.left_diag_4] ,
+        (3,4) : [self.right_diag_5, self.left_diag_3] ,
+        (3,5) : [self.right_diag_6, self.left_diag_2] ,
+        (3,6) : [self.left_diag_1] ,
+
+        # row 5
+        (4,0) : [self.right_diag_2] ,
+        (4,1) : [self.right_diag_3] ,
+        (4,2) : [self.right_diag_4, self.left_diag_6] ,
+        (4,3) : [self.right_diag_5, self.left_diag_5] ,
+        (4,4) : [self.right_diag_6, self.left_diag_4] ,
+        (4,5) : [self.left_diag_3] ,
+        (4,6) : [self.left_diag_2] ,
+
+        # row 6
+        (5,0) : [self.right_diag_3] ,
+        (5,1) : [self.right_diag_4] ,
+        (5,2) : [self.right_diag_5] ,
+        (5,3) : [self.right_diag_6, self.left_diag_6] ,
+        (5,4) : [self.left_diag_5] ,
+        (5,5) : [self.left_diag_3] ,
+        (5,6) : [self.left_diag_2] ,
+        }
+
     def check_win(self, row, col):
-        pass
+        self.update_diags()
 
-def main():
-    cf1 = cf()
-    cf1.print_board()
-    keep_going = True # red moves first
-    while (keep_going):
-        column = input("enter the column of the move: (type q to quit) ")
-        if (column == 'q'):
-            keep_going = False
-            quit()
-        elif (column != '1' and column != '2' and column != '3' and column != '4'
-              and column != '5' and column != '6' and column != '7'):
-            print("please enter a valid column value 1-7")
+        # check column
+        if(row > 2):
+            pass
         else:
-            column_int = int(column)
-            if(cf1.move_number%2 == 1): # even move number implies red's move
-                cf1.make_move('red', column_int - 1)
-                cf1.move_number += 1
-            else:
-                cf1.make_move('black', column_int - 1)
-                cf1.move_number += 1
-            if(cf1.check_win_rc() or cf1.check_win_diag()):
-                quit()
+            if(self.board[row,col] == self.board[row+1,col] ==
+            self.board[row+2,col] == self.board[row+3,col]):
+                if(self.board[row,col] == 1):
+                    print('red win')
+                    return True
+                else:
+                    print("black win")
+                    return True
 
-if (__name__=='__main__'):
-    main()
+        # check row
+        for i in range(4):
+            if(self.board[row,i] == self.board[row,i+1] ==self.board[row,i+2]
+            == self.board[row,i+3] != 0):
+                if(self.board[row,i] == 1):
+                    print('red win')
+                    return True
+                else:
+                    print('black win')
+                    return True
+
+        # check diagonally
+        for diagonal in self.diag_dict[(row,col)]:
+            print(diagonal)
+            for i in range(len(diagonal) - 3):
+                if(diagonal[i] == diagonal [i+1] == diagonal [i+2] == diagonal [i+3] != 0):
+                    if(self.board[row,col] == 1):
+                        print('red win')
+                        return True
+                        exit()
+                    else:
+                        print('black win')
+                        return True
+        return False
