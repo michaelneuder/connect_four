@@ -5,3 +5,7 @@ training project for lasp and lockheed. using pyqt5 to build a connect four gui 
 
 ## to run:
 simply clone or download and run ./main.py to open the app. i scaled it to the size of the user screen, so ideally it should look good on any size screen. 
+
+## dependencies:
+- pyqt5 download with package management or build from source 
+- https://pypi.python.org/pypi/PyQt5
