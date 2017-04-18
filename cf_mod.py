@@ -22,6 +22,8 @@ class cf(object):
         self.left_diag_6 = []
         self.diag_dict = {}
         self.move_history = []
+        self.win_results = []
+        self.win_found = False
 
     def print_board(self):
         print("    "+"-"*17)
@@ -140,10 +142,12 @@ class cf(object):
             self.board[row+2,col] == self.board[row+3,col]):
                 if(self.board[row,col] == 1):
                     print('red win')
-                    return True
+                    self.win_results.append([[row,col],[row+1,col],[row+2,col],[row+3,col]])
+                    self.win_found = True
                 else:
                     print("black win")
-                    return True
+                    self.win_results.append([[row,col],[row+1,col],[row+2,col],[row+3,col]])
+                    self.win_found = True
 
         # check row
         for i in range(4):
@@ -151,10 +155,12 @@ class cf(object):
             == self.board[row,i+3] != 0):
                 if(self.board[row,i] == 1):
                     print('red win')
-                    return True
+                    self.win_results.append([[row,i],[row,i+1],[row,i+2],[row,i+3]])
+                    self.win_found = True
                 else:
                     print('black win')
-                    return True
+                    self.win_found =  True
+                    self.win_results.append([[row,i],[row,i+1],[row,i+2],[row,i+3]])
 
         # check diagonally
         for diagonal in self.diag_dict[(row,col)]:
@@ -168,16 +174,15 @@ class cf(object):
                     else:
                         print('black win')
                         return True
-        return False
+        return self.win_found
 
     def get_last_move(self):
-        # print(self.move_history)
-        # print(self.move_history.pop())
-        # print(self.find_row(self.move_history.pop()))
         col = self.move_history.pop()
         row = self.find_row(col) + 1
-        # print(row)
-        # print(col)
         self.board[row, col] = 0
         removed_cell = [row, col]
         return removed_cell
+
+    def check_win_new(self, row, col):
+
+        return False

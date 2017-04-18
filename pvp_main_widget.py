@@ -12,6 +12,8 @@ class pvp_main_widget(QWidget):
         self.main_layout = QVBoxLayout(self)
         self.connection = sqlite3.connect('database/game_history.db')
         self.cursor = self.connection.cursor()
+        self.win_found_bool = False
+        self.move_made = False
 
     # # ------- connect four stuff --------- # #
         self.test = cf()
@@ -34,6 +36,8 @@ class pvp_main_widget(QWidget):
         self.red_cell = QPixmap(self.file_red)
         self.file_black = "images/black.png"
         self.black_cell = QPixmap(self.file_black)
+        self.file_win = "images/purple_cell.png"
+        self.win_cell = QPixmap(self.file_win)
 
         # player images
         self.p1_file = 'images/r_p1.png'
@@ -122,70 +126,73 @@ class pvp_main_widget(QWidget):
                 self.board.setCellWidget(j,i, cell)
 
     def column_clicked(self, row, col):
-        if(self.test.is_col_full(col)):
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Information)
-            msg.setText('this column is full, please choose another')
-            msg.setWindowTitle("full column")
-            msg.setStandardButtons(QMessageBox.Ok)
-            retval = msg.exec_()
-            return
-        elif(self.test.is_col_empty(col)):
-            row_landed = 5
-            if(self.move_number % 2 == 1):
-                self.test.board[5,col] = 1
-                cell = QLabel()
-                cell.setPixmap(self.red_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(5,col,cell)
-                self.move_number+=1
-                self.move_number_label.setText("move number: " + str(self.move_number -1))
-                self.test.move_history.append(col)
-            else:
-                self.test.board[5,col] = 2
-                cell = QLabel()
-                cell.setPixmap(self.black_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(5,col,cell)
-                self.move_number+=1
-                self.move_number_label.setText("move number: " + str(self.move_number -1))
-                self.test.move_history.append(col)
-        else:
-            row_landed = self.test.find_row(col)
-            if(self.move_number % 2 == 1):
-                self.test.board[row_landed,col] = 1
-                cell = QLabel()
-                cell.setPixmap(self.red_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(row_landed,col,cell)
-                self.move_number+=1
-                self.move_number_label.setText("move number: " + str(self.move_number -1))
-                self.test.move_history.append(col)
-            else:
-                self.test.board[row_landed,col] = 2
-                cell = QLabel()
-                cell.setPixmap(self.black_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(row_landed,col,cell)
-                self.move_number+=1
-                self.move_number_label.setText("move number: " + str(self.move_number -1))
-                self.test.move_history.append(col)
-        self.update_turn_graphic(self.move_number)
-        if(self.test.check_win(row_landed, col)):
-            if(self.move_number % 2 == 0):
+        # while(not self.win_found_bool):
+            if(self.test.is_col_full(col)):
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
-                msg.setText('red wins!!')
-                msg.setWindowTitle("winner")
+                msg.setText('this column is full, please choose another')
+                msg.setWindowTitle("full column")
                 msg.setStandardButtons(QMessageBox.Ok)
                 retval = msg.exec_()
+                return
+            elif(self.test.is_col_empty(col)):
+                row_landed = 5
+                if(self.move_number % 2 == 1):
+                    self.test.board[5,col] = 1
+                    cell = QLabel()
+                    cell.setPixmap(self.red_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(5,col,cell)
+                    self.move_number+=1
+                    self.move_number_label.setText("move number: " + str(self.move_number -1))
+                    self.test.move_history.append(col)
+                else:
+                    self.test.board[5,col] = 2
+                    cell = QLabel()
+                    cell.setPixmap(self.black_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(5,col,cell)
+                    self.move_number+=1
+                    self.move_number_label.setText("move number: " + str(self.move_number -1))
+                    self.test.move_history.append(col)
             else:
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setText('black wins!!')
-                msg.setWindowTitle("winner")
-                msg.setStandardButtons(QMessageBox.Ok)
-                retval = msg.exec_()
+                row_landed = self.test.find_row(col)
+                if(self.move_number % 2 == 1):
+                    self.test.board[row_landed,col] = 1
+                    cell = QLabel()
+                    cell.setPixmap(self.red_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(row_landed,col,cell)
+                    self.move_number+=1
+                    self.move_number_label.setText("move number: " + str(self.move_number -1))
+                    self.test.move_history.append(col)
+                else:
+                    self.test.board[row_landed,col] = 2
+                    cell = QLabel()
+                    cell.setPixmap(self.black_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(row_landed,col,cell)
+                    self.move_number+=1
+                    self.move_number_label.setText("move number: " + str(self.move_number -1))
+                    self.test.move_history.append(col)
+            self.update_turn_graphic(self.move_number)
+            if(self.test.check_win_new(row_landed, col)):
+                self.win_found_bool = True
+                self.win_found(self.test.win_results)
+                if(self.move_number % 2 == 0):
+                    msg = QMessageBox()
+                    msg.setIcon(QMessageBox.Information)
+                    msg.setText('red wins!!')
+                    msg.setWindowTitle("winner")
+                    msg.setStandardButtons(QMessageBox.Ok)
+                    retval = msg.exec_()
+                else:
+                    msg = QMessageBox()
+                    msg.setIcon(QMessageBox.Information)
+                    msg.setText('black wins!!')
+                    msg.setWindowTitle("winner")
+                    msg.setStandardButtons(QMessageBox.Ok)
+                    retval = msg.exec_()
 
     def reset_clicked(self):
         self.test.print_board()
@@ -243,3 +250,13 @@ class pvp_main_widget(QWidget):
         self.connection.commit()
         for row in self.connection.execute('SELECT * from history;'):
             print(row)
+
+    def win_found(self, win_list):
+        for win in win_list:
+            for cell in win:
+                i = cell[0]
+                j = cell[1]
+                cell = QLabel()
+                cell.setPixmap(self.win_cell)
+                cell.setScaledContents(True)
+                self.board.setCellWidget(i,j, cell)
