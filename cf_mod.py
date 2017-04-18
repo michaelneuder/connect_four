@@ -54,7 +54,7 @@ class cf(object):
         self.board[1,4],self.board[0,5]]
         self.right_diag_4 = [self.board[5,1],self.board[4,2],self.board[3,3],self.board[2,4],
         self.board[1,5],self.board[0,6]]
-        self.right_diag_5 = [self.board[5,2],self.board[4,2],self.board[3,4],self.board[2,5],
+        self.right_diag_5 = [self.board[5,2],self.board[4,3],self.board[3,4],self.board[2,5],
         self.board[1,6]]
         self.right_diag_6 = [self.board[5,3],self.board[4,4],self.board[3,5],self.board[2,6]]
 
@@ -124,8 +124,8 @@ class cf(object):
         (5,2) : [self.right_diag_5] ,
         (5,3) : [self.right_diag_6, self.left_diag_6] ,
         (5,4) : [self.left_diag_5] ,
-        (5,5) : [self.left_diag_3] ,
-        (5,6) : [self.left_diag_2] ,
+        (5,5) : [self.left_diag_4] ,
+        (5,6) : [self.left_diag_3] ,
         }
 
     def check_win(self, row, col):

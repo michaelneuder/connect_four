@@ -164,7 +164,21 @@ class pvp_main_widget(QWidget):
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
         self.update_turn_graphic(self.move_number)
-        print(self.test.check_win(row_landed, col))
+        if(self.test.check_win(row_landed, col)):
+            if(self.move_number % 2 == 0):
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Information)
+                msg.setText('red wins!!')
+                msg.setWindowTitle("winner")
+                msg.setStandardButtons(QMessageBox.Ok)
+                retval = msg.exec_()
+            else:
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Information)
+                msg.setText('black wins!!')
+                msg.setWindowTitle("winner")
+                msg.setStandardButtons(QMessageBox.Ok)
+                retval = msg.exec_()
 
     def reset_clicked(self):
         self.test.print_board()
