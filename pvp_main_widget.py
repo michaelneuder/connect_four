@@ -10,6 +10,8 @@ class pvp_main_widget(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
+        self.connection = sqlite3.connect('database/game_history.db')
+        self.cursor = self.connection.cursor()
 
     # # ------- connect four stuff --------- # #
         self.test = cf()
@@ -105,6 +107,7 @@ class pvp_main_widget(QWidget):
         self.board.cellClicked.connect(self.column_clicked)
         self.reset_push_button.clicked.connect(self.reset_clicked)
         self.undo_button.clicked.connect(self.undo_clicked)
+        self.save_push_button.clicked.connect(self.save_clicked)
 
 
     def exit_app(self):
@@ -137,6 +140,7 @@ class pvp_main_widget(QWidget):
                 self.board.setCellWidget(5,col,cell)
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
+                self.test.move_history.append(col)
             else:
                 self.test.board[5,col] = 2
                 cell = QLabel()
@@ -145,6 +149,7 @@ class pvp_main_widget(QWidget):
                 self.board.setCellWidget(5,col,cell)
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
+                self.test.move_history.append(col)
         else:
             row_landed = self.test.find_row(col)
             if(self.move_number % 2 == 1):
@@ -155,6 +160,7 @@ class pvp_main_widget(QWidget):
                 self.board.setCellWidget(row_landed,col,cell)
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
+                self.test.move_history.append(col)
             else:
                 self.test.board[row_landed,col] = 2
                 cell = QLabel()
@@ -163,6 +169,7 @@ class pvp_main_widget(QWidget):
                 self.board.setCellWidget(row_landed,col,cell)
                 self.move_number+=1
                 self.move_number_label.setText("move number: " + str(self.move_number -1))
+                self.test.move_history.append(col)
         self.update_turn_graphic(self.move_number)
         if(self.test.check_win(row_landed, col)):
             if(self.move_number % 2 == 0):
@@ -198,9 +205,25 @@ class pvp_main_widget(QWidget):
             self.p1_label.setPixmap(self.p1_image)
             self.p1_label.setScaledContents(True)
 
-
     def undo_clicked(self):
-        pass
+        if(self.move_number == 1):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('there are no more moves to be taken back!!')
+            msg.setWindowTitle("error")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+        else:
+            coordinates = self.test.get_last_move()
+            cell = QLabel()
+            cell.setPixmap(self.empty_cell)
+            cell.setScaledContents(True)
+            i = coordinates[0]
+            j = coordinates[1]
+            self.board.setCellWidget(i,j, cell)
+            self.move_number-=1
+            self.update_turn_graphic(self.move_number)
+            self.move_number_label.setText("move number: " + str(self.move_number -1))
 
     def update_turn_graphic(self, move):
         if(move % 2 == 0):
@@ -213,3 +236,10 @@ class pvp_main_widget(QWidget):
             self.p2_label.setScaledContents(True)
             self.p1_label.setPixmap(self.p1_image)
             self.p1_label.setScaledContents(True)
+
+    def save_clicked(self):
+        print(self.test.move_history)
+        self.connection.execute('INSERT INTO history values (?, ?)', (1, '290219021509125'))
+        self.connection.commit()
+        for row in self.connection.execute('SELECT * from history;'):
+            print(row)

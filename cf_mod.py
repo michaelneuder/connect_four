@@ -21,6 +21,7 @@ class cf(object):
         self.left_diag_5 = []
         self.left_diag_6 = []
         self.diag_dict = {}
+        self.move_history = []
 
     def print_board(self):
         print("    "+"-"*17)
@@ -157,7 +158,7 @@ class cf(object):
 
         # check diagonally
         for diagonal in self.diag_dict[(row,col)]:
-            print(diagonal)
+            # print(diagonal)
             for i in range(len(diagonal) - 3):
                 if(diagonal[i] == diagonal [i+1] == diagonal [i+2] == diagonal [i+3] != 0):
                     if(self.board[row,col] == 1):
@@ -168,3 +169,15 @@ class cf(object):
                         print('black win')
                         return True
         return False
+
+    def get_last_move(self):
+        # print(self.move_history)
+        # print(self.move_history.pop())
+        # print(self.find_row(self.move_history.pop()))
+        col = self.move_history.pop()
+        row = self.find_row(col) + 1
+        # print(row)
+        # print(col)
+        self.board[row, col] = 0
+        removed_cell = [row, col]
+        return removed_cell
