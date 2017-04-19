@@ -45,6 +45,7 @@ class main_widget(QWidget):
         self.rules_push_button = QPushButton("how to play")
         self.pvp_push_button = QPushButton("player v. player")
         self.pvai_push_button = QPushButton("player v. ai")
+        self.game_history_push_button = QPushButton("game history")
         self.quit_push_button = QPushButton("quit")
 
     # # -------- add to layouts -------- # #
@@ -61,6 +62,7 @@ class main_widget(QWidget):
         self.footer_layout.addWidget(self.rules_push_button)
         self.footer_layout.addWidget(self.pvp_push_button)
         self.footer_layout.addWidget(self.pvai_push_button)
+        self.footer_layout.addWidget(self.game_history_push_button)
         self.footer_layout.addWidget(self.quit_push_button)
         self.footer_layout.addStretch(0)
 
@@ -69,6 +71,7 @@ class main_widget(QWidget):
         self.pvp_push_button.hide()
         self.pvai_push_button.hide()
         self.rules_push_button.hide()
+        self.game_history_push_button.hide()
         self.quit_push_button.hide()
 
         # main layout
@@ -80,6 +83,7 @@ class main_widget(QWidget):
         self.pvp_push_button.clicked.connect(self.pvp_clicked)
         self.pvai_push_button.clicked.connect(self.pvai_clicked)
         self.rules_push_button.clicked.connect(self.rules_clicked)
+        self.game_history_push_button.clicked.connect(self.game_history_clicked)
         self.quit_push_button.clicked.connect(self.quit_clicked)
         self.quit_action.triggered.connect(self.quit_clicked)
         self.home_widget.rules_push_button.clicked.connect(self.rules_clicked)
@@ -95,6 +99,7 @@ class main_widget(QWidget):
         self.pvp_push_button.hide()
         self.pvai_push_button.hide()
         self.rules_push_button.hide()
+        self.game_history_push_button.hide()
         self.quit_push_button.hide()
 
     def pvp_clicked(self):
@@ -104,6 +109,7 @@ class main_widget(QWidget):
         self.pvp_push_button.show()
         self.pvai_push_button.show()
         self.rules_push_button.show()
+        self.game_history_push_button.show()
         self.quit_push_button.show()
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)
@@ -120,6 +126,7 @@ class main_widget(QWidget):
         self.pvp_push_button.show()
         self.pvai_push_button.show()
         self.rules_push_button.show()
+        self.game_history_push_button.show()
         self.quit_push_button.show()
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)
@@ -137,6 +144,7 @@ class main_widget(QWidget):
         self.pvp_push_button.show()
         self.pvai_push_button.show()
         self.rules_push_button.show()
+        self.game_history_push_button.show()
         self.quit_push_button.show()
 
     def game_history_clicked(self):
@@ -146,6 +154,7 @@ class main_widget(QWidget):
         self.pvp_push_button.show()
         self.pvai_push_button.show()
         self.rules_push_button.show()
+        self.game_history_push_button.show()
         self.quit_push_button.show()
 
 
