@@ -68,7 +68,7 @@ class playback_dialog(QDialog):
         # actions
         self.close_push_button.clicked.connect(self.close_clicked)
         self.forward_push_button.clicked.connect(self.move_forward)
-        print(moves)
+        self.backward_push_button.clicked.connect(self.move_back)
 
 
     def initialize_board(self):
@@ -141,9 +141,29 @@ class playback_dialog(QDialog):
             #         dialog.exec_()
 
     def move_forward(self):
-        print(self.move_number)
-        print(self.moves_string[self.move_number])
-        self.column_clicked(0, int(self.moves_string[self.move_number]))
+        if(self.move_number < len(self.moves_string)):
+            self.column_clicked(0, int(self.moves_string[self.move_number]))
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('this is the end of the game!')
+            msg.setWindowTitle("unable to continue")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+
+    def move_back(self):
+        remove_col = self.moves_string[self.move_number-1]
+        count = 0
+        for col in range(self.move_number-1):
+            if(self.moves_string[col] == remove_col):
+                count+=1
+        remove_row = 5 - count
+        print(remove_row)
+        cell = QLabel()
+        cell.setPixmap(self.empty_cell)
+        cell.setScaledContents(True)
+        self.board.setCellWidget(int(remove_row),int(remove_col),cell)
+        self.move_number-=1
 
 
     def close_clicked(self):
