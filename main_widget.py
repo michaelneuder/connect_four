@@ -17,14 +17,31 @@ class main_widget(QWidget):
     # # -------- menu_bar item declaration -------- # #
         self.menu_bar = QMenuBar(self)
         self.file_menu = QMenu('file')
+        self.game_menu = QMenu('game')
 
         # quit
         self.quit_action = QAction(QIcon('exit.png'), '&exit', self)
         self.quit_action.setShortcut('Ctrl+E')
         self.file_menu.addAction(self.quit_action)
 
+        # undo
+        self.undo_action = QAction(QIcon('exit.png'), 'undo', self)
+        self.undo_action.setShortcut('Ctrl+Z')
+        self.game_menu.addAction(self.undo_action)
+
+        # reset
+        self.reset_action = QAction(QIcon('exit.png'), '&reset', self)
+        self.reset_action.setShortcut('Ctrl+R')
+        self.game_menu.addAction(self.reset_action)
+
+        # save
+        self.save_action = QAction(QIcon('exit.png'), '&save', self)
+        self.save_action.setShortcut('Ctrl+S')
+        self.game_menu.addAction(self.save_action)
+
     # # -------- add menus to menu_bar -------- # #
         self.menu_bar.addMenu(self.file_menu)
+        self.menu_bar.addMenu(self.game_menu)
         self.menu_bar.hide()
 
     # # -------- layout declaration -------- # #
@@ -91,6 +108,9 @@ class main_widget(QWidget):
         self.home_widget.pvai_push_button.clicked.connect(self.pvai_clicked)
         self.home_widget.game_history_push_button.clicked.connect(self.game_history_clicked)
         self.home_widget.quit_push_button.clicked.connect(self.quit_clicked)
+        self.undo_action.triggered.connect(self.undo_clicked)
+        self.reset_action.triggered.connect(self.reset_clicked)
+        self.save_action.triggered.connect(self.save_clicked)
 
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
@@ -134,7 +154,7 @@ class main_widget(QWidget):
         'you can simply click on the column where you want to place your piece!')
         msg.setWindowTitle("player vs ai")
         msg.setStandardButtons(QMessageBox.Ok)
-        retval = msg.exec_()
+        # retval = msg.exec_()
 
 
     def rules_clicked(self):
@@ -157,6 +177,14 @@ class main_widget(QWidget):
         self.game_history_push_button.show()
         self.quit_push_button.show()
 
+    def undo_clicked(self):
+        self.pvp_widget.undo_clicked()
+
+    def reset_clicked(self):
+        self.pvp_widget.reset_clicked()
+
+    def save_clicked(self):
+        self.pvp_widget.save_clicked()
 
     def quit_clicked(self):
         exit()

@@ -51,11 +51,9 @@ class cf(object):
             if(self.board[row,col] == self.board[row+1,col] ==
             self.board[row+2,col] == self.board[row+3,col]):
                 if(self.board[row,col] == 1):
-                    print('red win')
                     self.win_results.append([[row,col],[row+1,col],[row+2,col],[row+3,col]])
                     self.win_found = True
                 else:
-                    print("black win")
                     self.win_results.append([[row,col],[row+1,col],[row+2,col],[row+3,col]])
                     self.win_found = True
 
@@ -64,69 +62,71 @@ class cf(object):
             if(self.board[row,i] == self.board[row,i+1] ==self.board[row,i+2]
             == self.board[row,i+3] != 0):
                 if(self.board[row,i] == 1):
-                    print('red win')
                     self.win_results.append([[row,i],[row,i+1],[row,i+2],[row,i+3]])
                     self.win_found = True
                 else:
-                    print('black win')
                     self.win_found =  True
                     self.win_results.append([[row,i],[row,i+1],[row,i+2],[row,i+3]])
 
         # diagonals
         # negative slope diagonal first
         current_max = 1
-        potential_win = []
+        potential_win = [[row,col]]
 
         # iterate to the bottom right of the diagonal
         temp_row = row + 1
         temp_col = col + 1
         while(temp_row < 6 and temp_col < 7 and self.board[temp_row, temp_col] == color_id):
-            print('here')
             current_max+=1
-            print(current_max)
+            potential_win.append([temp_row, temp_col])
             temp_row+=1
             temp_col+=1
-            # potential_win.append([])
             if(current_max >= 4):
-                print("win1")
+                # print("win1")
                 self.win_found = True
+                self.win_results.append(potential_win)
 
         # iterate to the top left of the diagonal
         temp_row = row - 1
         temp_col = col - 1
         while(temp_row >= 0 and temp_col >= 0 and self.board[temp_row, temp_col] == color_id):
-            print('here2')
             current_max+=1
-            print(current_max)
+            potential_win.append([temp_row, temp_col])
             temp_row-=1
             temp_col-=1
-
             if(current_max >= 4):
-                print("win2")
+                # print("win2")
+                self.win_found = True
+                self.win_results.append(potential_win)
 
         # positive slope diagonals
         current_max = 1
+        potential_win = [[row,col]]
 
         # iterate to the top right of the diagonal
         temp_row = row - 1
         temp_col = col + 1
         while(temp_row >= 0 and temp_col < 7 and self.board[temp_row, temp_col] == color_id):
-            print('here3')
             current_max+=1
-            print(current_max)
+            potential_win.append([temp_row, temp_col])
             temp_row-=1
             temp_col+=1
             if(current_max >= 4):
-                print('win3')
+                # print('win3')
+                self.win_found = True
+                self.win_results.append(potential_win)
 
         # iterate to the bottom left of the diagonal
         temp_row = row + 1
         temp_col = col - 1
         while(temp_row < 6 and temp_col >= 0 and self.board[temp_row, temp_col] == color_id):
-            print('here4')
             current_max+=1
-            print(current_max)
+            potential_win.append([temp_row, temp_col])
             temp_row+=1
             temp_col-=1
             if(current_max >= 4):
-                print('win4')
+                # print('win4')
+                self.win_found = True
+                self.win_results.append(potential_win)
+
+        return self.win_found

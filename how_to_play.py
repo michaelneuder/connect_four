@@ -19,17 +19,18 @@ class rules_main_widget(QWidget):
 
         # main description
         self.description = QLabel()
-        self.description.setFixedSize(QDesktopWidget().width() * .3, QDesktopWidget().height()*.3)
+        self.description.setFixedSize(QDesktopWidget().width() * .33, QDesktopWidget().height()*.33)
         # self.description.setReadOnly(True)
         self.description_font = QFont("Helvetica",20)
         self.description.setFont(self.description_font)
         self.description.setWordWrap(True)
         self.description.setAlignment(Qt.AlignJustify)
-        self.description.setText('Summary: To win Connect Four you must be the '
+        self.description.setText('To win Connect Four you must be the '
         'first player to get four of your colored checkers in a row either horizontally, '
         'vertically or diagonally. Each player will take turns dropping a piece of their '
         'color in one of the seven columns, until four are connected. Play vs the '
-        'computer to see how it works!')
+        'computer to see how it works! To play in this application, simply click '
+        'the column in which you want to drop a piece.')
 
     # # -------- adding widgets and layouts to main layout -------- # #
         self.main_layout.addStretch(0)
