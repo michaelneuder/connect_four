@@ -165,6 +165,5 @@ class playback_dialog(QDialog):
         self.board.setCellWidget(int(remove_row),int(remove_col),cell)
         self.move_number-=1
 
-
     def close_clicked(self):
         self.close()
