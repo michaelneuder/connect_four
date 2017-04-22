@@ -3,6 +3,7 @@
 ## connect four using numpy because it is nice
 import numpy as np
 
+
 class cf(object):
     def __init__(self):
         self.board = np.array([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
