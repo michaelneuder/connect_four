@@ -7,8 +7,10 @@ training project for lasp and lockheed. using pyqt5 to build a connect four gui 
 simply clone or download and run ./main.py to open the app. 
 
 ## dependencies:
-- pyqt5 download with package management or build from source 
+#### pyqt (python version of qt graphics library)
 - https://pypi.python.org/pypi/PyQt5
+- sudo apt-get install python3-pyqt5 (ubuntu)
 
-- numpy -- python package that helps with data and computations
+#### numpy (numerical and computation library)
 - http://www.numpy.org/
+- sudo apt-get install python3-numpy (ubuntu)
