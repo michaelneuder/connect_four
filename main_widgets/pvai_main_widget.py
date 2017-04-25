@@ -2,8 +2,8 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from cf_mod import cf
-from win_dialog import win_dialog
+from back_end_scripts.cf_mod import cf
+from dialogs.win_dialog import win_dialog
 import sqlite3
 
 class pvai_main_widget(QWidget):

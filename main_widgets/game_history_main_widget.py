@@ -2,7 +2,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from playback_dialog import playback_dialog
+from dialogs.playback_dialog import playback_dialog
 import sqlite3
 
 class game_history_main_widget(QWidget):

@@ -3,11 +3,11 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sqlite3
-from home_main_widget import home_main_widget
-from pvp_main_widget import pvp_main_widget
-from pvai_main_widget import pvai_main_widget
-from how_to_play import rules_main_widget
-from game_history_main_widget import game_history_main_widget
+from main_widgets.home_main_widget import home_main_widget
+from main_widgets.pvp_main_widget import pvp_main_widget
+from main_widgets.pvai_main_widget import pvai_main_widget
+from main_widgets.how_to_play import rules_main_widget
+from main_widgets.game_history_main_widget import game_history_main_widget
 
 class main_widget(QWidget):
     def __init__(self):
