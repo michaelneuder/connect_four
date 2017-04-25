@@ -120,23 +120,11 @@ class main_widget(QWidget):
 
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
-        self.menu_bar.hide()
-        self.main_menu_push_button.hide()
-        self.pvp_push_button.hide()
-        self.pvai_push_button.hide()
-        self.rules_push_button.hide()
-        self.game_history_push_button.hide()
-        self.quit_push_button.hide()
+        self.hide_footer()
 
     def pvp_clicked(self):
         self.stack_layout.setCurrentIndex(2)
-        self.menu_bar.show()
-        self.main_menu_push_button.show()
-        self.pvp_push_button.show()
-        self.pvai_push_button.show()
-        self.rules_push_button.show()
-        self.game_history_push_button.show()
-        self.quit_push_button.show()
+        self.show_footer()
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)
         msg.setText('welcome to the player vs player game. red goes first, and '
@@ -147,13 +135,7 @@ class main_widget(QWidget):
 
     def pvai_clicked(self):
         self.stack_layout.setCurrentIndex(3)
-        self.menu_bar.show()
-        self.main_menu_push_button.show()
-        self.pvp_push_button.show()
-        self.pvai_push_button.show()
-        self.rules_push_button.show()
-        self.game_history_push_button.show()
-        self.quit_push_button.show()
+        self.show_footer()
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)
         msg.setText('welcome to the player vs ai game. red goes first, and '
@@ -164,23 +146,11 @@ class main_widget(QWidget):
 
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)
-        self.menu_bar.show()
-        self.main_menu_push_button.show()
-        self.pvp_push_button.show()
-        self.pvai_push_button.show()
-        self.rules_push_button.show()
-        self.game_history_push_button.show()
-        self.quit_push_button.show()
+        self.show_footer()
 
     def game_history_clicked(self):
         self.stack_layout.setCurrentIndex(4)
-        self.menu_bar.show()
-        self.main_menu_push_button.show()
-        self.pvp_push_button.show()
-        self.pvai_push_button.show()
-        self.rules_push_button.show()
-        self.game_history_push_button.show()
-        self.quit_push_button.show()
+        self.show_footer()
 
     def undo_clicked(self):
         self.stack_layout.setCurrentIndex(2)
@@ -196,6 +166,24 @@ class main_widget(QWidget):
 
     def load_clicked(self):
         self.stack_layout.setCurrentIndex(2)
+
+    def hide_footer(self):
+        self.menu_bar.hide()
+        self.main_menu_push_button.hide()
+        self.pvp_push_button.hide()
+        self.pvai_push_button.hide()
+        self.rules_push_button.hide()
+        self.game_history_push_button.hide()
+        self.quit_push_button.hide()
+
+    def show_footer(self):
+        self.menu_bar.show()
+        self.main_menu_push_button.show()
+        self.pvp_push_button.show()
+        self.pvai_push_button.show()
+        self.rules_push_button.show()
+        self.game_history_push_button.show()
+        self.quit_push_button.show()
 
     def quit_clicked(self):
         exit()
