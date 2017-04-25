@@ -9,8 +9,8 @@ simply clone or download and run ./main.py to open the app.
 ## dependencies:
 #### pyqt (python version of qt graphics library)
 - https://pypi.python.org/pypi/PyQt5
-- sudo apt-get install python3-numpy (ubuntu)
+- sudo apt-get install python3-pyqt5 (ubuntu)
 
 #### numpy (numerical and computation library)
 - http://www.numpy.org/
-- sudo apt-get install python3-pyqt5 (ubuntu)
+- sudo apt-get install python3-numpy (ubuntu)
