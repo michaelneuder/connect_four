@@ -37,7 +37,12 @@ class main_widget(QWidget):
         # save
         self.save_action = QAction(QIcon('exit.png'), '&save', self)
         self.save_action.setShortcut('Ctrl+S')
-        self.game_menu.addAction(self.save_action)
+        self.file_menu.addAction(self.save_action)
+
+        # load
+        self.load_action = QAction(QIcon('exit.png'), '&load', self)
+        self.load_action.setShortcut('Ctrl+L')
+        self.file_menu.addAction(self.load_action)
 
     # # -------- add menus to menu_bar -------- # #
         self.menu_bar.addMenu(self.file_menu)
@@ -111,6 +116,7 @@ class main_widget(QWidget):
         self.undo_action.triggered.connect(self.undo_clicked)
         self.reset_action.triggered.connect(self.reset_clicked)
         self.save_action.triggered.connect(self.save_clicked)
+        self.load_action.triggered.connect(self.load_clicked)
 
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
@@ -178,13 +184,20 @@ class main_widget(QWidget):
         self.quit_push_button.show()
 
     def undo_clicked(self):
+        self.stack_layout.setCurrentIndex(2)
         self.pvp_widget.undo_clicked()
 
     def reset_clicked(self):
+        self.stack_layout.setCurrentIndex(2)
         self.pvp_widget.reset_clicked()
 
     def save_clicked(self):
         self.pvp_widget.save_clicked()
+        self.stack_layout.setCurrentIndex(2)
+
+    def load_clicked(self):
+        self.stack_layout.setCurrentIndex(2)
+
 
     def quit_clicked(self):
         exit()

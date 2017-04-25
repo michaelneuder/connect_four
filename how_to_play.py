@@ -20,7 +20,6 @@ class rules_main_widget(QWidget):
         # main description
         self.description = QLabel()
         self.description.setFixedSize(QDesktopWidget().width() * .33, QDesktopWidget().height()*.33)
-        # self.description.setReadOnly(True)
         self.description_font = QFont("Helvetica",20)
         self.description.setFont(self.description_font)
         self.description.setWordWrap(True)

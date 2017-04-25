@@ -104,26 +104,13 @@ class pvai_main_widget(QWidget):
         self.header_layout.addWidget(self.pvp_label)
         self.header_layout.addWidget(self.p2_label)
         self.header_layout.addStretch(0)
-
-        # board and sidebard layout
-        # self.side_bar_layout.addWidget(self.move_number_label)
         self.side_bar_layout.addStretch(0)
         self.side_bar_layout.addWidget(self.undo_button)
         self.side_bar_layout.addWidget(self.reset_push_button)
         self.side_bar_layout.addWidget(self.save_push_button)
         self.side_bar_layout.addWidget(self.move_number_label)
         self.side_bar_layout.addStretch(0)
-        # self.mid_layout.addLayout(self.side_bar_layout)
         self.mid_layout.addWidget(self.board)
-
-
-        # self.mid_layout.addSpacing(self.reset_push_button.sizeHint().width()+ .5*self.reset_push_button.sizeHint().width())
-        # footer layout
-        # self.footer_layout.addWidget(self.move_number_label)
-        # self.footer_layout.addStretch(0)
-        # self.footer_layout.addWidget(self.undo_button)
-        # self.footer_layout.addWidget(self.reset_push_button)
-        # self.footer_layout.addWidget(self.save_push_button)
 
     # # -------- adding widgets and layouts to main layout -------- # #
         self.main_layout.addWidget(self.title_label, alignment=Qt.AlignCenter)
@@ -209,24 +196,12 @@ class pvai_main_widget(QWidget):
                 if(self.test.check_win_new(row_landed, col, 1)):
                     self.win_found_bool = True
                     self.win_found(self.test.win_results)
-                    # msg = QMessageBox()
-                    # msg.setIcon(QMessageBox.Information)
-                    # msg.setText('red wins!!')
-                    # msg.setWindowTitle("winner")
-                    # msg.setStandardButtons(QMessageBox.Ok)
-                    # retval = msg.exec_()
                     dialog = win_dialog('red')
                     dialog.exec_()
             elif(self.move_number % 2 == 1):
                 if(self.test.check_win_new(row_landed, col, 2)):
                     self.win_found_bool = True
                     self.win_found(self.test.win_results)
-                    # msg = QMessageBox()
-                    # msg.setIcon(QMessageBox.Information)
-                    # msg.setText('black wins!!')
-                    # msg.setWindowTitle("winner")
-                    # msg.setStandardButtons(QMessageBox.Ok)
-                    # retval = msg.exec_()
                     dialog = win_dialog('black')
                     dialog.exec_()
 

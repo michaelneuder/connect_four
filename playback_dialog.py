@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from cf_mod import cf
+from win_dialog import win_dialog
 import sqlite3
 
 
@@ -14,6 +15,7 @@ class playback_dialog(QDialog):
         self.moves_string = moves
         self.move_number = 0
         self.test = cf()
+        self.win_found_bool = False
 
         # properties of the dialog
         self.setWindowTitle("playback")
@@ -22,7 +24,6 @@ class playback_dialog(QDialog):
         self.title_label = QLabel("game moves")
         self.title_font = QFont("Helvetica",40)
         self.title_label.setFont(self.title_font)
-
 
         # cell images
         self.file = "images/empty_cell.png"
@@ -80,69 +81,68 @@ class playback_dialog(QDialog):
                 self.board.setCellWidget(j,i, cell)
 
     def column_clicked(self, row, col):
-        if(self.test.is_col_empty(col)):
-            row_landed = 5
-            if(self.move_number % 2 == 1):
-                self.test.board[5,col] = 1
-                cell = QLabel()
-                cell.setPixmap(self.red_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(5,col,cell)
-                self.move_number+=1
+        if(not self.win_found_bool):
+            if(self.test.is_col_full(col)):
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Information)
+                msg.setText('this column is full, please choose another')
+                msg.setWindowTitle("full column")
+                msg.setStandardButtons(QMessageBox.Ok)
+                retval = msg.exec_()
+                return
+            elif(self.test.is_col_empty(col)):
+                row_landed = 5
+                if(self.move_number % 2 == 0):
+                    self.test.board[5,col] = 1
+                    cell = QLabel()
+                    cell.setPixmap(self.red_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(5,col,cell)
+                    self.move_number+=1
+                    self.test.move_history.append(col)
+                else:
+                    self.test.board[5,col] = 2
+                    cell = QLabel()
+                    cell.setPixmap(self.black_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(5,col,cell)
+                    self.move_number+=1
+                    self.test.move_history.append(col)
             else:
-                self.test.board[5,col] = 2
-                cell = QLabel()
-                cell.setPixmap(self.black_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(5,col,cell)
-                self.move_number+=1
-
-        else:
-            row_landed = self.test.find_row(col)
+                row_landed = self.test.find_row(col)
+                if(self.move_number % 2 == 0):
+                    self.test.board[row_landed,col] = 1
+                    cell = QLabel()
+                    cell.setPixmap(self.red_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(row_landed,col,cell)
+                    self.move_number+=1
+                    self.test.move_history.append(col)
+                else:
+                    self.test.board[row_landed,col] = 2
+                    cell = QLabel()
+                    cell.setPixmap(self.black_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(row_landed,col,cell)
+                    self.move_number+=1
+                    self.test.move_history.append(col)
             if(self.move_number % 2 == 1):
-                self.test.board[row_landed,col] = 1
-                cell = QLabel()
-                cell.setPixmap(self.red_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(row_landed,col,cell)
-                self.move_number+=1
-            else:
-                self.test.board[row_landed,col] = 2
-                cell = QLabel()
-                cell.setPixmap(self.black_cell)
-                cell.setScaledContents(True)
-                self.board.setCellWidget(row_landed,col,cell)
-                self.move_number+=1
-
-            # self.update_turn_graphic(self.move_number)
-            # if(self.move_number % 2 == 0):
-            #     if(self.test.check_win_new(row_landed, col, 1)):
-            #         self.win_found_bool = True
-            #         self.win_found(self.test.win_results)
-            #         # msg = QMessageBox()
-            #         # msg.setIcon(QMessageBox.Information)
-            #         # msg.setText('red wins!!')
-            #         # msg.setWindowTitle("winner")
-            #         # msg.setStandardButtons(QMessageBox.Ok)
-            #         # retval = msg.exec_()
-            #         dialog = win_dialog('red')
-            #         dialog.exec_()
-            # elif(self.move_number % 2 == 1):
-            #     if(self.test.check_win_new(row_landed, col, 2)):
-            #         self.win_found_bool = True
-            #         self.win_found(self.test.win_results)
-            #         # msg = QMessageBox()
-            #         # msg.setIcon(QMessageBox.Information)
-            #         # msg.setText('black wins!!')
-            #         # msg.setWindowTitle("winner")
-            #         # msg.setStandardButtons(QMessageBox.Ok)
-            #         # retval = msg.exec_()
-            #         dialog = win_dialog('black')
-            #         dialog.exec_()
+                if(self.test.check_win_new(row_landed, col, 1)):
+                    self.win_found_bool = True
+                    self.win_found(self.test.win_results)
+                    dialog = win_dialog('red')
+                    dialog.exec_()
+            elif(self.move_number % 2 == 0):
+                if(self.test.check_win_new(row_landed, col, 2)):
+                    self.win_found_bool = True
+                    self.win_found(self.test.win_results)
+                    dialog = win_dialog('black')
+                    dialog.exec_()
 
     def move_forward(self):
         if(self.move_number < len(self.moves_string)):
             self.column_clicked(0, int(self.moves_string[self.move_number]))
+            self.test.print_board()
         else:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)
@@ -152,18 +152,50 @@ class playback_dialog(QDialog):
             retval = msg.exec_()
 
     def move_back(self):
-        remove_col = self.moves_string[self.move_number-1]
-        count = 0
-        for col in range(self.move_number-1):
-            if(self.moves_string[col] == remove_col):
-                count+=1
-        remove_row = 5 - count
-        print(remove_row)
-        cell = QLabel()
-        cell.setPixmap(self.empty_cell)
-        cell.setScaledContents(True)
-        self.board.setCellWidget(int(remove_row),int(remove_col),cell)
-        self.move_number-=1
+        if(self.move_number == 0):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('there are no more moves to be taken back!!')
+            msg.setWindowTitle("error")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+        else:
+            coordinates = self.test.get_last_move()
+            cell = QLabel()
+            cell.setPixmap(self.empty_cell)
+            cell.setScaledContents(True)
+            i = coordinates[0]
+            j = coordinates[1]
+            self.board.setCellWidget(i,j, cell)
+            self.move_number-=1
+            self.win_found_bool = False
+            self.clear_win()
+            self.test.win_found = False
+            self.test.win_results = []
+
+    def clear_win(self):
+        for i in range(7):
+            for j in range(6):
+                if(self.test.board[j,i] == 1):
+                    cell = QLabel()
+                    cell.setPixmap(self.red_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(j,i, cell)
+                elif(self.test.board[j,i] == 2):
+                    cell = QLabel()
+                    cell.setPixmap(self.black_cell)
+                    cell.setScaledContents(True)
+                    self.board.setCellWidget(j,i, cell)
+
+    def win_found(self, win_list):
+        for win in win_list:
+            for cell in win:
+                i = cell[0]
+                j = cell[1]
+                cell = QLabel()
+                cell.setPixmap(self.win_cell)
+                cell.setScaledContents(True)
+                self.board.setCellWidget(i,j, cell)
 
     def close_clicked(self):
         self.close()

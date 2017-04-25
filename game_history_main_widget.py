@@ -39,8 +39,8 @@ class game_history_main_widget(QWidget):
         self.game_history_list_widget.clear()
         connection = sqlite3.connect('database/game_history.db')
         cursor = connection.cursor()
-        for row in connection.execute('SELECT * from history'):
-            self.game_history_list_widget.addItem('game id: ' + str(row[0]) + ' moves: ' + row[1])
+        for row in connection.execute('SELECT * from history1'):
+            self.game_history_list_widget.addItem('game description --- \"' + str(row[0]) + '\"')
             self.game_history_list.append(row)
         connection.close()
 

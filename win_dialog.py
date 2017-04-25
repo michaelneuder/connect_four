@@ -11,12 +11,7 @@ class win_dialog(QDialog):
         self.color = color
 
         # properties of the dialog
-        self.setWindowTitle("winner!!")
-
-        # main title
-        self.title_label = QLabel("game over!")
-        self.title_font = QFont("Helvetica",40)
-        self.title_label.setFont(self.title_font)
+        self.setWindowTitle("game over!")
 
         # red win
         self.red_label = QLabel("red player wins!")
@@ -29,21 +24,15 @@ class win_dialog(QDialog):
         self.black_label.setFont(self.black_font)
 
         # player images
-        self.p1_file = 'images/red.png'
+        self.p1_file = 'images/red_transparent.png'
         self.p1_image = QPixmap(self.p1_file)
-        self.p2_file = 'images/black.png'
+        self.p2_file = 'images/black_transparent.png'
         self.p2_image = QPixmap(self.p2_file)
         self.p1_label = QLabel()
-        self.p1_label.setFrameStyle(QFrame.Panel)
-        self.p1_label.setLineWidth(2)
-        # self.p1_label.setStyleSheet("QLabel { background-color : rgb(184,184,186) ;border: solid; border-radius: 10px; border-color: black; border-width: 2px }")
         self.p1_label.setFixedSize(self.height() * .1, self.height() * .1)
         self.p1_label.setPixmap(self.p1_image)
         self.p1_label.setScaledContents(True)
         self.p2_label = QLabel()
-        self.p2_label.setFrameStyle(QFrame.Panel)
-        self.p2_label.setLineWidth(2)
-        # self.p1_label.setStyleSheet("QLabel { background-color : rgb(184,184,186) ;border: solid; border-radius: 10px; border-color: black; border-width: 2px }")
         self.p2_label.setFixedSize(self.height() * .1, self.height() * .1)
         self.p2_label.setPixmap(self.p2_image)
         self.p2_label.setScaledContents(True)
@@ -56,14 +45,14 @@ class win_dialog(QDialog):
         self.black_layout = QHBoxLayout()
 
         # adding widgets to layouts
-        self.main_layout.addWidget(self.title_label)
-        # self.main_layout.addWidget(self.red_label)
-        # self.main_layout.addWidget(self.black_label)
-        # self.main_layout.addWidget(self.p1_label)
-        self.red_layout.addWidget(self.p1_label)
-        self.red_layout.addWidget(self.red_label)
-        self.black_layout.addWidget(self.p2_label)
-        self.black_layout.addWidget(self.black_label)
+        self.red_layout.addStretch(0)
+        self.red_layout.addWidget(self.p1_label, alignment=Qt.AlignCenter)
+        self.red_layout.addWidget(self.red_label, alignment=Qt.AlignCenter)
+        self.red_layout.addStretch(0)
+        self.black_layout.addStretch(0)
+        self.black_layout.addWidget(self.p2_label, alignment=Qt.AlignCenter)
+        self.black_layout.addWidget(self.black_label, alignment=Qt.AlignCenter)
+        self.black_layout.addStretch(0)
         self.main_layout.addLayout(self.red_layout)
         self.main_layout.addLayout(self.black_layout)
         self.main_layout.addWidget(self.ok_button, alignment=Qt.AlignCenter)
