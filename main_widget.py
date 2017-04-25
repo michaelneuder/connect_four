@@ -162,7 +162,6 @@ class main_widget(QWidget):
         msg.setStandardButtons(QMessageBox.Ok)
         # retval = msg.exec_()
 
-
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)
         self.menu_bar.show()
@@ -197,7 +196,6 @@ class main_widget(QWidget):
 
     def load_clicked(self):
         self.stack_layout.setCurrentIndex(2)
-
 
     def quit_clicked(self):
         exit()

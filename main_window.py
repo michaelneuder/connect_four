@@ -13,8 +13,5 @@ class main_window(QMainWindow):
         self.central_widget = main_widget()
         self.setCentralWidget(self.central_widget)
 
-    def game_history_clicked(self):
-        print('game history')
-
     def quit_clicked(self):
         exit()
