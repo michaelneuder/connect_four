@@ -13,5 +13,7 @@ class main_window(QMainWindow):
         self.central_widget = main_widget()
         self.setCentralWidget(self.central_widget)
 
-    def quit_clicked(self):
-        exit()
+        # actions
+        self.central_widget.home_widget.quit_push_button.clicked.connect(self.close)
+        self.central_widget.quit_action.triggered.connect(self.close)
+        self.central_widget.quit_push_button.clicked.connect(self.close)

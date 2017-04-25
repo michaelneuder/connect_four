@@ -44,7 +44,7 @@ class save_dialog(QDialog):
         move_string = ''
         for i in self.moves:
             move_string+=(str(i))
-        connection = sqlite3.connect('database/game_history.db')
+        connection = sqlite3.connect('../database/game_history.db')
         cursor = connection.cursor()
         connection.execute("INSERT into history1 values (?, ?)", (text, move_string))
         connection.commit()

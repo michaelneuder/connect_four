@@ -27,7 +27,7 @@ class home_main_widget(QWidget):
         self.pvai_push_button = QPushButton("player vs ai")
         self.pvai_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.pvai_push_button.setFont(self.menu_button_font)
-        self.game_history_push_button = QPushButton("game history")
+        self.game_history_push_button = QPushButton("saved games")
         self.game_history_push_button.setFixedSize(QDesktopWidget().width() * .26, QDesktopWidget().height()*.11)
         self.game_history_push_button.setFont(self.menu_button_font)
         self.quit_push_button = QPushButton("quit")

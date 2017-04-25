@@ -11,7 +11,7 @@ class pvai_main_widget(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
-        self.connection = sqlite3.connect('database/game_history.db')
+        self.connection = sqlite3.connect('../database/game_history.db')
         self.cursor = self.connection.cursor()
         self.win_found_bool = False
         self.move_made = False
@@ -36,21 +36,21 @@ class pvai_main_widget(QWidget):
         self.line.setFrameShadow(QFrame.Sunken)
 
         # cell images
-        self.file = "images/empty_cell.png"
+        self.file = "../images/empty_cell.png"
         self.empty_cell = QPixmap(self.file)
-        self.file_red = "images/red.png"
+        self.file_red = "../images/red.png"
         self.red_cell = QPixmap(self.file_red)
-        self.file_black = "images/black.png"
+        self.file_black = "../images/black.png"
         self.black_cell = QPixmap(self.file_black)
-        self.file_win = "images/purple_cell.png"
+        self.file_win = "../images/purple_cell.png"
         self.win_cell = QPixmap(self.file_win)
 
         # player images
-        self.p1_file = 'images/r_p1.png'
+        self.p1_file = '../images/r_p1.png'
         self.p1_image = QPixmap(self.p1_file)
-        self.p2_file = 'images/b_p2.png'
+        self.p2_file = '../images/b_p2.png'
         self.p2_image = QPixmap(self.p2_file)
-        self.g_file = 'images/g.png'
+        self.g_file = '../images/g.png'
         self.g_image = QPixmap(self.g_file)
 
         # header widgets

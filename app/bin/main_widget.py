@@ -8,6 +8,7 @@ from main_widgets.pvp_main_widget import pvp_main_widget
 from main_widgets.pvai_main_widget import pvai_main_widget
 from main_widgets.how_to_play import rules_main_widget
 from main_widgets.game_history_main_widget import game_history_main_widget
+from dialogs.save_dialog import save_dialog
 
 class main_widget(QWidget):
     def __init__(self):
@@ -67,7 +68,7 @@ class main_widget(QWidget):
         self.rules_push_button = QPushButton("how to play")
         self.pvp_push_button = QPushButton("player v. player")
         self.pvai_push_button = QPushButton("player v. ai")
-        self.game_history_push_button = QPushButton("game history")
+        self.game_history_push_button = QPushButton("saved games")
         self.quit_push_button = QPushButton("quit")
 
     # # -------- add to layouts -------- # #
@@ -106,17 +107,16 @@ class main_widget(QWidget):
         self.pvai_push_button.clicked.connect(self.pvai_clicked)
         self.rules_push_button.clicked.connect(self.rules_clicked)
         self.game_history_push_button.clicked.connect(self.game_history_clicked)
-        self.quit_push_button.clicked.connect(self.quit_clicked)
-        self.quit_action.triggered.connect(self.quit_clicked)
         self.home_widget.rules_push_button.clicked.connect(self.rules_clicked)
         self.home_widget.pvp_push_button.clicked.connect(self.pvp_clicked)
         self.home_widget.pvai_push_button.clicked.connect(self.pvai_clicked)
         self.home_widget.game_history_push_button.clicked.connect(self.game_history_clicked)
-        self.home_widget.quit_push_button.clicked.connect(self.quit_clicked)
         self.undo_action.triggered.connect(self.undo_clicked)
         self.reset_action.triggered.connect(self.reset_clicked)
         self.save_action.triggered.connect(self.save_clicked)
         self.load_action.triggered.connect(self.load_clicked)
+        self.game_history_widget.load_game_button.clicked.connect(self.load_game)
+        self.pvp_widget.dialog.submit_button.clicked.connect(self.game_history_widget.populate_list)
 
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
@@ -161,11 +161,17 @@ class main_widget(QWidget):
         self.pvp_widget.reset_clicked()
 
     def save_clicked(self):
-        self.pvp_widget.save_clicked()
         self.stack_layout.setCurrentIndex(2)
+        self.pvp_widget.save_clicked()
 
     def load_clicked(self):
-        self.stack_layout.setCurrentIndex(2)
+        self.stack_layout.setCurrentIndex(4)
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText('select a game to load and press the load button at the bottom of page ')
+        msg.setWindowTitle("load")
+        msg.setStandardButtons(QMessageBox.Ok)
+        retval = msg.exec_()
 
     def hide_footer(self):
         self.menu_bar.hide()
@@ -185,5 +191,9 @@ class main_widget(QWidget):
         self.game_history_push_button.show()
         self.quit_push_button.show()
 
-    def quit_clicked(self):
-        exit()
+    def load_game(self):
+        self.stack_layout.setCurrentIndex(2)
+        moves = self.game_history_widget.moves
+        self.pvp_widget.reset_clicked()
+        for col in moves:
+            self.pvp_widget.column_clicked(0,int(col))

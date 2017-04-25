@@ -26,13 +26,13 @@ class playback_dialog(QDialog):
         self.title_label.setFont(self.title_font)
 
         # cell images
-        self.file = "images/empty_cell.png"
+        self.file = "../images/empty_cell.png"
         self.empty_cell = QPixmap(self.file)
-        self.file_red = "images/red.png"
+        self.file_red = "../images/red.png"
         self.red_cell = QPixmap(self.file_red)
-        self.file_black = "images/black.png"
+        self.file_black = "../images/black.png"
         self.black_cell = QPixmap(self.file_black)
-        self.file_win = "images/purple_cell.png"
+        self.file_win = "../images/purple_cell.png"
         self.win_cell = QPixmap(self.file_win)
 
         # table for representing board state
@@ -142,7 +142,6 @@ class playback_dialog(QDialog):
     def move_forward(self):
         if(self.move_number < len(self.moves_string)):
             self.column_clicked(0, int(self.moves_string[self.move_number]))
-            self.test.print_board()
         else:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)
