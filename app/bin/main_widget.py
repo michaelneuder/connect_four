@@ -9,6 +9,7 @@ from main_widgets.pvai_main_widget import pvai_main_widget
 from main_widgets.how_to_play import rules_main_widget
 from main_widgets.game_history_main_widget import game_history_main_widget
 from dialogs.save_dialog import save_dialog
+from dialogs.color_select_dialog import color_select_dialog
 
 class main_widget(QWidget):
     def __init__(self):
@@ -116,7 +117,7 @@ class main_widget(QWidget):
         self.save_action.triggered.connect(self.save_clicked)
         self.load_action.triggered.connect(self.load_clicked)
         self.game_history_widget.load_game_button.clicked.connect(self.load_game)
-        self.pvp_widget.dialog.submit_button.clicked.connect(self.game_history_widget.populate_list)
+        self.pvp_widget.save_clicked_signal.connect(self.game_history_widget.populate_list)
 
     def main_menu_clicked(self):
         self.stack_layout.setCurrentIndex(0)
@@ -136,13 +137,9 @@ class main_widget(QWidget):
     def pvai_clicked(self):
         self.stack_layout.setCurrentIndex(3)
         self.show_footer()
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Information)
-        msg.setText('welcome to the player vs ai game. red goes first, and '
-        'you can simply click on the column where you want to place your piece!')
-        msg.setWindowTitle("player vs ai")
-        msg.setStandardButtons(QMessageBox.Ok)
-        # retval = msg.exec_()
+    # # # ------- choosing color --------- # #
+    #     self.dialog = color_select_dialog()
+    #     self.dialog.exec_()
 
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)

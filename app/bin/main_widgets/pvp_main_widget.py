@@ -8,7 +8,7 @@ from dialogs.save_dialog import save_dialog
 import sqlite3
 
 class pvp_main_widget(QWidget):
-    home_clicked_signal = pyqtSignal()
+    save_clicked_signal = pyqtSignal()
     def __init__(self):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
@@ -124,14 +124,11 @@ class pvp_main_widget(QWidget):
         self.main_layout.addSpacing(1)
         self.main_layout.addLayout(self.footer_layout)
 
-        self.dialog = save_dialog(self.test.move_history)
-
     # # ------- actions --------- # #
         self.board.cellClicked.connect(self.column_clicked)
         self.reset_push_button.clicked.connect(self.reset_clicked)
         self.undo_button.clicked.connect(self.undo_clicked)
         self.save_push_button.clicked.connect(self.save_clicked)
-
 
     def exit_app(self):
         exit()
@@ -163,7 +160,6 @@ class pvp_main_widget(QWidget):
                     cell.setScaledContents(True)
                     self.board.setCellWidget(5,col,cell)
                     self.move_number+=1
-                    self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
                 else:
                     self.test.board[5,col] = 2
@@ -172,7 +168,6 @@ class pvp_main_widget(QWidget):
                     cell.setScaledContents(True)
                     self.board.setCellWidget(5,col,cell)
                     self.move_number+=1
-                    self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
             else:
                 row_landed = self.test.find_row(col)
@@ -183,7 +178,6 @@ class pvp_main_widget(QWidget):
                     cell.setScaledContents(True)
                     self.board.setCellWidget(row_landed,col,cell)
                     self.move_number+=1
-                    self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
                 else:
                     self.test.board[row_landed,col] = 2
@@ -192,7 +186,6 @@ class pvp_main_widget(QWidget):
                     cell.setScaledContents(True)
                     self.board.setCellWidget(row_landed,col,cell)
                     self.move_number+=1
-                    self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
             self.update_turn_graphic(self.move_number)
             if(self.move_number % 2 == 0):
@@ -284,7 +277,9 @@ class pvp_main_widget(QWidget):
             self.p1_label.setScaledContents(True)
 
     def save_clicked(self):
+        self.dialog = save_dialog(self.test.move_history)
         self.dialog.exec_()
+        self.save_clicked_signal.emit()
 
     def win_found(self, win_list):
         for win in win_list:

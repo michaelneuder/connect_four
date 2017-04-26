@@ -4,10 +4,13 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from back_end_scripts.cf_mod import cf
 from dialogs.win_dialog import win_dialog
+from dialogs.save_dialog import save_dialog
+from dialogs.color_select_dialog import color_select_dialog
 import sqlite3
+import random
 
 class pvai_main_widget(QWidget):
-    home_clicked_signal = pyqtSignal()
+    save_clicked_signal = pyqtSignal()
     def __init__(self):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
@@ -129,7 +132,6 @@ class pvai_main_widget(QWidget):
         self.undo_button.clicked.connect(self.undo_clicked)
         self.save_push_button.clicked.connect(self.save_clicked)
 
-
     def exit_app(self):
         exit()
 
@@ -162,6 +164,7 @@ class pvai_main_widget(QWidget):
                     self.move_number+=1
                     self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
+                    self.ai_move()
                 else:
                     self.test.board[5,col] = 2
                     cell = QLabel()
@@ -182,6 +185,7 @@ class pvai_main_widget(QWidget):
                     self.move_number+=1
                     self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
+                    self.ai_move()
                 else:
                     self.test.board[row_landed,col] = 2
                     cell = QLabel()
@@ -192,18 +196,25 @@ class pvai_main_widget(QWidget):
                     self.move_number_label.setText("move: " + str(self.move_number -1))
                     self.test.move_history.append(col)
             self.update_turn_graphic(self.move_number)
-            if(self.move_number % 2 == 0):
+            if(self.move_number % 2 == 1):
                 if(self.test.check_win_new(row_landed, col, 1)):
                     self.win_found_bool = True
                     self.win_found(self.test.win_results)
                     dialog = win_dialog('red')
                     dialog.exec_()
-            elif(self.move_number % 2 == 1):
+            elif(self.move_number % 2 == 0):
                 if(self.test.check_win_new(row_landed, col, 2)):
                     self.win_found_bool = True
                     self.win_found(self.test.win_results)
                     dialog = win_dialog('black')
                     dialog.exec_()
+        if(self.move_number == 43):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('you have reached a stalemate!')
+            msg.setWindowTitle("stalemate")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
 
     def reset_clicked(self):
         msg = QMessageBox()
@@ -274,11 +285,9 @@ class pvai_main_widget(QWidget):
             self.p1_label.setScaledContents(True)
 
     def save_clicked(self):
-        print(self.test.move_history)
-        # self.connection.execute('INSERT INTO history values (?, ?)', (1, '290219021509125'))
-        # self.connection.commit()
-        for row in self.connection.execute('SELECT * from history;'):
-            print(row)
+        self.dialog = save_dialog(self.test.move_history)
+        self.dialog.exec_()
+        self.save_clicked_signal.emit()
 
     def win_found(self, win_list):
         for win in win_list:
@@ -289,3 +298,7 @@ class pvai_main_widget(QWidget):
                 cell.setPixmap(self.win_cell)
                 cell.setScaledContents(True)
                 self.board.setCellWidget(i,j, cell)
+
+    def ai_move(self):
+        column = random.randint(0,6)
+        self.column_clicked(0,column)

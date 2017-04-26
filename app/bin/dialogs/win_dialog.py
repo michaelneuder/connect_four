@@ -24,9 +24,9 @@ class win_dialog(QDialog):
         self.black_label.setFont(self.black_font)
 
         # player images
-        self.p1_file = 'images/red_transparent.png'
+        self.p1_file = '../images/red_transparent.png'
         self.p1_image = QPixmap(self.p1_file)
-        self.p2_file = 'images/black_transparent.png'
+        self.p2_file = '../images/black_transparent.png'
         self.p2_image = QPixmap(self.p2_file)
         self.p1_label = QLabel()
         self.p1_label.setFixedSize(self.height() * .1, self.height() * .1)
