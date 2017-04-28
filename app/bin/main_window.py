@@ -15,5 +15,8 @@ class main_window(QMainWindow):
 
         # actions
         self.central_widget.home_widget.quit_push_button.clicked.connect(self.close)
-        self.central_widget.quit_action.triggered.connect(self.close)
+        self.central_widget.pvp_widget.quit_action.triggered.connect(self.close)
+        self.central_widget.pvai_widget.quit_action.triggered.connect(self.close)
+        self.central_widget.game_history_widget.quit_action.triggered.connect(self.close)
+        self.central_widget.rules_widget.quit_action.triggered.connect(self.close)
         self.central_widget.quit_push_button.clicked.connect(self.close)

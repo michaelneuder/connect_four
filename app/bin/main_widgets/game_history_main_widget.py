@@ -11,6 +11,19 @@ class game_history_main_widget(QWidget):
         self.main_layout = QVBoxLayout(self)
         self.moves = ''
 
+    # # -------- menu_bar item declaration -------- # #
+        self.menu_bar = QMenuBar(self)
+        self.file_menu = QMenu('file')
+
+        # quit
+        self.quit_action = QAction(QIcon('exit.png'), '&exit', self)
+        self.quit_action.setShortcut('Ctrl+E')
+        self.file_menu.addAction(self.quit_action)
+
+    # # -------- add menus to menu_bar -------- # #
+        self.menu_bar.addMenu(self.file_menu)
+        self.menu_bar.show()
+
     # # -------- widget declaration -------- # #
         # main title
         self.title_label = QLabel("saved games")
@@ -23,6 +36,9 @@ class game_history_main_widget(QWidget):
         self.game_history_list_widget = QListWidget()
         self.game_history_list_widget.setFixedSize(self.width(), self.height())
         self.populate_list()
+
+        self.list_font = QFont("Helvetica",25)
+        self.game_history_list_widget.setFont(self.list_font)
 
         # footer
         self.open_game_button = QPushButton("open game")
@@ -55,7 +71,7 @@ class game_history_main_widget(QWidget):
         connection = sqlite3.connect('../database/game_history.db')
         cursor = connection.cursor()
         for row in connection.execute('SELECT * from history1'):
-            self.game_history_list_widget.addItem('game description --- \"' + str(row[0]) + '\"')
+            self.game_history_list_widget.addItem(str(row[0]))
             self.game_history_list.append(row)
         connection.close()
 

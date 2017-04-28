@@ -16,41 +16,6 @@ class main_widget(QWidget):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
 
-    # # -------- menu_bar item declaration -------- # #
-        self.menu_bar = QMenuBar(self)
-        self.file_menu = QMenu('file')
-        self.game_menu = QMenu('game')
-
-        # quit
-        self.quit_action = QAction(QIcon('exit.png'), '&exit', self)
-        self.quit_action.setShortcut('Ctrl+E')
-        self.file_menu.addAction(self.quit_action)
-
-        # undo
-        self.undo_action = QAction(QIcon('exit.png'), 'undo', self)
-        self.undo_action.setShortcut('Ctrl+Z')
-        self.game_menu.addAction(self.undo_action)
-
-        # reset
-        self.reset_action = QAction(QIcon('exit.png'), '&reset', self)
-        self.reset_action.setShortcut('Ctrl+R')
-        self.game_menu.addAction(self.reset_action)
-
-        # save
-        self.save_action = QAction(QIcon('exit.png'), '&save', self)
-        self.save_action.setShortcut('Ctrl+S')
-        self.file_menu.addAction(self.save_action)
-
-        # load
-        self.load_action = QAction(QIcon('exit.png'), '&load', self)
-        self.load_action.setShortcut('Ctrl+L')
-        self.file_menu.addAction(self.load_action)
-
-    # # -------- add menus to menu_bar -------- # #
-        self.menu_bar.addMenu(self.file_menu)
-        self.menu_bar.addMenu(self.game_menu)
-        self.menu_bar.hide()
-
     # # -------- layout declaration -------- # #
         self.stack_layout = QStackedLayout()
         self.footer_layout = QHBoxLayout()
@@ -112,10 +77,6 @@ class main_widget(QWidget):
         self.home_widget.pvp_push_button.clicked.connect(self.pvp_clicked)
         self.home_widget.pvai_push_button.clicked.connect(self.pvai_clicked)
         self.home_widget.game_history_push_button.clicked.connect(self.game_history_clicked)
-        self.undo_action.triggered.connect(self.undo_clicked)
-        self.reset_action.triggered.connect(self.reset_clicked)
-        self.save_action.triggered.connect(self.save_clicked)
-        self.load_action.triggered.connect(self.load_clicked)
         self.game_history_widget.load_game_button.clicked.connect(self.load_game)
         self.pvp_widget.save_clicked_signal.connect(self.game_history_widget.populate_list)
 
@@ -137,9 +98,8 @@ class main_widget(QWidget):
     def pvai_clicked(self):
         self.stack_layout.setCurrentIndex(3)
         self.show_footer()
-    # # # ------- choosing color --------- # #
-    #     self.dialog = color_select_dialog()
-    #     self.dialog.exec_()
+        self.dialog = color_select_dialog()
+        self.dialog.exec_()
 
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)
@@ -171,7 +131,7 @@ class main_widget(QWidget):
         retval = msg.exec_()
 
     def hide_footer(self):
-        self.menu_bar.hide()
+        # self.menu_bar.hide()
         self.main_menu_push_button.hide()
         self.pvp_push_button.hide()
         self.pvai_push_button.hide()
@@ -180,7 +140,7 @@ class main_widget(QWidget):
         self.quit_push_button.hide()
 
     def show_footer(self):
-        self.menu_bar.show()
+        # self.menu_bar.show()
         self.main_menu_push_button.show()
         self.pvp_push_button.show()
         self.pvai_push_button.show()

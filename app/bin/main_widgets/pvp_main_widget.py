@@ -17,6 +17,38 @@ class pvp_main_widget(QWidget):
         self.win_found_bool = False
         self.move_made = False
 
+    # # -------- menu_bar item declaration -------- # #
+        self.menu_bar = QMenuBar(self)
+        self.file_menu = QMenu('file')
+        self.game_menu = QMenu('game')
+
+        # quit
+        self.quit_action = QAction(QIcon('exit.png'), '&exit', self)
+        self.quit_action.setShortcut('Ctrl+E')
+        self.file_menu.addAction(self.quit_action)
+
+        # undo
+        self.undo_action = QAction(QIcon('exit.png'), 'undo', self)
+        self.undo_action.setShortcut('Ctrl+Z')
+        self.game_menu.addAction(self.undo_action)
+
+        # reset
+        self.reset_action = QAction(QIcon('exit.png'), '&reset', self)
+        self.reset_action.setShortcut('Ctrl+R')
+        self.game_menu.addAction(self.reset_action)
+
+        # save
+        self.save_action = QAction(QIcon('exit.png'), '&save', self)
+        self.save_action.setShortcut('Ctrl+S')
+        self.file_menu.addAction(self.save_action)
+
+
+    # # -------- add menus to menu_bar -------- # #
+        self.menu_bar.addMenu(self.file_menu)
+        self.menu_bar.addMenu(self.game_menu)
+        self.menu_bar.show()
+
+
     # # ------- connect four stuff --------- # #
         self.test = cf()
         self.keep_going = True
@@ -85,17 +117,8 @@ class pvp_main_widget(QWidget):
         self.board.horizontalHeader().hide()
         self.board.verticalHeader().hide()
 
-        # footer widgets
-        self.move_number_label = QLabel("move #   ")
-        self.move_number_label.setFixedWidth(100)
-        self.undo_button = QPushButton("undo")
-        self.reset_push_button = QPushButton("reset")
-        self.save_push_button = QPushButton("save")
-
     # # -------- layout declaration -------- # #
         self.header_layout = QHBoxLayout()
-        self.footer_layout = QHBoxLayout()
-        self.side_bar_layout = QVBoxLayout()
         self.mid_layout = QHBoxLayout()
 
     # # -------- adding widgets to layouts -------- # #
@@ -105,12 +128,6 @@ class pvp_main_widget(QWidget):
         self.header_layout.addWidget(self.pvp_label)
         self.header_layout.addWidget(self.p2_label)
         self.header_layout.addStretch(0)
-        self.side_bar_layout.addStretch(0)
-        self.side_bar_layout.addWidget(self.undo_button)
-        self.side_bar_layout.addWidget(self.reset_push_button)
-        self.side_bar_layout.addWidget(self.save_push_button)
-        self.side_bar_layout.addWidget(self.move_number_label)
-        self.side_bar_layout.addStretch(0)
         self.mid_layout.addWidget(self.board)
 
     # # -------- adding widgets and layouts to main layout -------- # #
@@ -122,16 +139,27 @@ class pvp_main_widget(QWidget):
         self.main_layout.addSpacing(15)
         self.main_layout.addWidget(self.line)
         self.main_layout.addSpacing(1)
-        self.main_layout.addLayout(self.footer_layout)
 
     # # ------- actions --------- # #
         self.board.cellClicked.connect(self.column_clicked)
-        self.reset_push_button.clicked.connect(self.reset_clicked)
-        self.undo_button.clicked.connect(self.undo_clicked)
-        self.save_push_button.clicked.connect(self.save_clicked)
+        self.undo_action.triggered.connect(self.undo_clicked)
+        self.reset_action.triggered.connect(self.reset_clicked)
+        self.save_action.triggered.connect(self.save_clicked)
 
     def exit_app(self):
         exit()
+
+    def undo_clicked(self):
+        self.stack_layout.setCurrentIndex(2)
+        self.pvp_widget.undo_clicked()
+
+    def reset_clicked(self):
+        self.stack_layout.setCurrentIndex(2)
+        self.pvp_widget.reset_clicked()
+
+    def save_clicked(self):
+        self.stack_layout.setCurrentIndex(2)
+        self.pvp_widget.save_clicked()
 
     def initialize_board(self):
         for i in range(7):
@@ -220,7 +248,6 @@ class pvp_main_widget(QWidget):
             self.initialize_board()
             self.test.__init__()
             self.move_number = 1
-            self.move_number_label.setText("move: " + str(self.move_number))
             self.p2_label.setPixmap(self.g_image)
             self.p2_label.setScaledContents(True)
             self.p1_label.setPixmap(self.p1_image)
@@ -244,7 +271,6 @@ class pvp_main_widget(QWidget):
             self.board.setCellWidget(i,j, cell)
             self.move_number-=1
             self.update_turn_graphic(self.move_number)
-            self.move_number_label.setText("move: " + str(self.move_number -1))
             self.win_found_bool = False
             self.clear_win()
             self.test.win_found = False

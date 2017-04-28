@@ -10,6 +10,20 @@ class rules_main_widget(QWidget):
         QWidget.__init__(self)
         self.main_layout = QVBoxLayout(self)
 
+
+    # # -------- menu_bar item declaration -------- # #
+        self.menu_bar = QMenuBar(self)
+        self.file_menu = QMenu('file')
+
+        # quit
+        self.quit_action = QAction(QIcon('exit.png'), '&exit', self)
+        self.quit_action.setShortcut('Ctrl+E')
+        self.file_menu.addAction(self.quit_action)
+
+    # # -------- add menus to menu_bar -------- # #
+        self.menu_bar.addMenu(self.file_menu)
+        self.menu_bar.show()
+
     # # -------- widget declaration -------- # #
         # main title
         self.title_label = QLabel("connect four instructions")

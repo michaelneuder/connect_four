@@ -41,11 +41,29 @@ class save_dialog(QDialog):
 
     def submit_clicked(self):
         text = self.description.text()
+        if(text == ''):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('please enter a name to save')
+            msg.setWindowTitle("name error")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+            return
         move_string = ''
         for i in self.moves:
             move_string+=(str(i))
         connection = sqlite3.connect('../database/game_history.db')
         cursor = connection.cursor()
+        for row in connection.execute("SELECT * from history1;"):
+            if(text == row[0]):
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Information)
+                msg.setText('please enter a unique name to save')
+                msg.setWindowTitle("name in use")
+                msg.setStandardButtons(QMessageBox.Ok)
+                retval = msg.exec_()
+                self.description.setText('')
+                return
         connection.execute("INSERT into history1 values (?, ?)", (text, move_string))
         connection.commit()
         connection.close()

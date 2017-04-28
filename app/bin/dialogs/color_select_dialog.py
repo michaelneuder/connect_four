@@ -40,5 +40,8 @@ class color_select_dialog(QDialog):
 
 
         # actions
-        # self.cancel_button.clicked.connect(self.cancel_clicked)
+        self.cancel_button.clicked.connect(self.cancel_clicked)
         # self.submit_button.clicked.connect(self.submit_clicked)
+
+    def cancel_clicked(self):
+        self.close()
