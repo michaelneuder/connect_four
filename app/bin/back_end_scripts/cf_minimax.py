@@ -133,6 +133,23 @@ class cf(object):
 
         return self.win_found
 
+
+    # def find_twos(self, row, col):
+    #
+    #
+    # def find_threes(self, row, col):
+    #
+    # def get_fours(self, row, col):
+
+
+    # def evaluate_board(self):
+        # (2 in a rows)*10 + (3 in a rows)*1000 + (4 in a row)*100000
+
+    # def minimax(self):
+    #
+
+
+
 def main():
     cf1 = cf()
     keep_going = True
@@ -157,9 +174,8 @@ def main():
                     cf1.move_number += 1
                     if(cf1.check_win_new(row, column_int, 1)):
                         print('win')
-                        cf1.print_board()
                         print(cf1.win_results)
-                        exit()
+                        # exit()
                 elif(cf1.is_col_full(column_int)):
                     print('column full')
                     pass
@@ -167,35 +183,66 @@ def main():
                     # not empty or full
                     cf1.board[row-1, column_int] = 1
                     cf1.move_number += 1
+                    if(cf1.check_win_new(row-1, column_int, 1)):
+                        print('win')
+                        print(cf1.win_results)
+                        # exit()
+        # ai plays black
+        # else:
+        #     ai_col = rand.randint(0,6)
+        #     ai_row = cf1.find_row(ai_col)
+        #     if(cf1.is_col_empty(ai_col)):
+        #         cf1.board[ai_row, ai_col] = 2
+        #         cf1.move_number += 1
+        #         if(cf1.check_win_new(ai_row, ai_col, 2)):
+        #             print('win')
+        #             cf1.print_board()
+        #             print(cf1.win_results)
+        #             # exit()
+        #     elif(cf1.is_col_full(ai_col)):
+        #         print('column full')
+        #         pass
+        #     else:
+        #         # col not full or empty
+        #         cf1.board[ai_row-1, ai_col] = 2
+        #         cf1.move_number += 1
+        #         if(cf1.check_win_new(ai_row-1, ai_col, 2)):
+        #             print('win')
+        #             cf1.print_board()
+        #             print(cf1.win_results)
+        #             # exit()
+        else:
+            cf1.print_board()
+            column = input("enter the column of the move: (type q to quit) ")
+            if (column == 'q'):
+                keep_going = False
+                quit()
+            elif (column != '1' and column != '2' and column != '3' and column != '4'
+                  and column != '5' and column != '6' and column != '7'):
+                print("please enter a valid column value 1-7")
+            else:
+                # move will be made
+                column_int = int(column) - 1
+                row = cf1.find_row(column_int)
+
+                if(cf1.is_col_empty(column_int)):
+                    cf1.board[row, column_int] = 2
+                    cf1.move_number += 1
+                    if(cf1.check_win_new(row, column_int, 2)):
+                        print('win')
+                        print(cf1.win_results)
+                        # exit()
+                elif(cf1.is_col_full(column_int)):
+                    print('column full')
+                    pass
+                else:
+                    # not empty or full
+                    cf1.board[row-1, column_int] = 2
+                    cf1.move_number += 1
                     if(cf1.check_win_new(row-1, column_int, 2)):
                         print('win')
-                        cf1.print_board()
                         print(cf1.win_results)
-                        exit()
-        # ai plays black
-        else:
-            ai_col = rand.randint(0,6)
-            ai_row = cf1.find_row(ai_col)
-            if(cf1.is_col_empty(ai_col)):
-                cf1.board[ai_row, ai_col] = 2
-                cf1.move_number += 1
-                if(cf1.check_win_new(ai_row, ai_col, 2)):
-                    print('win')
-                    cf1.print_board()
-                    print(cf1.win_results)
-                    exit()
-            elif(cf1.is_col_full(ai_col)):
-                print('column full')
-                pass
-            else:
-                # col not full or empty
-                cf1.board[ai_row-1, ai_col] = 2
-                cf1.move_number += 1
-                if(cf1.check_win_new(ai_row-1, ai_col, 2)):
-                    print('win')
-                    cf1.print_board()
-                    print(cf1.win_results)
-                    exit()
+                        # exit()
 
 if(__name__=='__main__'):
     main()

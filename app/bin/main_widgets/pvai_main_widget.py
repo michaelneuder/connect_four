@@ -262,6 +262,15 @@ class pvai_main_widget(QWidget):
             self.board.setCellWidget(i,j, cell)
             self.move_number-=1
             self.update_turn_graphic(self.move_number)
+            coordinates = self.test.get_last_move()
+            cell = QLabel()
+            cell.setPixmap(self.empty_cell)
+            cell.setScaledContents(True)
+            i = coordinates[0]
+            j = coordinates[1]
+            self.board.setCellWidget(i,j, cell)
+            self.move_number-=1
+            self.update_turn_graphic(self.move_number)
             self.win_found_bool = False
             self.clear_win()
             self.test.win_found = False
