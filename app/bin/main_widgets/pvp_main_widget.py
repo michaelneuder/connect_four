@@ -303,9 +303,17 @@ class pvp_main_widget(QWidget):
             self.p1_label.setScaledContents(True)
 
     def save_clicked(self):
-        self.dialog = save_dialog(self.test.move_history)
-        self.dialog.exec_()
-        self.save_clicked_signal.emit()
+        if(self.test.move_history == []):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('trying to save an empty game! \n\nplease play before trying to save')
+            msg.setWindowTitle("error")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+        else:
+            self.dialog = save_dialog(self.test.move_history)
+            self.dialog.exec_()
+            self.save_clicked_signal.emit()
 
     def win_found(self, win_list):
         for win in win_list:

@@ -99,7 +99,7 @@ class main_widget(QWidget):
         self.stack_layout.setCurrentIndex(3)
         self.show_footer()
         self.dialog = color_select_dialog()
-        self.dialog.exec_()
+        # self.dialog.exec_()
 
     def rules_clicked(self):
         self.stack_layout.setCurrentIndex(1)
