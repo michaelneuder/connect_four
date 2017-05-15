@@ -228,21 +228,29 @@ class pvai_main_widget(QWidget):
             retval = msg.exec_()
 
     def reset_clicked(self):
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Information)
-        msg.setText('are you sure you want to reset?  this action cannot be undone')
-        msg.setWindowTitle("confirm")
-        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
-        retval = msg.exec_()
-        if (retval == QMessageBox.Yes):
-            self.win_found_bool = False
-            self.initialize_board()
-            self.test.__init__()
-            self.move_number = 1
-            self.p2_label.setPixmap(self.g_image)
-            self.p2_label.setScaledContents(True)
-            self.p1_label.setPixmap(self.p1_image)
-            self.p1_label.setScaledContents(True)
+        if(self.test.move_history == []):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('trying to save an empty game! \n\nplease play before trying to save')
+            msg.setWindowTitle("error")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('are you sure you want to reset?  this action cannot be undone')
+            msg.setWindowTitle("confirm")
+            msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+            retval = msg.exec_()
+            if (retval == QMessageBox.Yes):
+                self.win_found_bool = False
+                self.initialize_board()
+                self.test.__init__()
+                self.move_number = 1
+                self.p2_label.setPixmap(self.g_image)
+                self.p2_label.setScaledContents(True)
+                self.p1_label.setPixmap(self.p1_image)
+                self.p1_label.setScaledContents(True)
 
     def undo_clicked(self):
         if(self.move_number == 1):
@@ -303,9 +311,17 @@ class pvai_main_widget(QWidget):
             self.p1_label.setScaledContents(True)
 
     def save_clicked(self):
-        self.dialog = save_dialog(self.test.move_history)
-        self.dialog.exec_()
-        self.save_clicked_signal.emit()
+        if(self.test.move_history == []):
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText('trying to save an empty game! \n\nplease play before trying to save')
+            msg.setWindowTitle("error")
+            msg.setStandardButtons(QMessageBox.Ok)
+            retval = msg.exec_()
+        else:
+            self.dialog = save_dialog(self.test.move_history)
+            self.dialog.exec_()
+            self.save_clicked_signal.emit()
 
     def win_found(self, win_list):
         for win in win_list:
