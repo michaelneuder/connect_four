@@ -1,0 +1,10 @@
+﻿2017-05-17 10:21:29.555 -0600	START		Running practice_script.script
+2017-05-17 10:21:30.147 -0600	click	terminal_icon	at (155, 1037)	1	on_practice_script	practice_script.script
+2017-05-17 10:21:30.870 -0600	typetext		ls	2	on_practice_script	practice_script.script
+2017-05-17 10:21:31.582 -0600	typetext		[return]	3	on_practice_script	practice_script.script
+2017-05-17 10:21:32.736 -0600	typetext		 cd Dropbox/github/connect_four/app/bin 	4	on_practice_script	practice_script.script
+2017-05-17 10:21:33.449 -0600	typetext		[return]	5	on_practice_script	practice_script.script
+2017-05-17 10:21:34.252 -0600	typetext		./main.py	6	on_practice_script	practice_script.script
+2017-05-17 10:21:34.966 -0600	typetext		[return]	7	on_practice_script	practice_script.script
+2017-05-17 10:21:35.054 -0600	EndTestCase		(Duration:"5.492775", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 10:21:29 -0600", Successes:"0", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:21:36.847 -0600	FAILURE	Screen_Error.png	STUnknownMessage ERROR: 'imagefound' was called as a Command, but is only available as a Function -- Execution Time 0:00:06 practice_script.script

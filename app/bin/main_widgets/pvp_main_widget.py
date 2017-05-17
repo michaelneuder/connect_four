@@ -238,12 +238,7 @@ class pvp_main_widget(QWidget):
 
     def reset_clicked(self):
         if(self.test.move_history == []):
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Information)
-            msg.setText('trying to save an empty game! \n\nplease play before trying to save')
-            msg.setWindowTitle("error")
-            msg.setStandardButtons(QMessageBox.Ok)
-            retval = msg.exec_()
+            pass
         else:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)

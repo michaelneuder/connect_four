@@ -1,0 +1,8 @@
+﻿2017-05-17 10:13:43.994 -0600	START		Running practice_script.script
+2017-05-17 10:13:44.799 -0600	click	terminal_icon	at (155, 1037)	1	on_practice_script	practice_script.script
+2017-05-17 10:13:45.521 -0600	typetext		ls	2	on_practice_script	practice_script.script
+2017-05-17 10:13:46.234 -0600	typetext		[return]	3	on_practice_script	practice_script.script
+2017-05-17 10:13:47.072 -0600	typetext		 cd Dropbox 	4	on_practice_script	practice_script.script
+2017-05-17 10:13:47.784 -0600	typetext		[return]	5	on_practice_script	practice_script.script
+2017-05-17 10:13:47.865 -0600	EndTestCase		(Duration:"3.687064", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 10:13:44 -0600", Successes:"1", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:13:49.640 -0600	SUCCESS		Execution Time 0:00:04 practice_script.script

@@ -1,0 +1,8 @@
+﻿2017-05-17 10:15:56.671 -0600	START		Running practice_script.script
+2017-05-17 10:15:57.336 -0600	click	terminal_icon	at (155, 1037)	1	on_practice_script	practice_script.script
+2017-05-17 10:15:58.060 -0600	typetext		ls	2	on_practice_script	practice_script.script
+2017-05-17 10:15:58.773 -0600	typetext		[return]	3	on_practice_script	practice_script.script
+2017-05-17 10:15:59.925 -0600	typetext		 cd Dropbox/github/connect_four/app/bin 	4	on_practice_script	practice_script.script
+2017-05-17 10:16:00.638 -0600	typetext		[return]	5	on_practice_script	practice_script.script
+2017-05-17 10:16:00.719 -0600	EndTestCase		(Duration:"4.04199", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 10:15:56 -0600", Successes:"1", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:16:02.181 -0600	SUCCESS		Execution Time 0:00:04 practice_script.script
