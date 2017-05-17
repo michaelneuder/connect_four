@@ -1,0 +1,6 @@
+﻿run open_app
+run htp_script
+run open_app
+run pvp_script
+run pvai_script
+run sgames_script

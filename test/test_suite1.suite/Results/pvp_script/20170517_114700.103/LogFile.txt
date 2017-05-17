@@ -1,0 +1,4 @@
+﻿2017-05-17 11:47:00.107 -0600	START		Running pvp_script.script
+2017-05-17 11:47:10.122 -0600	Exception	pvp	No Image Found On Screen: "pvp"	2	on_pvp_script	pvp_script.script
+2017-05-17 11:47:10.236 -0600	EndTestCase		(Duration:"10.120811", Errors:"1", Exceptions:"1", StartTime:"2017-05-17 11:47:00 -0600", Successes:"0", TestCase:"pvp_script.script", Warnings:"0")
+2017-05-17 11:47:10.238 -0600	ABORTED		Execution Time 0:00:10 pvp_script.script

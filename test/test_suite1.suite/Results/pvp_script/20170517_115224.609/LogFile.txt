@@ -1,0 +1,14 @@
+﻿2017-05-17 11:52:24.610 -0600	START		Running pvp_script.script
+2017-05-17 11:52:25.609 -0600	click	file_pvp	at (366, 112)	5	on_pvp_script	pvp_script.script
+2017-05-17 11:52:27.538 -0600	click	save_pvp	at (447, 163)	6	on_pvp_script	pvp_script.script
+2017-05-17 11:52:29.425 -0600	imagefound	empty_save	found at (830, 454)	7	on_pvp_script	pvp_script.script
+2017-05-17 11:52:30.617 -0600	click	ok_button	at (906, 502)	8	on_pvp_script	pvp_script.script
+2017-05-17 11:52:31.599 -0600	click	game_menu	at (412, 115)	9	on_pvp_script	pvp_script.script
+2017-05-17 11:52:33.530 -0600	click	undo_menu_item	at (483, 137)	10	on_pvp_script	pvp_script.script
+2017-05-17 11:52:35.015 -0600	imagefound	no_moves_undo	found at (829, 457)	11	on_pvp_script	pvp_script.script
+2017-05-17 11:52:35.856 -0600	click	ok_button	at (937, 490)	12	on_pvp_script	pvp_script.script
+2017-05-17 11:52:36.785 -0600	click	game_menu	at (412, 115)	13	on_pvp_script	pvp_script.script
+2017-05-17 11:52:38.761 -0600	click	reset_menu_item	at (487, 163)	14	on_pvp_script	pvp_script.script
+2017-05-17 11:52:38.768 -0600	Exception	518	Could Not Open Image: 518	16	on_pvp_script	pvp_script.script
+2017-05-17 11:52:38.867 -0600	EndTestCase		(Duration:"14.251322", Errors:"1", Exceptions:"1", StartTime:"2017-05-17 11:52:24 -0600", Successes:"0", TestCase:"pvp_script.script", Warnings:"0")
+2017-05-17 11:52:41.323 -0600	FAILURE	Screen_Error.png	File Not Found click Error - Could Not Open Image: 518 -- Execution Time 0:00:14 pvp_script.script

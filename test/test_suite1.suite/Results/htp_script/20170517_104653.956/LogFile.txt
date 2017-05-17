@@ -1,0 +1,9 @@
+﻿2017-05-17 10:46:53.958 -0600	START		Running practice_script.script
+2017-05-17 10:46:54.591 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:46:55.720 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:46:56.433 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:46:57.236 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:46:57.949 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:47:12.015 -0600	Exception	file_instructions	No Image Found On Screen: "file_instructions"	2	on_practice_script	practice_script.script
+2017-05-17 10:47:12.114 -0600	EndTestCase		(Duration:"18.150411", Errors:"1", Exceptions:"1", StartTime:"2017-05-17 10:46:53 -0600", Successes:"0", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:47:12.116 -0600	ABORTED		Execution Time 0:00:19 practice_script.script

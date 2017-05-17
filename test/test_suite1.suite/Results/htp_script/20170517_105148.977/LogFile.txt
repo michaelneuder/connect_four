@@ -1,0 +1,14 @@
+﻿2017-05-17 10:51:48.978 -0600	START		Running practice_script.script
+2017-05-17 10:51:50.951 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:51:52.081 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:51:52.794 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:51:53.597 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:51:54.310 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:51:55.129 -0600	imagefound	connectfour_title	found at (846, 181)	2	on_practice_script	practice_script.script
+2017-05-17 10:51:55.449 -0600	imagefound	menu	found at (837, 595)	3	on_practice_script	practice_script.script
+2017-05-17 10:51:56.070 -0600	click	howtoplay	at (841, 352)	4	on_practice_script	practice_script.script
+2017-05-17 10:52:02.635 -0600	imagefound	instruction_page	found at (833, 503)	5	on_practice_script	practice_script.script
+2017-05-17 10:52:03.387 -0600	click	file_instructions	at (368, 117)	6	on_practice_script	practice_script.script
+2017-05-17 10:52:04.814 -0600	click	exit_instructions	at (442, 139)	7	on_practice_script	practice_script.script
+2017-05-17 10:52:04.896 -0600	EndTestCase		(Duration:"15.911225", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 10:51:48 -0600", Successes:"1", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:52:06.315 -0600	SUCCESS		Execution Time 0:00:16 practice_script.script

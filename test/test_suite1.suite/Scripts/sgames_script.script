@@ -1,0 +1,26 @@
+﻿Click "savedgames_menu"
+put ImageFound("savedgames_title")
+DoubleClick "samplewin"
+repeat 13 times
+	Click "forward_arrow"
+end repeat
+put ImageFound("red_win")
+click "ok_button"
+click "forward_arrow"
+put ImageFound("unable_to_continue")
+click "ok_button"
+put ImageFound("purple_cell")
+repeat 14 times
+	Click "back_arrow"
+end repeat
+put ImageFound("no_moves_back")
+click "ok_button"
+Click "close_button"
+Click "load_game"
+click "ok_button"
+click "game_menu"
+click "undo_menu_item"
+click "quit_button"
+TypeText "exit"
+TypeText return
+

@@ -1,0 +1,5 @@
+﻿Click (Image:"terminal_icon", WaitFor:5)
+TypeText <<cd Dropbox/github/connect_four/app/bin>>
+TypeText Return
+TypeText <<./main.py>>
+TypeText Return

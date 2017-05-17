@@ -1,0 +1,4 @@
+﻿2017-05-17 13:40:13.676 -0600	START		Running pvai_script.script
+2017-05-17 13:40:18.958 -0600	Exception	pvai	No Image Found On Screen: "pvai"	1	on_pvai_script	pvai_script.script
+2017-05-17 13:40:19.079 -0600	EndTestCase		(Duration:"5.394929", Errors:"1", Exceptions:"1", StartTime:"2017-05-17 13:40:13 -0600", Successes:"0", TestCase:"pvai_script.script", Warnings:"0")
+2017-05-17 13:40:19.080 -0600	ABORTED		Execution Time 0:00:06 pvai_script.script

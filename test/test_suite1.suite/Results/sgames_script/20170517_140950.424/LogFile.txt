@@ -1,0 +1,20 @@
+﻿2017-05-17 14:09:50.428 -0600	START		Running sgames_script.script
+2017-05-17 14:09:51.544 -0600	click	savedgames_menu	at (835, 712)	1	on_sgames_script	sgames_script.script
+2017-05-17 14:09:53.153 -0600	imagefound	savedgames_title	found at (841, 216)	2	on_sgames_script	sgames_script.script
+2017-05-17 14:09:54.778 -0600	doubleclick	samplewin	at (607, 375)	3	on_sgames_script	sgames_script.script
+2017-05-17 14:09:56.147 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:09:57.729 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:09:59.210 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:00.991 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:02.317 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:04.100 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:05.881 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:07.461 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:09.042 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:10.728 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:12.510 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:14.140 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:15.922 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:10:17.088 -0600	imagefound	red_win	found at (833, 456)	7	on_sgames_script	sgames_script.script
+2017-05-17 14:10:35.152 -0600	EndTestCase		(Duration:"44.718705", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 14:09:50 -0600", Successes:"0", TestCase:"sgames_script.script", Warnings:"0")
+2017-05-17 14:10:35.155 -0600	ABORTED		Execution Time 0:00:45 sgames_script.script

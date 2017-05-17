@@ -1,0 +1,10 @@
+﻿2017-05-17 10:59:34.972 -0600	START		Running controller.script
+2017-05-17 10:59:35.846 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:59:36.975 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:59:37.687 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:59:38.490 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:59:39.204 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:59:40.674 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:59:41.802 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:59:42.058 -0600	EndTestCase		(Duration:"7.080872", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 10:59:34 -0600", Successes:"0", TestCase:"controller.script", Warnings:"0")
+2017-05-17 10:59:42.060 -0600	ABORTED		Execution Time 0:00:08 controller.script

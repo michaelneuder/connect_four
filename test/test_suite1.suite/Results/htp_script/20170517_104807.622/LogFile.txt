@@ -1,0 +1,11 @@
+﻿2017-05-17 10:48:07.623 -0600	START		Running practice_script.script
+2017-05-17 10:48:08.299 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:48:09.429 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:48:10.141 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:48:10.943 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:48:11.656 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:48:16.987 -0600	imagefound	connectfour_title	Unable to Find Image connectfour_title	2	on_practice_script	practice_script.script
+2017-05-17 10:48:21.855 -0600	imagefound	menu	Unable to Find Image menu	3	on_practice_script	practice_script.script
+2017-05-17 10:48:29.262 -0600	Exception	howtoplay	No Image Found On Screen: "howtoplay"	4	on_practice_script	practice_script.script
+2017-05-17 10:48:29.358 -0600	EndTestCase		(Duration:"21.729351", Errors:"1", Exceptions:"1", StartTime:"2017-05-17 10:48:07 -0600", Successes:"0", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:48:29.360 -0600	ABORTED		Execution Time 0:00:22 practice_script.script

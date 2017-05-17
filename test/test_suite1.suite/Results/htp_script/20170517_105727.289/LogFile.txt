@@ -1,0 +1,21 @@
+﻿2017-05-17 10:57:27.290 -0600	START		Running practice_script.script
+2017-05-17 10:57:28.190 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:57:29.319 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:57:30.032 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:57:30.835 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:57:31.548 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:57:32.405 -0600	imagefound	connectfour_title	found at (846, 181)	2	on_practice_script	practice_script.script
+2017-05-17 10:57:33.133 -0600	imagefound	menu	found at (837, 595)	3	on_practice_script	practice_script.script
+2017-05-17 10:57:33.903 -0600	click	howtoplay	at (841, 352)	4	on_practice_script	practice_script.script
+2017-05-17 10:57:40.547 -0600	imagefound	instruction_page	found at (833, 503)	5	on_practice_script	practice_script.script
+2017-05-17 10:57:41.248 -0600	click	file_instructions	at (368, 117)	6	on_practice_script	practice_script.script
+2017-05-17 10:57:42.618 -0600	click	exit_instructions	at (442, 139)	7	on_practice_script	practice_script.script
+2017-05-17 10:57:43.363 -0600	typetext		exit	8	on_practice_script	practice_script.script
+2017-05-17 10:57:44.077 -0600	typetext		[return]	9	on_practice_script	practice_script.script
+2017-05-17 10:57:45.549 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:57:46.679 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:57:47.392 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:57:48.195 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:57:48.908 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:57:48.995 -0600	EndTestCase		(Duration:"21.699598", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 10:57:27 -0600", Successes:"1", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:57:50.204 -0600	SUCCESS		Execution Time 0:00:21 practice_script.script

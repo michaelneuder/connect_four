@@ -81,9 +81,9 @@ class pvai_main_widget(QWidget):
         # player images
         self.p1_file = '../images/r_p1.png'
         self.p1_image = QPixmap(self.p1_file)
-        self.p2_file = '../images/b_p2.png'
+        self.p2_file = '../images/b_ai1.png'
         self.p2_image = QPixmap(self.p2_file)
-        self.g_file = '../images/g.png'
+        self.g_file = '../images/b_ai1.png'
         self.g_image = QPixmap(self.g_file)
 
         # header widgets

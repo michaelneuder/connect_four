@@ -1,0 +1,23 @@
+﻿2017-05-17 12:45:47.809 -0600	START		Running pvp_script.script
+2017-05-17 12:45:50.927 -0600	imagefound	pvp_logo	found at (848, 273)	4	on_pvp_script	pvp_script.script
+2017-05-17 12:45:52.532 -0600	click	file_pvp	at (366, 112)	5	on_pvp_script	pvp_script.script
+2017-05-17 12:45:53.755 -0600	click	save_pvp	at (447, 163)	6	on_pvp_script	pvp_script.script
+2017-05-17 12:45:55.435 -0600	imagefound	empty_save	found at (830, 454)	7	on_pvp_script	pvp_script.script
+2017-05-17 12:45:56.121 -0600	click	ok_button	at (906, 502)	8	on_pvp_script	pvp_script.script
+2017-05-17 12:45:57.145 -0600	click	game_menu	at (412, 115)	9	on_pvp_script	pvp_script.script
+2017-05-17 12:45:59.175 -0600	click	undo_menu_item	at (483, 137)	10	on_pvp_script	pvp_script.script
+2017-05-17 12:46:00.611 -0600	imagefound	no_moves_undo	found at (829, 457)	11	on_pvp_script	pvp_script.script
+2017-05-17 12:46:01.055 -0600	click	ok_button	at (937, 490)	12	on_pvp_script	pvp_script.script
+2017-05-17 12:46:02.084 -0600	click	game_menu	at (412, 115)	13	on_pvp_script	pvp_script.script
+2017-05-17 12:46:03.516 -0600	click	reset_menu_item	at (487, 163)	14	on_pvp_script	pvp_script.script
+2017-05-17 12:46:06.307 -0600	click	cell00	at (552, 378)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:07.994 -0600	click	cell00	at (552, 378)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:09.000 -0600	click	cell00	at (552, 758)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:11.111 -0600	click	cell00	at (552, 758)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:13.209 -0600	click	cell00	at (552, 568)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:15.304 -0600	click	cell00	at (552, 568)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:17.383 -0600	click	cell00	at (552, 378)	16	on_pvp_script	pvp_script.script
+2017-05-17 12:46:19.423 -0600	imagefound	full_column	found at (831, 456)	18	on_pvp_script	pvp_script.script
+2017-05-17 12:46:20.859 -0600	click	ok_button	at (931, 490)	19	on_pvp_script	pvp_script.script
+2017-05-17 12:46:20.961 -0600	EndTestCase		(Duration:"33.144587", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 12:45:47 -0600", Successes:"1", TestCase:"pvp_script.script", Warnings:"0")
+2017-05-17 12:46:22.060 -0600	SUCCESS		Execution Time 0:00:33 pvp_script.script

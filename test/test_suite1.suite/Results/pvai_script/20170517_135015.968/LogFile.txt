@@ -1,0 +1,14 @@
+﻿2017-05-17 13:50:15.969 -0600	START		Running pvai_script.script
+2017-05-17 13:50:16.705 -0600	imagefound	pvai_header	found at (836, 271)	2	on_pvai_script	pvai_script.script
+2017-05-17 13:50:17.162 -0600	click	file_pvp	at (366, 112)	3	on_pvai_script	pvai_script.script
+2017-05-17 13:50:18.539 -0600	click	save_pvp	at (447, 163)	4	on_pvai_script	pvai_script.script
+2017-05-17 13:50:19.885 -0600	imagefound	empty_save	found at (830, 454)	5	on_pvai_script	pvai_script.script
+2017-05-17 13:50:20.522 -0600	click	ok_button	at (906, 502)	6	on_pvai_script	pvai_script.script
+2017-05-17 13:50:21.401 -0600	click	game_menu	at (412, 115)	7	on_pvai_script	pvai_script.script
+2017-05-17 13:50:22.827 -0600	click	undo_menu_item	at (483, 137)	8	on_pvai_script	pvai_script.script
+2017-05-17 13:50:24.001 -0600	imagefound	no_moves_undo	found at (829, 457)	9	on_pvai_script	pvai_script.script
+2017-05-17 13:50:24.834 -0600	click	ok_button	at (937, 490)	10	on_pvai_script	pvai_script.script
+2017-05-17 13:50:26.314 -0600	click	game_menu	at (412, 115)	11	on_pvai_script	pvai_script.script
+2017-05-17 13:50:27.795 -0600	click	reset_menu_item	at (487, 163)	12	on_pvai_script	pvai_script.script
+2017-05-17 13:50:27.899 -0600	EndTestCase		(Duration:"11.925538", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 13:50:15 -0600", Successes:"1", TestCase:"pvai_script.script", Warnings:"0")
+2017-05-17 13:50:29.283 -0600	SUCCESS		Execution Time 0:00:12 pvai_script.script

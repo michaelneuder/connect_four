@@ -1,0 +1,43 @@
+﻿2017-05-17 14:19:06.175 -0600	START		Running sgames_script.script
+2017-05-17 14:19:07.319 -0600	click	savedgames_menu	at (835, 712)	1	on_sgames_script	sgames_script.script
+2017-05-17 14:19:18.035 -0600	imagefound	savedgames_title	found at (841, 216)	2	on_sgames_script	sgames_script.script
+2017-05-17 14:19:19.888 -0600	doubleclick	samplewin	at (607, 375)	3	on_sgames_script	sgames_script.script
+2017-05-17 14:19:21.011 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:22.848 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:24.325 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:26.410 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:27.588 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:28.964 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:30.042 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:31.271 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:32.451 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:33.481 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:35.511 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:36.992 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:39.128 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-17 14:19:41.153 -0600	imagefound	red_win	found at (833, 456)	7	on_sgames_script	sgames_script.script
+2017-05-17 14:19:44.002 -0600	click	ok_button	at (830, 498)	8	on_sgames_script	sgames_script.script
+2017-05-17 14:19:45.235 -0600	click	forward_arrow	at (826, 799)	9	on_sgames_script	sgames_script.script
+2017-05-17 14:19:47.267 -0600	imagefound	unable_to_continue	found at (830, 454)	10	on_sgames_script	sgames_script.script
+2017-05-17 14:19:47.996 -0600	click	ok_button	at (892, 490)	11	on_sgames_script	sgames_script.script
+2017-05-17 14:19:49.147 -0600	imagefound	purple_cell	found at (636, 726)	12	on_sgames_script	sgames_script.script
+2017-05-17 14:19:50.608 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:19:52.740 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:19:54.871 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:19:57.001 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:19:59.130 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:00.811 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:02.190 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:04.327 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:05.758 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:06.790 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:07.920 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:08.950 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:10.930 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:11.960 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-17 14:20:13.637 -0600	imagefound	no_moves_back	found at (829, 456)	16	on_sgames_script	sgames_script.script
+2017-05-17 14:20:14.323 -0600	click	ok_button	at (937, 490)	17	on_sgames_script	sgames_script.script
+2017-05-17 14:20:15.326 -0600	click	close_button	at (920, 798)	18	on_sgames_script	sgames_script.script
+2017-05-17 14:20:17.505 -0600	click	load_game	at (840, 852)	19	on_sgames_script	sgames_script.script
+2017-05-17 14:20:46.916 -0600	EndTestCase		(Duration:"100.735272", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 14:19:06 -0600", Successes:"0", TestCase:"sgames_script.script", Warnings:"0")
+2017-05-17 14:20:46.918 -0600	ABORTED		Execution Time 0:01:40 sgames_script.script

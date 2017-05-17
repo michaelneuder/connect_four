@@ -1,0 +1,3 @@
+﻿2017-05-17 13:55:23.706 -0600	START		Running pvai_script.script
+2017-05-17 13:55:25.154 -0600	EndTestCase		(Duration:"1.442378", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 13:55:23 -0600", Successes:"0", TestCase:"pvai_script.script", Warnings:"0")
+2017-05-17 13:55:25.155 -0600	ABORTED		Execution Time 0:00:02 pvai_script.script

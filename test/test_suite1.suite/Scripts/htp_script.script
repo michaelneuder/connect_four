@@ -1,0 +1,8 @@
+﻿put ImageFound("connectfour_title")
+put ImageFound("menu")
+Click "howtoplay"
+put ImageFound("instruction_page")
+Click "file_instructions"
+Click "exit_instructions"
+TypeText <<exit>>
+TypeText Return

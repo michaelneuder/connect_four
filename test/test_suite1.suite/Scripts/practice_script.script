@@ -1,9 +1,0 @@
-﻿Click (Image:"terminal_icon", WaitFor:5)
-TypeText ls
-TypeText Return
-TypeText << cd Dropbox/github/connect_four/app/bin >> 
-TypeText Return
-TypeText <<./main.py>>
-TypeText Return
-ImageFound("connectfour_title")
-ImageFound("menu")

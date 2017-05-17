@@ -1,0 +1,8 @@
+﻿2017-05-17 13:06:14.717 -0600	START		Running pvp_script.script
+2017-05-17 13:06:16.119 -0600	imagefound	pvp_logo	found at (848, 273)	4	on_pvp_script	pvp_script.script
+2017-05-17 13:06:16.665 -0600	click	file_pvp	at (366, 112)	5	on_pvp_script	pvp_script.script
+2017-05-17 13:06:17.839 -0600	click	save_pvp	at (447, 163)	6	on_pvp_script	pvp_script.script
+2017-05-17 13:06:19.418 -0600	imagefound	empty_save	found at (830, 454)	7	on_pvp_script	pvp_script.script
+2017-05-17 13:06:20.403 -0600	click	ok_button	at (906, 502)	8	on_pvp_script	pvp_script.script
+2017-05-17 13:06:42.400 -0600	EndTestCase		(Duration:"27.672448", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 13:06:14 -0600", Successes:"0", TestCase:"pvp_script.script", Warnings:"0")
+2017-05-17 13:06:42.402 -0600	ABORTED		Execution Time 0:00:28 pvp_script.script

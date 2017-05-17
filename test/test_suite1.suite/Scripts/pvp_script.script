@@ -1,0 +1,34 @@
+﻿Click "pvp"
+put ImageFound("pvp_logo")
+Click "file_pvp"
+Click "save_pvp"
+put ImageFound("empty_save")
+Click "ok_button"
+Click "game_menu"
+Click "undo_menu_item"
+put ImageFound("no_moves_undo")
+Click "ok_button"
+Click "game_menu"
+Click "reset_menu_item"
+repeat 7 times
+	Click  "cell00"
+end repeat
+put ImageFound("full_column")
+Click "ok_button"
+repeat 6 times
+	Click "game_menu"
+	Click "undo_menu_item"
+end repeat
+Click "cell00"
+Click "game_menu"
+click "reset_menu_item"
+Click "no_button"
+put ImageFound("red_cell")
+Click "game_menu"
+click "reset_menu_item"
+click "yes_button"
+click "file_pvp"
+Click "exit_menu_item"
+TypeText <<./main.py>>
+TypeText Return
+

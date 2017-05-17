@@ -1,0 +1,12 @@
+﻿2017-05-17 10:49:52.737 -0600	START		Running practice_script.script
+2017-05-17 10:49:53.453 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 10:49:54.581 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 10:49:55.294 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 10:49:56.097 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 10:49:56.810 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 10:49:57.775 -0600	imagefound	connectfour_title	found at (846, 181)	2	on_practice_script	practice_script.script
+2017-05-17 10:49:58.333 -0600	imagefound	menu	found at (837, 595)	3	on_practice_script	practice_script.script
+2017-05-17 10:49:58.951 -0600	click	howtoplay	at (841, 352)	4	on_practice_script	practice_script.script
+2017-05-17 10:50:04.578 -0600	imagefound	instruction_page	found at (833, 503)	5	on_practice_script	practice_script.script
+2017-05-17 10:50:05.178 -0600	click	file_instructions	at (368, 117)	6	on_practice_script	practice_script.script
+2017-05-17 10:50:36.461 -0600	Exception	file_instructions	No Image Found On Screen: "file_instructions"	7	on_practice_script	practice_script.script

@@ -1,0 +1,65 @@
+﻿2017-05-17 13:26:14.998 -0600	START		Running controller.script
+2017-05-17 13:26:16.508 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 13:26:17.636 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 13:26:18.349 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 13:26:19.152 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 13:26:19.865 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 13:26:20.659 -0600	imagefound	connectfour_title	found at (846, 181)	1	on_htp_script	htp_script.script
+2017-05-17 13:26:22.217 -0600	imagefound	menu	found at (837, 595)	2	on_htp_script	htp_script.script
+2017-05-17 13:26:23.838 -0600	click	howtoplay	at (841, 352)	3	on_htp_script	htp_script.script
+2017-05-17 13:26:34.669 -0600	imagefound	instruction_page	found at (833, 503)	4	on_htp_script	htp_script.script
+2017-05-17 13:26:36.320 -0600	click	file_instructions	at (368, 117)	5	on_htp_script	htp_script.script
+2017-05-17 13:26:37.445 -0600	click	exit_instructions	at (442, 139)	6	on_htp_script	htp_script.script
+2017-05-17 13:26:38.190 -0600	typetext		exit	7	on_htp_script	htp_script.script
+2017-05-17 13:26:38.903 -0600	typetext		[return]	8	on_htp_script	htp_script.script
+2017-05-17 13:26:41.279 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 13:26:42.408 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 13:26:43.120 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 13:26:43.923 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 13:26:44.636 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 13:26:45.716 -0600	click	pvp	at (838, 471)	1	on_pvp_script	pvp_script.script
+2017-05-17 13:26:47.401 -0600	imagefound	pvp_logo	found at (848, 273)	2	on_pvp_script	pvp_script.script
+2017-05-17 13:26:49.004 -0600	click	file_pvp	at (366, 112)	3	on_pvp_script	pvp_script.script
+2017-05-17 13:26:50.636 -0600	click	save_pvp	at (447, 163)	4	on_pvp_script	pvp_script.script
+2017-05-17 13:26:52.028 -0600	imagefound	empty_save	found at (830, 454)	5	on_pvp_script	pvp_script.script
+2017-05-17 13:26:53.665 -0600	click	ok_button	at (906, 502)	6	on_pvp_script	pvp_script.script
+2017-05-17 13:26:55.951 -0600	click	game_menu	at (412, 115)	7	on_pvp_script	pvp_script.script
+2017-05-17 13:26:56.830 -0600	click	undo_menu_item	at (483, 137)	8	on_pvp_script	pvp_script.script
+2017-05-17 13:26:57.762 -0600	imagefound	no_moves_undo	found at (829, 457)	9	on_pvp_script	pvp_script.script
+2017-05-17 13:26:59.405 -0600	click	ok_button	at (937, 490)	10	on_pvp_script	pvp_script.script
+2017-05-17 13:27:01.684 -0600	click	game_menu	at (412, 115)	11	on_pvp_script	pvp_script.script
+2017-05-17 13:27:03.966 -0600	click	reset_menu_item	at (487, 163)	12	on_pvp_script	pvp_script.script
+2017-05-17 13:27:07.803 -0600	click	cell00	at (552, 378)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:11.497 -0600	click	cell00	at (552, 378)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:12.602 -0600	click	cell00	at (552, 758)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:14.401 -0600	click	cell00	at (552, 758)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:15.390 -0600	click	cell00	at (552, 568)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:16.433 -0600	click	cell00	at (552, 568)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:18.469 -0600	click	cell00	at (552, 378)	14	on_pvp_script	pvp_script.script
+2017-05-17 13:27:19.647 -0600	imagefound	full_column	found at (831, 456)	16	on_pvp_script	pvp_script.script
+2017-05-17 13:27:20.129 -0600	click	ok_button	at (931, 490)	17	on_pvp_script	pvp_script.script
+2017-05-17 13:27:21.054 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-17 13:27:22.889 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-17 13:27:24.464 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-17 13:27:25.791 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-17 13:27:26.710 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-17 13:27:27.686 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-17 13:27:29.561 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-17 13:27:30.588 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-17 13:27:32.666 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-17 13:27:33.697 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-17 13:27:35.873 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-17 13:27:37.406 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-17 13:27:40.992 -0600	click	cell00	at (552, 378)	22	on_pvp_script	pvp_script.script
+2017-05-17 13:27:41.915 -0600	click	game_menu	at (412, 115)	23	on_pvp_script	pvp_script.script
+2017-05-17 13:27:43.037 -0600	click	reset_menu_item	at (487, 163)	24	on_pvp_script	pvp_script.script
+2017-05-17 13:27:45.408 -0600	click	no_button	at (898, 489)	25	on_pvp_script	pvp_script.script
+2017-05-17 13:27:47.171 -0600	imagefound	red_cell	found at (550, 857)	26	on_pvp_script	pvp_script.script
+2017-05-17 13:27:48.830 -0600	click	game_menu	at (412, 115)	27	on_pvp_script	pvp_script.script
+2017-05-17 13:27:51.164 -0600	click	reset_menu_item	at (487, 163)	28	on_pvp_script	pvp_script.script
+2017-05-17 13:27:53.549 -0600	click	yes_button	at (984, 490)	29	on_pvp_script	pvp_script.script
+2017-05-17 13:27:55.885 -0600	click	file_pvp	at (366, 112)	30	on_pvp_script	pvp_script.script
+2017-05-17 13:27:58.209 -0600	click	exit_menu_item	at (445, 138)	31	on_pvp_script	pvp_script.script
+2017-05-17 13:27:59.010 -0600	typetext		./main.py	32	on_pvp_script	pvp_script.script
+2017-05-17 13:28:12.340 -0600	EndTestCase		(Duration:"117.336786", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 13:26:15 -0600", Successes:"0", TestCase:"controller.script", Warnings:"0")
+2017-05-17 13:28:12.341 -0600	ABORTED		Execution Time 0:01:58 controller.script

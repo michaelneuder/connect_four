@@ -1,0 +1,4 @@
+﻿2017-05-17 10:43:42.726 -0600	START		Running practice_script.script
+2017-05-17 10:43:57.033 -0600	Exception	file_instructions	No Image Found On Screen: "file_instructions"	2	on_practice_script	practice_script.script
+2017-05-17 10:43:57.130 -0600	EndTestCase		(Duration:"14.396842", Errors:"1", Exceptions:"1", StartTime:"2017-05-17 10:43:42 -0600", Successes:"0", TestCase:"practice_script.script", Warnings:"0")
+2017-05-17 10:43:57.132 -0600	ABORTED		Execution Time 0:00:15 practice_script.script

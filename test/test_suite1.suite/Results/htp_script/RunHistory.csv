@@ -1,0 +1,13 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-05-17 10:13:43.993 -0600,"Success",0:00:03,0,0,0,"20170517_101343.993/LogFile.txt","","",1
+2017-05-17 10:15:56.669 -0600,"Success",0:00:04,0,0,0,"20170517_101556.669/LogFile.txt","","",1
+2017-05-17 10:17:42.144 -0600,"Success",0:00:04,0,0,0,"20170517_101742.144/LogFile.txt","","",1
+2017-05-17 10:18:16.155 -0600,"Success",0:00:04,0,0,0,"20170517_101816.155/LogFile.txt","","",1
+2017-05-17 10:18:54.013 -0600,"Success",0:00:05,0,0,0,"20170517_101854.013/LogFile.txt","","",1
+2017-05-17 10:20:53.604 -0600,"Failure",0:00:04,1,0,0,"20170517_102053.604/LogFile.txt","","STUnknownMessage -- ERROR: No Such Function: 'returnimagefound'",0
+2017-05-17 10:21:29.554 -0600,"Failure",0:00:05,1,0,0,"20170517_102129.554/LogFile.txt","","STUnknownMessage -- ERROR: 'imagefound' was called as a Command, but is only available as a Function",0
+2017-05-17 10:28:29.739 -0600,"Success",0:00:06,0,0,0,"20170517_102829.739/LogFile.txt","","",1
+2017-05-17 10:31:06.016 -0600,"Success",0:00:06,0,0,0,"20170517_103106.016/LogFile.txt","","",1
+2017-05-17 10:33:11.948 -0600,"Success",0:00:11,0,0,0,"20170517_103311.948/LogFile.txt","","",1
+2017-05-17 10:51:48.977 -0600,"Success",0:00:15,0,0,0,"20170517_105148.977/LogFile.txt","","",1
+2017-05-17 10:57:27.289 -0600,"Success",0:00:21,0,0,0,"20170517_105727.289/LogFile.txt","","",1

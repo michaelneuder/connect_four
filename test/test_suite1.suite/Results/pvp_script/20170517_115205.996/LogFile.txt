@@ -1,0 +1,6 @@
+﻿2017-05-17 11:52:05.997 -0600	START		Running pvp_script.script
+2017-05-17 11:52:07.667 -0600	click	file_pvp	at (366, 112)	5	on_pvp_script	pvp_script.script
+2017-05-17 11:52:09.346 -0600	click	save_pvp	at (447, 163)	6	on_pvp_script	pvp_script.script
+2017-05-17 11:52:13.486 -0600	imagefound	empty_save	Unable to Find Image empty_save	7	on_pvp_script	pvp_script.script
+2017-05-17 11:52:15.787 -0600	EndTestCase		(Duration:"9.784303", Errors:"1", Exceptions:"0", StartTime:"2017-05-17 11:52:06 -0600", Successes:"0", TestCase:"pvp_script.script", Warnings:"0")
+2017-05-17 11:52:15.788 -0600	ABORTED		Execution Time 0:00:10 pvp_script.script

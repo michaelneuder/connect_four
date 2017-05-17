@@ -1,0 +1,23 @@
+﻿2017-05-17 11:26:46.125 -0600	START		Running controller.script
+2017-05-17 11:26:47.145 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 11:26:48.273 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 11:26:48.986 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 11:26:49.789 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 11:26:50.502 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 11:26:51.370 -0600	imagefound	connectfour_title	found at (846, 181)	1	on_htp_script	htp_script.script
+2017-05-17 11:26:52.183 -0600	imagefound	menu	found at (837, 595)	2	on_htp_script	htp_script.script
+2017-05-17 11:26:53.052 -0600	click	howtoplay	at (841, 352)	3	on_htp_script	htp_script.script
+2017-05-17 11:26:59.478 -0600	imagefound	instruction_page	found at (833, 503)	4	on_htp_script	htp_script.script
+2017-05-17 11:27:00.334 -0600	click	file_instructions	at (368, 117)	5	on_htp_script	htp_script.script
+2017-05-17 11:27:01.863 -0600	click	exit_instructions	at (442, 139)	6	on_htp_script	htp_script.script
+2017-05-17 11:27:02.608 -0600	typetext		exit	7	on_htp_script	htp_script.script
+2017-05-17 11:27:03.321 -0600	typetext		[return]	8	on_htp_script	htp_script.script
+2017-05-17 11:27:04.966 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 11:27:06.095 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 11:27:06.808 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 11:27:07.611 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 11:27:08.324 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 11:27:09.253 -0600	click	pvp	at (838, 471)	1	on_pvp_script	pvp_script.script
+2017-05-17 11:27:10.740 -0600	imagefound	pvp_logo	found at (848, 273)	2	on_pvp_script	pvp_script.script
+2017-05-17 11:27:10.914 -0600	EndTestCase		(Duration:"24.783965", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 11:26:46 -0600", Successes:"1", TestCase:"controller.script", Warnings:"0")
+2017-05-17 11:27:12.404 -0600	SUCCESS		Execution Time 0:00:24 controller.script

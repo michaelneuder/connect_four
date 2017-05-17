@@ -1,0 +1,21 @@
+﻿2017-05-17 11:02:39.896 -0600	START		Running controller.script
+2017-05-17 11:02:40.751 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 11:02:41.881 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 11:02:42.594 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 11:02:43.397 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 11:02:44.110 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 11:02:45.066 -0600	imagefound	connectfour_title	found at (846, 181)	1	on_htp_script	htp_script.script
+2017-05-17 11:02:45.779 -0600	imagefound	menu	found at (837, 595)	2	on_htp_script	htp_script.script
+2017-05-17 11:02:46.541 -0600	click	howtoplay	at (841, 352)	3	on_htp_script	htp_script.script
+2017-05-17 11:02:53.065 -0600	imagefound	instruction_page	found at (833, 503)	4	on_htp_script	htp_script.script
+2017-05-17 11:02:53.923 -0600	click	file_instructions	at (368, 117)	5	on_htp_script	htp_script.script
+2017-05-17 11:02:55.452 -0600	click	exit_instructions	at (442, 139)	6	on_htp_script	htp_script.script
+2017-05-17 11:02:56.197 -0600	typetext		exit	7	on_htp_script	htp_script.script
+2017-05-17 11:02:56.910 -0600	typetext		[return]	8	on_htp_script	htp_script.script
+2017-05-17 11:02:58.019 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-17 11:02:59.149 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-17 11:02:59.862 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-17 11:03:00.665 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-17 11:03:01.378 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-17 11:03:01.479 -0600	EndTestCase		(Duration:"21.57415", Errors:"0", Exceptions:"0", StartTime:"2017-05-17 11:02:39 -0600", Successes:"1", TestCase:"controller.script", Warnings:"0")
+2017-05-17 11:03:02.595 -0600	SUCCESS		Execution Time 0:00:22 controller.script
