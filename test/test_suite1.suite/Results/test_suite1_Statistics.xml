@@ -2,11 +2,11 @@
 <statistics>
  <script name="controller">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>8</NumberOfRuns>
+  <NumberOfRuns>9</NumberOfRuns>
   <NumberOfFails>0</NumberOfFails>
   <FirstRun>2017-05-17 11:02:39 -0600</FirstRun>
-  <LastRun>2017-05-18 13:40:11 -0600</LastRun>
-  <TotalTimeOnSuccess>711.425751</TotalTimeOnSuccess>
+  <LastRun>2017-05-18 17:38:33 -0600</LastRun>
+  <TotalTimeOnSuccess>1057.356854</TotalTimeOnSuccess>
  </script>
  <script name="htp_script">
   <LastStatus>Success</LastStatus>
@@ -33,12 +33,12 @@
   <TotalTimeOnSuccess>58.255595</TotalTimeOnSuccess>
  </script>
  <script name="pvp_script">
-  <LastStatus>Success</LastStatus>
-  <NumberOfRuns>5</NumberOfRuns>
-  <NumberOfFails>1</NumberOfFails>
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>7</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 11:47:37 -0600</FirstRun>
-  <LastRun>2017-05-17 13:02:30 -0600</LastRun>
-  <TotalTimeOnSuccess>233.660434</TotalTimeOnSuccess>
+  <LastRun>2017-05-18 14:13:55 -0600</LastRun>
+  <TotalTimeOnSuccess>318.416834</TotalTimeOnSuccess>
  </script>
  <script name="open_app">
   <LastStatus>Success</LastStatus>
