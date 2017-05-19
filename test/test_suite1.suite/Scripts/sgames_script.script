@@ -20,7 +20,7 @@ Click "load_game"
 click "ok_button"
 click "game_menu"
 click "undo_menu_item"
-click "quit_button"
-TypeText "exit"
-TypeText return
+//click "quit_button"
+//TypeText "exit"
+//TypeText return
 

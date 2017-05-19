@@ -1,0 +1,13 @@
+﻿2017-05-19 09:14:00.329 -0600	START		Running footer_script.script
+2017-05-19 09:14:01.536 -0600	click	how_to_play_button	at (689, 963)	1	on_footer_script	footer_script.script
+2017-05-19 09:14:02.849 -0600	click	pvp_button	at (792, 962)	2	on_footer_script	footer_script.script
+2017-05-19 09:14:05.189 -0600	imagefound	pvp_board	found at (827, 570)	3	on_footer_script	footer_script.script
+2017-05-19 09:14:06.217 -0600	click	pvai_button	at (893, 964)	4	on_footer_script	footer_script.script
+2017-05-19 09:14:08.376 -0600	imagefound	pvai_board	found at (839, 578)	5	on_footer_script	footer_script.script
+2017-05-19 09:14:10.009 -0600	click	saved_games_footer	at (988, 962)	6	on_footer_script	footer_script.script
+2017-05-19 09:14:12.999 -0600	imagefound	saved_games_buttons	found at (858, 853)	7	on_footer_script	footer_script.script
+2017-05-19 09:14:14.644 -0600	click	quit_button	at (1083, 962)	8	on_footer_script	footer_script.script
+2017-05-19 09:14:15.389 -0600	typetext		exit	9	on_footer_script	footer_script.script
+2017-05-19 09:14:16.159 -0600	typetext		return	10	on_footer_script	footer_script.script
+2017-05-19 09:14:16.280 -0600	EndTestCase		(Duration:"15.946631", Errors:"0", Exceptions:"0", StartTime:"2017-05-19 09:14:00 -0600", Successes:"1", TestCase:"footer_script.script", Warnings:"0")
+2017-05-19 09:14:17.248 -0600	SUCCESS		Execution Time 0:00:16 footer_script.script

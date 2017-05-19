@@ -1,0 +1,10 @@
+﻿Click "how_to_play_button"
+Click "pvp_button"
+put ImageFound("pvp_board")
+Click "pvai_button"
+put ImageFound("pvai_board")
+click "saved_games_footer"
+put ImageFound("saved_games_buttons")
+click "quit_button"
+TypeText "exit"
+TypeText return

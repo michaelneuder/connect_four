@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="footer_script">
+ <run>
+  <RunDate>2017-05-19 09:14:00.320 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>15.957268</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170519_091400.320/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>
