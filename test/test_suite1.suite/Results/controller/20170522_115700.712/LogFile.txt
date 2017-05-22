@@ -1,0 +1,3 @@
+﻿2017-05-22 11:57:00.714 -0600	START		Running controller.script
+2017-05-22 11:57:03.602 -0600	EndTestCase		(Duration:"2.883354", Errors:"1", Exceptions:"0", StartTime:"2017-05-22 11:57:00 -0600", Successes:"0", TestCase:"controller.script", Warnings:"0")
+2017-05-22 11:57:03.604 -0600	ABORTED		Execution Time 0:00:03 controller.script

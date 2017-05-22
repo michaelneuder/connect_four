@@ -1,0 +1,11 @@
+﻿2017-05-22 11:58:42.837 -0600	START		Running controller.script
+2017-05-22 11:58:44.669 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-22 11:58:45.799 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-22 11:58:46.511 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-22 11:58:47.314 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-22 11:58:48.028 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-22 11:58:48.827 -0600	imagefound	connectfour_title	found at (846, 181)	1	on_htp_script	htp_script.script
+2017-05-22 11:58:49.098 -0600	imagefound	menu	found at (837, 595)	2	on_htp_script	htp_script.script
+2017-05-22 11:58:51.265 -0600	click	howtoplay	at (841, 352)	3	on_htp_script	htp_script.script
+2017-05-22 11:58:52.093 -0600	EndTestCase		(Duration:"9.250714", Errors:"1", Exceptions:"0", StartTime:"2017-05-22 11:58:42 -0600", Successes:"0", TestCase:"controller.script", Warnings:"0")
+2017-05-22 11:58:52.094 -0600	ABORTED		Execution Time 0:00:10 controller.script

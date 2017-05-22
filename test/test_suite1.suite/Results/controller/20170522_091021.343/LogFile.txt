@@ -1,0 +1,11 @@
+﻿2017-05-22 09:10:21.391 -0600	START		Running controller.script
+2017-05-22 09:10:24.822 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-22 09:10:25.951 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-22 09:10:26.663 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-22 09:10:27.466 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-22 09:10:28.178 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-22 09:10:33.245 -0600	imagefound	connectfour_title	Unable to Find Image connectfour_title	1	on_htp_script	htp_script.script
+2017-05-22 09:10:37.313 -0600	imagefound	menu	Unable to Find Image menu	2	on_htp_script	htp_script.script
+2017-05-22 09:11:03.854 -0600	Exception	howtoplay	No Image Found On Screen: "howtoplay"	3	on_htp_script	htp_script.script
+2017-05-22 09:11:04.010 -0600	EndTestCase		(Duration:"42.569316", Errors:"1", Exceptions:"1", StartTime:"2017-05-22 09:10:21 -0600", Successes:"0", TestCase:"controller.script", Warnings:"0")
+2017-05-22 09:11:06.459 -0600	FAILURE	Screen_Error.png	Image Not Found click Error - No Image Found On Screen: "howtoplay" -- Execution Time 0:00:43 controller.script

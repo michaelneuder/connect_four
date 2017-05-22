@@ -1,0 +1,179 @@
+﻿2017-05-22 11:11:31.631 -0600	START		Running controller.script
+2017-05-22 11:11:33.293 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-22 11:11:34.421 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-22 11:11:35.134 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-22 11:11:35.937 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-22 11:11:36.650 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-22 11:11:37.499 -0600	imagefound	connectfour_title	found at (846, 181)	1	on_htp_script	htp_script.script
+2017-05-22 11:11:39.324 -0600	imagefound	menu	found at (837, 595)	2	on_htp_script	htp_script.script
+2017-05-22 11:11:41.246 -0600	click	howtoplay	at (841, 352)	3	on_htp_script	htp_script.script
+2017-05-22 11:11:52.297 -0600	imagefound	instruction_page	found at (833, 503)	4	on_htp_script	htp_script.script
+2017-05-22 11:11:53.754 -0600	click	file_instructions	at (368, 117)	5	on_htp_script	htp_script.script
+2017-05-22 11:11:54.783 -0600	click	exit_instructions	at (442, 139)	6	on_htp_script	htp_script.script
+2017-05-22 11:11:55.528 -0600	typetext		exit	7	on_htp_script	htp_script.script
+2017-05-22 11:11:56.241 -0600	typetext		[return]	8	on_htp_script	htp_script.script
+2017-05-22 11:11:57.381 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-22 11:11:58.509 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-22 11:11:59.222 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-22 11:12:00.026 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-22 11:12:00.739 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-22 11:12:01.722 -0600	click	pvp	at (838, 471)	1	on_pvp_script	pvp_script.script
+2017-05-22 11:12:03.569 -0600	imagefound	pvp_logo	found at (848, 273)	2	on_pvp_script	pvp_script.script
+2017-05-22 11:12:04.772 -0600	click	file_pvp	at (366, 112)	3	on_pvp_script	pvp_script.script
+2017-05-22 11:12:06.847 -0600	click	save_pvp	at (447, 163)	4	on_pvp_script	pvp_script.script
+2017-05-22 11:12:08.029 -0600	imagefound	empty_save	found at (830, 454)	5	on_pvp_script	pvp_script.script
+2017-05-22 11:12:09.974 -0600	click	ok_button	at (906, 502)	6	on_pvp_script	pvp_script.script
+2017-05-22 11:12:11.302 -0600	click	game_menu	at (412, 115)	7	on_pvp_script	pvp_script.script
+2017-05-22 11:12:13.038 -0600	click	undo_menu_item	at (483, 137)	8	on_pvp_script	pvp_script.script
+2017-05-22 11:12:14.774 -0600	imagefound	no_moves_undo	found at (829, 457)	9	on_pvp_script	pvp_script.script
+2017-05-22 11:12:16.771 -0600	click	ok_button	at (937, 490)	10	on_pvp_script	pvp_script.script
+2017-05-22 11:12:18.351 -0600	click	game_menu	at (412, 115)	11	on_pvp_script	pvp_script.script
+2017-05-22 11:12:20.934 -0600	click	reset_menu_item	at (487, 163)	12	on_pvp_script	pvp_script.script
+2017-05-22 11:12:25.401 -0600	click	cell00	at (552, 378)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:29.821 -0600	click	cell00	at (552, 378)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:32.416 -0600	click	cell00	at (552, 758)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:35.008 -0600	click	cell00	at (552, 758)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:36.440 -0600	click	cell00	at (552, 568)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:38.178 -0600	click	cell00	at (552, 568)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:39.948 -0600	click	cell00	at (552, 378)	14	on_pvp_script	pvp_script.script
+2017-05-22 11:12:41.484 -0600	imagefound	full_column	found at (831, 456)	16	on_pvp_script	pvp_script.script
+2017-05-22 11:12:41.920 -0600	click	ok_button	at (931, 490)	17	on_pvp_script	pvp_script.script
+2017-05-22 11:12:42.895 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-22 11:12:44.780 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-22 11:12:45.653 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-22 11:12:46.986 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-22 11:12:49.162 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-22 11:12:50.245 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-22 11:12:52.722 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-22 11:12:53.906 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-22 11:12:55.632 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-22 11:12:58.266 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-22 11:12:59.842 -0600	click	game_menu	at (412, 115)	19	on_pvp_script	pvp_script.script
+2017-05-22 11:13:00.725 -0600	click	undo_menu_item	at (483, 137)	20	on_pvp_script	pvp_script.script
+2017-05-22 11:13:02.942 -0600	click	cell00	at (552, 378)	22	on_pvp_script	pvp_script.script
+2017-05-22 11:13:04.614 -0600	click	game_menu	at (412, 115)	23	on_pvp_script	pvp_script.script
+2017-05-22 11:13:05.839 -0600	click	reset_menu_item	at (487, 163)	24	on_pvp_script	pvp_script.script
+2017-05-22 11:13:08.512 -0600	click	no_button	at (898, 489)	25	on_pvp_script	pvp_script.script
+2017-05-22 11:13:09.972 -0600	imagefound	red_cell	found at (550, 857)	26	on_pvp_script	pvp_script.script
+2017-05-22 11:13:11.979 -0600	click	game_menu	at (412, 115)	27	on_pvp_script	pvp_script.script
+2017-05-22 11:13:14.608 -0600	click	reset_menu_item	at (487, 163)	28	on_pvp_script	pvp_script.script
+2017-05-22 11:13:17.296 -0600	click	yes_button	at (984, 490)	29	on_pvp_script	pvp_script.script
+2017-05-22 11:13:21.819 -0600	click	cell00	at (552, 378)	30	on_pvp_script	pvp_script.script
+2017-05-22 11:13:24.445 -0600	click	file_pvp	at (366, 112)	31	on_pvp_script	pvp_script.script
+2017-05-22 11:13:27.072 -0600	click	save_pvp	at (447, 163)	32	on_pvp_script	pvp_script.script
+2017-05-22 11:13:28.254 -0600	click	cancel_button	at (876, 509)	33	on_pvp_script	pvp_script.script
+2017-05-22 11:13:30.885 -0600	click	file_pvp	at (366, 112)	34	on_pvp_script	pvp_script.script
+2017-05-22 11:13:33.517 -0600	click	save_pvp	at (447, 163)	35	on_pvp_script	pvp_script.script
+2017-05-22 11:13:34.700 -0600	click	submit_button	at (786, 509)	36	on_pvp_script	pvp_script.script
+2017-05-22 11:13:37.232 -0600	imagefound	name_error	found at (831, 457)	37	on_pvp_script	pvp_script.script
+2017-05-22 11:13:39.230 -0600	click	ok_button	at (894, 490)	38	on_pvp_script	pvp_script.script
+2017-05-22 11:13:41.805 -0600	click	line_edit	at (832, 473)	39	on_pvp_script	pvp_script.script
+2017-05-22 11:13:42.607 -0600	typetext		test_game	40	on_pvp_script	pvp_script.script
+2017-05-22 11:13:43.779 -0600	click	submit_button	at (786, 509)	41	on_pvp_script	pvp_script.script
+2017-05-22 11:13:45.563 -0600	imagefound	save_success	found at (828, 455)	42	on_pvp_script	pvp_script.script
+2017-05-22 11:13:47.560 -0600	click	ok_button	at (896, 490)	43	on_pvp_script	pvp_script.script
+2017-05-22 11:13:50.143 -0600	click	file_pvp	at (366, 112)	44	on_pvp_script	pvp_script.script
+2017-05-22 11:13:51.574 -0600	click	save_pvp	at (447, 163)	45	on_pvp_script	pvp_script.script
+2017-05-22 11:13:52.376 -0600	typetext		test_game	46	on_pvp_script	pvp_script.script
+2017-05-22 11:13:53.460 -0600	click	submit_button	at (786, 509)	47	on_pvp_script	pvp_script.script
+2017-05-22 11:13:55.641 -0600	imagefound	name_in_use	found at (830, 453)	48	on_pvp_script	pvp_script.script
+2017-05-22 11:13:56.879 -0600	click	ok_button	at (915, 490)	49	on_pvp_script	pvp_script.script
+2017-05-22 11:13:58.506 -0600	click	cancel_button	at (876, 509)	50	on_pvp_script	pvp_script.script
+2017-05-22 11:13:59.959 -0600	click	saved_games_footer	at (988, 962)	51	on_pvp_script	pvp_script.script
+2017-05-22 11:14:02.440 -0600	imagefound	test_game	found at (605, 728)	52	on_pvp_script	pvp_script.script
+2017-05-22 11:14:03.605 -0600	click	test_game	at (605, 728)	53	on_pvp_script	pvp_script.script
+2017-05-22 11:14:06.190 -0600	click	delete_game	at (932, 852)	54	on_pvp_script	pvp_script.script
+2017-05-22 11:14:08.515 -0600	click	no_button	at (846, 489)	55	on_pvp_script	pvp_script.script
+2017-05-22 11:14:19.648 -0600	imagefound	test_game	Unable to Find Image test_game	56	on_pvp_script	pvp_script.script
+2017-05-22 11:14:21.661 -0600	click	delete_game	at (932, 852)	57	on_pvp_script	pvp_script.script
+2017-05-22 11:14:22.697 -0600	imagefound	delete_game_verify	found at (834, 456)	58	on_pvp_script	pvp_script.script
+2017-05-22 11:14:23.356 -0600	click	yes_button	at (932, 490)	59	on_pvp_script	pvp_script.script
+2017-05-22 11:14:25.738 -0600	click	file_pvp	at (366, 112)	61	on_pvp_script	pvp_script.script
+2017-05-22 11:14:27.273 -0600	click	exit_menu_item	at (441, 138)	62	on_pvp_script	pvp_script.script
+2017-05-22 11:14:28.074 -0600	typetext		./main.py	63	on_pvp_script	pvp_script.script
+2017-05-22 11:14:28.787 -0600	typetext		[return]	64	on_pvp_script	pvp_script.script
+2017-05-22 11:14:29.760 -0600	click	pvai	at (848, 594)	1	on_pvai_script	pvai_script.script
+2017-05-22 11:14:32.353 -0600	imagefound	pvai_header	found at (836, 271)	2	on_pvai_script	pvai_script.script
+2017-05-22 11:14:34.354 -0600	click	file_pvp	at (366, 112)	3	on_pvai_script	pvai_script.script
+2017-05-22 11:14:36.982 -0600	click	save_pvp	at (447, 163)	4	on_pvai_script	pvai_script.script
+2017-05-22 11:14:39.576 -0600	imagefound	empty_save	found at (830, 454)	5	on_pvai_script	pvai_script.script
+2017-05-22 11:14:41.622 -0600	click	ok_button	at (906, 502)	6	on_pvai_script	pvai_script.script
+2017-05-22 11:14:44.252 -0600	click	game_menu	at (412, 115)	7	on_pvai_script	pvai_script.script
+2017-05-22 11:14:45.638 -0600	click	undo_menu_item	at (483, 137)	8	on_pvai_script	pvai_script.script
+2017-05-22 11:14:48.224 -0600	imagefound	no_moves_undo	found at (829, 457)	9	on_pvai_script	pvai_script.script
+2017-05-22 11:14:50.264 -0600	click	ok_button	at (937, 490)	10	on_pvai_script	pvai_script.script
+2017-05-22 11:14:52.893 -0600	click	game_menu	at (412, 115)	11	on_pvai_script	pvai_script.script
+2017-05-22 11:14:55.525 -0600	click	reset_menu_item	at (487, 163)	12	on_pvai_script	pvai_script.script
+2017-05-22 11:14:59.142 -0600	click	cell00	at (552, 378)	13	on_pvai_script	pvai_script.script
+2017-05-22 11:15:01.031 -0600	click	cell00	at (1122, 853)	14	on_pvai_script	pvai_script.script
+2017-05-22 11:15:02.092 -0600	imagefound	black_cell	found at (1027, 854)	15	on_pvai_script	pvai_script.script
+2017-05-22 11:15:03.972 -0600	imagefound	red_cell	found at (1120, 762)	16	on_pvai_script	pvai_script.script
+2017-05-22 11:15:05.078 -0600	click	game_menu	at (412, 115)	17	on_pvai_script	pvai_script.script
+2017-05-22 11:15:06.810 -0600	click	undo_menu_item	at (483, 137)	18	on_pvai_script	pvai_script.script
+2017-05-22 11:15:08.389 -0600	click	game_menu	at (412, 115)	19	on_pvai_script	pvai_script.script
+2017-05-22 11:15:10.523 -0600	click	reset_menu_item	at (487, 163)	20	on_pvai_script	pvai_script.script
+2017-05-22 11:15:11.546 -0600	click	no_button	at (898, 489)	21	on_pvai_script	pvai_script.script
+2017-05-22 11:15:13.668 -0600	imagefound	black_cell	found at (1122, 854)	22	on_pvai_script	pvai_script.script
+2017-05-22 11:15:14.701 -0600	imagefound	red_cell	found at (550, 857)	23	on_pvai_script	pvai_script.script
+2017-05-22 11:15:16.759 -0600	click	game_menu	at (412, 115)	24	on_pvai_script	pvai_script.script
+2017-05-22 11:15:17.937 -0600	click	reset_menu_item	at (487, 163)	25	on_pvai_script	pvai_script.script
+2017-05-22 11:15:19.520 -0600	click	yes_button	at (984, 490)	26	on_pvai_script	pvai_script.script
+2017-05-22 11:15:21.755 -0600	click	file_pvp	at (366, 112)	27	on_pvai_script	pvai_script.script
+2017-05-22 11:15:23.186 -0600	click	exit_menu_item	at (445, 136)	28	on_pvai_script	pvai_script.script
+2017-05-22 11:15:23.987 -0600	typetext		./main.py	29	on_pvai_script	pvai_script.script
+2017-05-22 11:15:24.700 -0600	typetext		[return]	30	on_pvai_script	pvai_script.script
+2017-05-22 11:15:25.692 -0600	click	savedgames_menu	at (835, 712)	1	on_sgames_script	sgames_script.script
+2017-05-22 11:15:39.387 -0600	imagefound	savedgames_title	found at (841, 216)	2	on_sgames_script	sgames_script.script
+2017-05-22 11:15:41.513 -0600	doubleclick	samplewin	at (607, 375)	3	on_sgames_script	sgames_script.script
+2017-05-22 11:15:44.234 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:15:45.672 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:15:48.412 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:15:51.152 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:15:53.892 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:15:56.632 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:15:59.373 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:02.112 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:04.848 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:06.734 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:08.519 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:09.848 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:11.635 -0600	click	forward_arrow	at (826, 799)	5	on_sgames_script	sgames_script.script
+2017-05-22 11:16:12.907 -0600	imagefound	red_win	found at (833, 456)	7	on_sgames_script	sgames_script.script
+2017-05-22 11:16:14.560 -0600	click	ok_button	at (830, 498)	8	on_sgames_script	sgames_script.script
+2017-05-22 11:16:15.553 -0600	click	forward_arrow	at (826, 799)	9	on_sgames_script	sgames_script.script
+2017-05-22 11:16:16.479 -0600	imagefound	unable_to_continue	found at (830, 454)	10	on_sgames_script	sgames_script.script
+2017-05-22 11:16:18.574 -0600	click	ok_button	at (892, 490)	11	on_sgames_script	sgames_script.script
+2017-05-22 11:16:19.779 -0600	imagefound	purple_cell	found at (636, 726)	12	on_sgames_script	sgames_script.script
+2017-05-22 11:16:21.894 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:23.032 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:25.320 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:26.355 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:28.184 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:30.065 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:31.095 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:33.133 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:34.621 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:37.356 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:38.993 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:41.731 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:44.465 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:45.702 -0600	click	back_arrow	at (739, 799)	14	on_sgames_script	sgames_script.script
+2017-05-22 11:16:48.329 -0600	imagefound	no_moves_back	found at (829, 456)	16	on_sgames_script	sgames_script.script
+2017-05-22 11:16:50.419 -0600	click	ok_button	at (937, 490)	17	on_sgames_script	sgames_script.script
+2017-05-22 11:16:53.199 -0600	click	close_button	at (920, 798)	18	on_sgames_script	sgames_script.script
+2017-05-22 11:16:55.976 -0600	click	load_game	at (840, 852)	19	on_sgames_script	sgames_script.script
+2017-05-22 11:17:00.775 -0600	click	ok_button	at (830, 498)	20	on_sgames_script	sgames_script.script
+2017-05-22 11:17:03.460 -0600	click	game_menu	at (412, 115)	21	on_sgames_script	sgames_script.script
+2017-05-22 11:17:06.148 -0600	click	undo_menu_item	at (483, 137)	22	on_sgames_script	sgames_script.script
+2017-05-22 11:17:08.870 -0600	click	how_to_play_button	at (689, 963)	1	on_footer_script	footer_script.script
+2017-05-22 11:17:11.594 -0600	click	pvp_button	at (792, 962)	2	on_footer_script	footer_script.script
+2017-05-22 11:17:14.403 -0600	imagefound	pvp_board	found at (827, 570)	3	on_footer_script	footer_script.script
+2017-05-22 11:17:15.485 -0600	click	pvai_button	at (893, 964)	4	on_footer_script	footer_script.script
+2017-05-22 11:17:16.485 -0600	imagefound	pvai_board	found at (839, 578)	5	on_footer_script	footer_script.script
+2017-05-22 11:17:17.320 -0600	click	saved_games_footer	at (988, 962)	6	on_footer_script	footer_script.script
+2017-05-22 11:17:19.127 -0600	imagefound	saved_games_buttons	found at (858, 853)	7	on_footer_script	footer_script.script
+2017-05-22 11:17:19.740 -0600	click	quit_button	at (1083, 962)	8	on_footer_script	footer_script.script
+2017-05-22 11:17:20.485 -0600	typetext		exit	9	on_footer_script	footer_script.script
+2017-05-22 11:17:21.198 -0600	typetext		[return]	10	on_footer_script	footer_script.script
+2017-05-22 11:17:21.339 -0600	EndTestCase		(Duration:"349.70113", Errors:"0", Exceptions:"0", StartTime:"2017-05-22 11:11:31 -0600", Successes:"1", TestCase:"controller.script", Warnings:"0")
+2017-05-22 11:17:22.396 -0600	SUCCESS		Execution Time 0:05:50 controller.script

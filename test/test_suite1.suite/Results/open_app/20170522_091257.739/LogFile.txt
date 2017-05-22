@@ -1,0 +1,8 @@
+﻿2017-05-22 09:12:57.740 -0600	START		Running open_app.script
+2017-05-22 09:12:58.828 -0600	click	terminal_icon	at (155, 1037)	1	on_open_app	open_app.script
+2017-05-22 09:12:59.956 -0600	typetext		cd Dropbox/github/connect_four/app/bin	2	on_open_app	open_app.script
+2017-05-22 09:13:00.668 -0600	typetext		[return]	3	on_open_app	open_app.script
+2017-05-22 09:13:01.472 -0600	typetext		./main.py	4	on_open_app	open_app.script
+2017-05-22 09:13:02.185 -0600	typetext		[return]	5	on_open_app	open_app.script
+2017-05-22 09:13:02.313 -0600	EndTestCase		(Duration:"4.568179", Errors:"0", Exceptions:"0", StartTime:"2017-05-22 09:12:57 -0600", Successes:"1", TestCase:"open_app.script", Warnings:"0")
+2017-05-22 09:13:04.248 -0600	SUCCESS		Execution Time 0:00:05 open_app.script
