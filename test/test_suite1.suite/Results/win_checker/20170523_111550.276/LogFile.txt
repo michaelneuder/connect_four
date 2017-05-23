@@ -1,0 +1,33 @@
+﻿2017-05-23 11:15:50.277 -0600	START		Running win_checker.script
+2017-05-23 11:15:52.138 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:16:03.405 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:16:05.085 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:16:15.907 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:16:17.786 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:16:29.156 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:16:30.679 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:16:42.508 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:16:44.485 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:16:56.006 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:16:57.686 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:17:08.508 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:17:10.787 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:17:22.416 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:17:24.447 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:17:35.778 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:17:37.808 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:17:49.586 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:17:51.316 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:18:02.796 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:18:04.276 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:18:15.385 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:18:17.172 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:18:29.748 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:18:31.277 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:18:42.195 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:18:44.175 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:18:53.298 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:18:55.173 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-23 11:19:10.053 -0600	imagefound	purple_cell	Unable to Find Image purple_cell	3	on_win_checker	win_checker.script
+2017-05-23 11:19:10.209 -0600	EndTestCase		(Duration:"199.926258", Errors:"0", Exceptions:"0", StartTime:"2017-05-23 11:15:50 -0600", Successes:"1", TestCase:"win_checker.script", Warnings:"0")
+2017-05-23 11:19:11.312 -0600	SUCCESS		Execution Time 0:03:20 win_checker.script

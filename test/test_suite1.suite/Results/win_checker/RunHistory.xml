@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+<runHistory script="win_checker">
+ <run>
+  <RunDate>2017-05-23 10:41:10.653 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>206.228075</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170523_104110.653/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-05-23 11:15:50.276 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>199.930150</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170523_111550.276/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-05-23 11:20:27.644 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>36.017927</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170523_112027.644/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-05-23 12:51:48.628 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>46.698598</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170523_125148.628/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

@@ -1,0 +1,10 @@
+﻿repeat 19 times
+	click "empty_cell"
+end repeat
+put ImageFound("red_win")
+click "ok_button"
+put ImageFound("purple_cell")
+
+click "quit_button"
+TypeText "exit"
+TypeText return

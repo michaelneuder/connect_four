@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="win_checker.script" package="test_suite1.suite" timestamp="2017-05-23 11:15:50.276 -0600"
+ tests="1" successes="1" errors="0" time="199.930150">
+  <properties>
+   <property name="RunDate" value="2017-05-23 11:15:50.276 -0600"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="win_checker.script" assertions="1" successes="1" errors="0" time="199.926258">
+  </testcase>
+ </testsuite>
+</testsuites>

@@ -5,3 +5,4 @@ run pvp_script
 run pvai_script
 run sgames_script
 run footer_script
+run win_checker
