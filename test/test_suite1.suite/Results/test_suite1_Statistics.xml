@@ -2,19 +2,11 @@
 <statistics>
  <script name="open_app">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>11</NumberOfRuns>
+  <NumberOfRuns>13</NumberOfRuns>
   <NumberOfFails>0</NumberOfFails>
   <FirstRun>2017-05-17 10:44:15 -0600</FirstRun>
-  <LastRun>2017-05-22 09:13:27 -0600</LastRun>
-  <TotalTimeOnSuccess>47.388256</TotalTimeOnSuccess>
- </script>
- <script name="win_checker">
-  <LastStatus>Success</LastStatus>
-  <NumberOfRuns>4</NumberOfRuns>
-  <NumberOfFails>0</NumberOfFails>
-  <FirstRun>2017-05-23 10:41:10 -0600</FirstRun>
-  <LastRun>2017-05-23 12:51:48 -0600</LastRun>
-  <TotalTimeOnSuccess>488.874750</TotalTimeOnSuccess>
+  <LastRun>2017-05-24 09:09:59 -0600</LastRun>
+  <TotalTimeOnSuccess>58.491684</TotalTimeOnSuccess>
  </script>
  <script name="pvp_script">
   <LastStatus>Failure</LastStatus>
@@ -23,6 +15,14 @@
   <FirstRun>2017-05-17 11:47:37 -0600</FirstRun>
   <LastRun>2017-05-18 14:13:55 -0600</LastRun>
   <TotalTimeOnSuccess>318.416834</TotalTimeOnSuccess>
+ </script>
+ <script name="win_checker">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>7</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-05-23 10:41:10 -0600</FirstRun>
+  <LastRun>2017-05-24 09:10:10 -0600</LastRun>
+  <TotalTimeOnSuccess>531.490127</TotalTimeOnSuccess>
  </script>
  <script name="controller">
   <LastStatus>Success</LastStatus>
@@ -40,6 +40,14 @@
   <LastRun>2017-05-17 13:56:53 -0600</LastRun>
   <TotalTimeOnSuccess>58.255595</TotalTimeOnSuccess>
  </script>
+ <script name="htp_script">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>12</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-05-17 10:13:43 -0600</FirstRun>
+  <LastRun>2017-05-17 10:57:27 -0600</LastRun>
+  <TotalTimeOnSuccess>85.599027</TotalTimeOnSuccess>
+ </script>
  <script name="footer_script">
   <LastStatus>Success</LastStatus>
   <NumberOfRuns>1</NumberOfRuns>
@@ -55,13 +63,5 @@
   <FirstRun>2017-05-17 14:12:43 -0600</FirstRun>
   <LastRun>2017-05-19 09:05:59 -0600</LastRun>
   <TotalTimeOnSuccess>150.679935</TotalTimeOnSuccess>
- </script>
- <script name="htp_script">
-  <LastStatus>Success</LastStatus>
-  <NumberOfRuns>12</NumberOfRuns>
-  <NumberOfFails>2</NumberOfFails>
-  <FirstRun>2017-05-17 10:13:43 -0600</FirstRun>
-  <LastRun>2017-05-17 10:57:27 -0600</LastRun>
-  <TotalTimeOnSuccess>85.599027</TotalTimeOnSuccess>
  </script>
 </statistics>

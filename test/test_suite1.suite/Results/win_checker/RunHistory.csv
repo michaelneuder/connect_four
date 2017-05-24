@@ -3,3 +3,6 @@
 2017-05-23 11:15:50.276 -0600,"Success",0:03:19,0,0,0,"20170523_111550.276/LogFile.txt","","",1
 2017-05-23 11:20:27.644 -0600,"Success",0:00:36,0,0,0,"20170523_112027.644/LogFile.txt","","",1
 2017-05-23 12:51:48.628 -0600,"Success",0:00:46,0,0,0,"20170523_125148.628/LogFile.txt","","",1
+2017-05-24 09:07:57.484 -0600,"Success",0:00:42,0,0,0,"20170524_090757.484/LogFile.txt","","",1
+2017-05-24 09:09:47.530 -0600,"Failure",0:00:00,1,0,0,"20170524_090947.530/LogFile.txt","","SenseTalk Compiler Exception -- in win_checker:\nSyntax Error at line 2: Syntax Error - can't understand ""at"" at or near character 36",0
+2017-05-24 09:10:10.834 -0600,"Failure",0:00:00,1,0,0,"20170524_091010.834/LogFile.txt","","SenseTalk Compiler Exception -- in win_checker:\nSyntax Error at line 2: Syntax Error - can't understand ""at"" at or near character 36",0

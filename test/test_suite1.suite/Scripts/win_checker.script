@@ -1,10 +1,10 @@
 ﻿repeat 19 times
-	click "empty_cell"
+	click "empty_cell" at (743, 379)
 end repeat
 put ImageFound("red_win")
 click "ok_button"
 put ImageFound("purple_cell")
 
-click "quit_button"
-TypeText "exit"
-TypeText return
+//click "quit_button"
+//TypeText "exit"
+//TypeText return

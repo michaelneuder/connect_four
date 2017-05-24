@@ -1,0 +1,7 @@
+﻿2017-05-24 09:15:24.879 -0600	START		Running diagonal_win.script
+2017-05-24 09:15:26.006 -0600	click	empty_cell1	at (536, 392)	8	on_diagonal_win	diagonal_win.script
+2017-05-24 09:15:27.059 -0600	doubleclick	empty_cell2	at (556, 391)	9	on_diagonal_win	diagonal_win.script
+2017-05-24 09:15:29.054 -0600	click	red_cell1	at (551, 642)	10	on_diagonal_win	diagonal_win.script
+2017-05-24 09:15:47.371 -0600	Exception	red_black_cell	No Image Found On Screen: "red_black_cell"	11	on_diagonal_win	diagonal_win.script
+2017-05-24 09:15:47.503 -0600	EndTestCase		(Duration:"22.617957", Errors:"1", Exceptions:"1", StartTime:"2017-05-24 09:15:24 -0600", Successes:"0", TestCase:"diagonal_win.script", Warnings:"0")
+2017-05-24 09:15:47.505 -0600	ABORTED		Execution Time 0:00:23 diagonal_win.script

@@ -1,0 +1,28 @@
+﻿2017-05-24 09:07:57.485 -0600	START		Running win_checker.script
+2017-05-24 09:07:58.267 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:00.218 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:01.317 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:03.217 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:04.423 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:06.325 -0600	click	empty_cell	at (553, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:07.922 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:09.367 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:10.411 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:12.565 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:13.716 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:15.167 -0600	click	empty_cell	at (648, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:17.317 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:18.917 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:20.267 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:22.523 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:24.776 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:27.027 -0600	click	empty_cell	at (743, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:29.273 -0600	click	empty_cell	at (838, 379)	2	on_win_checker	win_checker.script
+2017-05-24 09:08:31.467 -0600	imagefound	red_win	found at (833, 456)	4	on_win_checker	win_checker.script
+2017-05-24 09:08:34.657 -0600	click	ok_button	at (830, 498)	5	on_win_checker	win_checker.script
+2017-05-24 09:08:36.824 -0600	imagefound	purple_cell	found at (551, 855)	6	on_win_checker	win_checker.script
+2017-05-24 09:08:38.539 -0600	click	quit_button	at (1083, 962)	8	on_win_checker	win_checker.script
+2017-05-24 09:08:39.284 -0600	typetext		exit	9	on_win_checker	win_checker.script
+2017-05-24 09:08:39.997 -0600	typetext		[return]	10	on_win_checker	win_checker.script
+2017-05-24 09:08:40.102 -0600	EndTestCase		(Duration:"42.611438", Errors:"0", Exceptions:"0", StartTime:"2017-05-24 09:07:57 -0600", Successes:"1", TestCase:"win_checker.script", Warnings:"0")
+2017-05-24 09:08:41.576 -0600	SUCCESS		Execution Time 0:00:43 win_checker.script

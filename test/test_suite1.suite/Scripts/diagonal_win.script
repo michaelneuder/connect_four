@@ -1,0 +1,15 @@
+(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2017-05-24 09:14:56
+  From session:  diagonal_win
+  Captured on:  2017-05-24 09:11:39
+  From server:  SUT
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+Click "empty_cell1"
+DoubleClick "empty_cell2"
+Click "red_cell1"
+Click "red_black_cell"
+DoubleClick "red_blac_cell1"
+Click "red_black_cell2"
+Click "red_black_cell3"
+Click "ok_button_offcenter"

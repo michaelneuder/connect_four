@@ -1,0 +1,35 @@
+{
+    commandList = "[{captureRect:[516, 160, 585, 229], command:@\"Click\", eventNum:2, hotSpot:[536, 867], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"empty_cell1\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0002.png\"}, {captureRect:[611, 160, 680, 229], command:@\"DoubleClick\", eventNum:4, hotSpot:[651, 866], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"empty_cell2\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0004.png\"}, {captureRect:[512, 169, 589, 233], command:@\"Click\", eventNum:8, hotSpot:[551, 832], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"red_cell1\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0008.png\"}, {captureRect:[504, 183, 621, 227], command:@\"Click\", eventNum:10, hotSpot:[717, 848], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"red_black_cell\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRHotSpot:[213, 19], OCRText:@\"r ir\", screenShotFile:@\"Screen0010.png\", useOCR:@\"NO\"}, {captureRect:[504, 184, 717, 228], command:@\"DoubleClick\", eventNum:16, hotSpot:[826, 847], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"red_blac_cell1\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRHotSpot:[322, 19], OCRText:@\"r ir ir\", screenShotFile:@\"Screen0016.png\", useOCR:@\"NO\"}, {captureRect:[504, 184, 885, 228], command:@\"Click\", eventNum:20, hotSpot:[826, 847], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"red_black_cell2\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"r lr lr lr 1\", screenShotFile:@\"Screen0020.png\", useOCR:@\"NO\"}, {captureRect:[504, 184, 885, 228], command:@\"Click\", eventNum:22, hotSpot:[826, 847], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"red_black_cell3\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"r lr lr lr 1\", screenShotFile:@\"Screen0022.png\", useOCR:@\"NO\"}, {captureRect:[811, 539, 861, 562], command:@\"Click\", eventNum:24, hotSpot:[846, 496], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"ok_button_offcenter\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0024.png\"}]";
+    generatedCommands = (
+	"Click \"empty_cell1\"",
+	"DoubleClick \"empty_cell2\"",
+	"Click \"red_cell1\"",
+	"Click \"red_black_cell\"",
+	"DoubleClick \"red_blac_cell1\"",
+	"Click \"red_black_cell2\"",
+	"Click \"red_black_cell3\"",
+	"Click \"ok_button_offcenter\""
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "empty_cell1.png",
+	    "empty_cell2.png",
+	    "red_cell1.png",
+	    "red_black_cell.png",
+	    "red_blac_cell1.png",
+	    "red_black_cell2.png",
+	    "red_black_cell3.png",
+	    "ok_button_offcenter.png",
+	    "empty_cell1.png",
+	    "empty_cell2.png",
+	    "red_cell1.png",
+	    "red_black_cell.png",
+	    "red_blac_cell1.png",
+	    "red_black_cell2.png",
+	    "red_black_cell3.png",
+	    "ok_button_offcenter.png"
+	);
+    };
+    sessionType = turboSession;
+    unnamedImageCount = <*I0>;
+}

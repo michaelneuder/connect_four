@@ -48,4 +48,42 @@
   <ReturnValue></ReturnValue>
   <ErrorMessage></ErrorMessage>
  </run>
+ <run>
+  <RunDate>2017-05-24 09:07:57.484 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>42.615377</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170524_090757.484/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-05-24 09:09:47.530 -0600</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.004785</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170524_090947.530/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>SenseTalk Compiler Exception -- in win_checker:
+Syntax Error at line 2: Syntax Error - can&#x27;t understand &quot;at&quot; at or near character 36</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-05-24 09:10:10.834 -0600</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.005997</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170524_091010.834/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>SenseTalk Compiler Exception -- in win_checker:
+Syntax Error at line 2: Syntax Error - can&#x27;t understand &quot;at&quot; at or near character 36</ErrorMessage>
+ </run>
 </runHistory>

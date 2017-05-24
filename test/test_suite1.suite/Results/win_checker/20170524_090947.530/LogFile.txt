@@ -1,0 +1,3 @@
+﻿2017-05-24 09:09:47.531 -0600	START		Running win_checker.script
+2017-05-24 09:09:47.538 -0600	EndTestCase		(Duration:"0.001102", Errors:"1", Exceptions:"0", StartTime:"2017-05-24 09:09:47 -0600", Successes:"0", TestCase:"win_checker.script", Warnings:"0")
+2017-05-24 09:09:49.956 -0600	FAILURE	Screen_Error.png	SenseTalk Compiler Exception in win_checker:\nSyntax Error at line 2: Syntax Error - can't understand "at" at or near character 36 -- Execution Time 0:00:00 win_checker.script
