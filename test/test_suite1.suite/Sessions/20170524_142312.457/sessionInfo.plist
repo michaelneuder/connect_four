@@ -1,0 +1,32 @@
+{
+    commandList = "[{captureRect:[490, 580, 557, 591], command:@\"Click\", eventNum:2, hotSpot:[516, 467], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"mainmenu\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"main menu\", screenShotFile:@\"Screen0002.png\", useOCR:@\"NO\"}, {captureRect:[757, 433, 805, 465], command:@\"Click\", eventNum:4, hotSpot:[801, 610], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"iciyt\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"iciyt\", screenShotFile:@\"Screen0004.png\", useOCR:@\"NO\"}, {captureRect:[746, 77, 834, 94], command:@\"Click\", eventNum:6, hotSpot:[794, 963], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"playervplayer\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"player v. player\", screenShotFile:@\"Screen0006.png\", useOCR:@\"NO\"}, {captureRect:[746, 77, 834, 94], command:@\"Click\", eventNum:8, hotSpot:[787, 964], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"playervplayer_0001\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"player v. player\", screenShotFile:@\"Screen0008.png\", useOCR:@\"NO\"}, {captureRect:[860, 77, 923, 94], command:@\"Click\", eventNum:10, hotSpot:[969, 960], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"playervai\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRHotSpot:[109, 13], OCRText:@\"player v. ai\", screenShotFile:@\"Screen0010.png\", useOCR:@\"NO\"}, {captureRect:[523, 357, 667, 385], command:@\"Click\", eventNum:12, hotSpot:[568, 679], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"stalemate\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"stalemate\", screenShotFile:@\"Screen0012.png\", useOCR:@\"NO\"}, {captureRect:[712, 192, 967, 209], command:@\"Click\", eventNum:14, hotSpot:[773, 850], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"opengameloadgamedeletegame\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"open game load game delete game\", screenShotFile:@\"Screen0014.png\", useOCR:@\"NO\"}]";
+    generatedCommands = (
+	"Click \"mainmenu\"",
+	"Click \"iciyt\"",
+	"Click \"playervplayer\"",
+	"Click \"playervplayer_0001\"",
+	"Click \"playervai\"",
+	"Click \"stalemate\"",
+	"Click \"opengameloadgamedeletegame\""
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "mainmenu.png",
+	    "opengameloadgamedeletegame.png",
+	    "mainmenu.png",
+	    "iciyt.png",
+	    "iciyt.png",
+	    "playervplayer.png",
+	    "playervplayer.png",
+	    "playervplayer_0001.png",
+	    "playervplayer_0001.png",
+	    "playervai.png",
+	    "playervai.png",
+	    "stalemate.png",
+	    "stalemate.png",
+	    "opengameloadgamedeletegame.png"
+	);
+    };
+    sessionType = turboSession;
+    unnamedImageCount = <*I0>;
+}

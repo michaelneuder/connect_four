@@ -10,11 +10,11 @@
  </script>
  <script name="htp_script">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>12</NumberOfRuns>
+  <NumberOfRuns>13</NumberOfRuns>
   <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 10:13:43 -0600</FirstRun>
-  <LastRun>2017-05-17 10:57:27 -0600</LastRun>
-  <TotalTimeOnSuccess>85.599027</TotalTimeOnSuccess>
+  <LastRun>2017-05-24 14:39:54 -0600</LastRun>
+  <TotalTimeOnSuccess>107.533818</TotalTimeOnSuccess>
  </script>
  <script name="win_checker">
   <LastStatus>Failure</LastStatus>
@@ -26,11 +26,11 @@
  </script>
  <script name="controller">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>31</NumberOfRuns>
+  <NumberOfRuns>37</NumberOfRuns>
   <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 11:02:39 -0600</FirstRun>
-  <LastRun>2017-05-24 11:21:08 -0600</LastRun>
-  <TotalTimeOnSuccess>8241.040997</TotalTimeOnSuccess>
+  <LastRun>2017-05-24 17:06:38 -0600</LastRun>
+  <TotalTimeOnSuccess>10921.811012</TotalTimeOnSuccess>
  </script>
  <script name="pvai_script">
   <LastStatus>Success</LastStatus>
@@ -50,11 +50,11 @@
  </script>
  <script name="open_app">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>24</NumberOfRuns>
+  <NumberOfRuns>25</NumberOfRuns>
   <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 10:44:15 -0600</FirstRun>
-  <LastRun>2017-05-24 11:34:59 -0600</LastRun>
-  <TotalTimeOnSuccess>96.215175</TotalTimeOnSuccess>
+  <LastRun>2017-05-24 14:39:28 -0600</LastRun>
+  <TotalTimeOnSuccess>102.163950</TotalTimeOnSuccess>
  </script>
  <script name="pvp_script">
   <LastStatus>Failure</LastStatus>

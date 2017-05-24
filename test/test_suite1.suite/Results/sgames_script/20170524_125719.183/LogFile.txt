@@ -1,0 +1,4 @@
+﻿2017-05-24 12:57:19.185 -0600	START		Running sgames_script.script
+2017-05-24 12:57:43.254 -0600	Exception	savedgames_menu	No Image Found On Screen: "savedgames_menu"	1	on_sgames_script	sgames_script.script
+2017-05-24 12:57:43.421 -0600	EndTestCase		(Duration:"24.231133", Errors:"1", Exceptions:"1", StartTime:"2017-05-24 12:57:19 -0600", Successes:"0", TestCase:"sgames_script.script", Warnings:"0")
+2017-05-24 12:57:43.423 -0600	ABORTED		Execution Time 0:00:24 sgames_script.script

@@ -1,0 +1,10 @@
+﻿2017-05-24 14:39:54.509 -0600	START		Running htp_script.script
+2017-05-24 14:39:55.572 -0600	imagefound	connectfour_title	found at (846, 181)	1	on_htp_script	htp_script.script
+2017-05-24 14:39:56.176 -0600	imagefound	menu	found at (837, 595)	2	on_htp_script	htp_script.script
+2017-05-24 14:39:58.605 -0600	click	howtoplay	at (841, 352)	3	on_htp_script	htp_script.script
+2017-05-24 14:40:11.997 -0600	imagefound	instruction_page	found at (833, 503)	4	on_htp_script	htp_script.script
+2017-05-24 14:40:13.848 -0600	click	file_instructions	at (368, 117)	5	on_htp_script	htp_script.script
+2017-05-24 14:40:14.824 -0600	click	exit_instructions	at (442, 139)	6	on_htp_script	htp_script.script
+2017-05-24 14:40:15.569 -0600	typetext		exit	7	on_htp_script	htp_script.script
+2017-05-24 14:40:16.282 -0600	typetext		[return]	8	on_htp_script	htp_script.script
+2017-05-24 14:40:16.445 -0600	EndTestCase		(Duration:"21.930186", Errors:"0", Exceptions:"0", StartTime:"2017-05-24 14:39:54 -0600", Successes:"1", TestCase:"htp_script.script", Warnings:"0")
