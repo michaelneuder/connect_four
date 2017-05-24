@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<runHistory script="exit_checker">
+ <run>
+  <RunDate>2017-05-24 09:25:41.146 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>13.592596</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170524_092541.146/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-05-24 09:28:50.937 -0600</RunDate>
+  <Status>Success</Status>
+  <Duration>26.112787</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170524_092850.937/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

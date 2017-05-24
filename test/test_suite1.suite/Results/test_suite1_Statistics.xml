@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0"?>
 <statistics>
- <script name="open_app">
+ <script name="footer_script">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>13</NumberOfRuns>
+  <NumberOfRuns>1</NumberOfRuns>
   <NumberOfFails>0</NumberOfFails>
-  <FirstRun>2017-05-17 10:44:15 -0600</FirstRun>
-  <LastRun>2017-05-24 09:09:59 -0600</LastRun>
-  <TotalTimeOnSuccess>58.491684</TotalTimeOnSuccess>
+  <FirstRun>2017-05-19 09:14:00 -0600</FirstRun>
+  <LastRun>2017-05-19 09:14:00 -0600</LastRun>
+  <TotalTimeOnSuccess>15.957268</TotalTimeOnSuccess>
  </script>
- <script name="pvp_script">
-  <LastStatus>Failure</LastStatus>
-  <NumberOfRuns>7</NumberOfRuns>
+ <script name="htp_script">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>12</NumberOfRuns>
   <NumberOfFails>2</NumberOfFails>
-  <FirstRun>2017-05-17 11:47:37 -0600</FirstRun>
-  <LastRun>2017-05-18 14:13:55 -0600</LastRun>
-  <TotalTimeOnSuccess>318.416834</TotalTimeOnSuccess>
+  <FirstRun>2017-05-17 10:13:43 -0600</FirstRun>
+  <LastRun>2017-05-17 10:57:27 -0600</LastRun>
+  <TotalTimeOnSuccess>85.599027</TotalTimeOnSuccess>
  </script>
  <script name="win_checker">
   <LastStatus>Failure</LastStatus>
@@ -26,11 +26,11 @@
  </script>
  <script name="controller">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>25</NumberOfRuns>
-  <NumberOfFails>1</NumberOfFails>
+  <NumberOfRuns>31</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 11:02:39 -0600</FirstRun>
-  <LastRun>2017-05-23 16:07:04 -0600</LastRun>
-  <TotalTimeOnSuccess>6035.391947</TotalTimeOnSuccess>
+  <LastRun>2017-05-24 11:21:08 -0600</LastRun>
+  <TotalTimeOnSuccess>8241.040997</TotalTimeOnSuccess>
  </script>
  <script name="pvai_script">
   <LastStatus>Success</LastStatus>
@@ -40,21 +40,29 @@
   <LastRun>2017-05-17 13:56:53 -0600</LastRun>
   <TotalTimeOnSuccess>58.255595</TotalTimeOnSuccess>
  </script>
- <script name="htp_script">
+ <script name="exit_checker">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>12</NumberOfRuns>
-  <NumberOfFails>2</NumberOfFails>
-  <FirstRun>2017-05-17 10:13:43 -0600</FirstRun>
-  <LastRun>2017-05-17 10:57:27 -0600</LastRun>
-  <TotalTimeOnSuccess>85.599027</TotalTimeOnSuccess>
- </script>
- <script name="footer_script">
-  <LastStatus>Success</LastStatus>
-  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfRuns>2</NumberOfRuns>
   <NumberOfFails>0</NumberOfFails>
-  <FirstRun>2017-05-19 09:14:00 -0600</FirstRun>
-  <LastRun>2017-05-19 09:14:00 -0600</LastRun>
-  <TotalTimeOnSuccess>15.957268</TotalTimeOnSuccess>
+  <FirstRun>2017-05-24 09:25:41 -0600</FirstRun>
+  <LastRun>2017-05-24 09:28:50 -0600</LastRun>
+  <TotalTimeOnSuccess>39.705383</TotalTimeOnSuccess>
+ </script>
+ <script name="open_app">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>24</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-05-17 10:44:15 -0600</FirstRun>
+  <LastRun>2017-05-24 11:34:59 -0600</LastRun>
+  <TotalTimeOnSuccess>96.215175</TotalTimeOnSuccess>
+ </script>
+ <script name="pvp_script">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>7</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-05-17 11:47:37 -0600</FirstRun>
+  <LastRun>2017-05-18 14:13:55 -0600</LastRun>
+  <TotalTimeOnSuccess>318.416834</TotalTimeOnSuccess>
  </script>
  <script name="sgames_script">
   <LastStatus>Success</LastStatus>

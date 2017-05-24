@@ -1,0 +1,4 @@
+﻿2017-05-24 09:37:44.248 -0600	START		Running open_app.script
+2017-05-24 09:37:44.336 -0600	typetext		[controlKey]x	1	on_open_app	open_app.script
+2017-05-24 09:37:44.476 -0600	EndTestCase		(Duration:"0.222724", Errors:"0", Exceptions:"0", StartTime:"2017-05-24 09:37:44 -0600", Successes:"1", TestCase:"open_app.script", Warnings:"0")
+2017-05-24 09:37:46.033 -0600	SUCCESS		Execution Time 0:00:00 open_app.script

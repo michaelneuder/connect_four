@@ -1,0 +1,1 @@
+2017-05-24 09:36:50.407 -0600,Failure,0:00:00,1,0,0,20170524_093650.407/LogFile.txt,"","SenseTalk Compiler Exception -- in open_app:\nSyntax Error at line 2: Syntax Error - can't understand [matching close of block comment not found] at or near character 20",0

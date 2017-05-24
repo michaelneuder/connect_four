@@ -1,4 +1,5 @@
-﻿Click "terminal_icon"
+﻿Click "mint_menu"
+click "terminal"
 TypeText <<cd Dropbox/github/connect_four/app/bin>>
 TypeText Return
 TypeText <<./main.py>>

@@ -1,0 +1,13 @@
+﻿2017-05-24 09:25:41.147 -0600	START		Running exit_checker.script
+2017-05-24 09:25:42.640 -0600	click	pvsp_button	at (840, 468)	1	on_exit_checker	exit_checker.script
+2017-05-24 09:25:44.928 -0600	click	file_pvp	at (366, 112)	2	on_exit_checker	exit_checker.script
+2017-05-24 09:25:46.262 -0600	click	exit_menu_item	at (445, 136)	3	on_exit_checker	exit_checker.script
+2017-05-24 09:25:47.063 -0600	typetext		./main.py	1	on_open_from_terminal	open_from_terminal.script
+2017-05-24 09:25:47.777 -0600	typetext		[return]	2	on_open_from_terminal	open_from_terminal.script
+2017-05-24 09:25:48.969 -0600	click	pvsai_button	at (836, 592)	5	on_exit_checker	exit_checker.script
+2017-05-24 09:25:51.401 -0600	click	file_pvp	at (366, 112)	6	on_exit_checker	exit_checker.script
+2017-05-24 09:25:53.090 -0600	click	exit_menu_item	at (445, 136)	7	on_exit_checker	exit_checker.script
+2017-05-24 09:25:53.891 -0600	typetext		./main.py	1	on_open_from_terminal	open_from_terminal.script
+2017-05-24 09:25:54.604 -0600	typetext		[return]	2	on_open_from_terminal	open_from_terminal.script
+2017-05-24 09:25:54.742 -0600	EndTestCase		(Duration:"13.587701", Errors:"0", Exceptions:"0", StartTime:"2017-05-24 09:25:41 -0600", Successes:"1", TestCase:"exit_checker.script", Warnings:"0")
+2017-05-24 09:25:55.955 -0600	SUCCESS		Execution Time 0:00:13 exit_checker.script

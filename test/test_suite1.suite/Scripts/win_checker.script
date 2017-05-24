@@ -1,10 +1,13 @@
-﻿repeat 19 times
-	click "empty_cell" at (743, 379)
+﻿click "game_menu"
+click "reset_menu_item"
+click "yes_button"
+repeat 19 times
+	click "empty_cell"
 end repeat
 put ImageFound("red_win")
 click "ok_button"
 put ImageFound("purple_cell")
-
+click "main_menu_button"
 //click "quit_button"
 //TypeText "exit"
 //TypeText return

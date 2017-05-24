@@ -1,0 +1,1 @@
+2017-05-24 09:35:20.373 -0600,Failure,0:00:00,1,0,0,20170524_093520.373/LogFile.txt,"","SenseTalk Runtime Exception -- Invalid operands for addition: expected numbers, dates and/or lists; got 'x' and 'Ctrl'",0

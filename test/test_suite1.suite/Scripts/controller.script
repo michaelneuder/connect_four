@@ -6,3 +6,4 @@ run pvai_script
 run sgames_script
 run footer_script
 run win_checker
+run exit_checker

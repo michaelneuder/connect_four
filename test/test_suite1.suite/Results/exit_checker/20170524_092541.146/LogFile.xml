@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="exit_checker.script" package="test_suite1.suite" timestamp="2017-05-24 09:25:41.146 -0600"
+ tests="1" successes="1" errors="0" time="13.592596">
+  <properties>
+   <property name="RunDate" value="2017-05-24 09:25:41.146 -0600"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="exit_checker.script" assertions="1" successes="1" errors="0" time="13.587701">
+  </testcase>
+ </testsuite>
+</testsuites>
