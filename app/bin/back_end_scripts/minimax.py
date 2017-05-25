@@ -56,67 +56,62 @@ class minimax(object):
         '''
         checking for twos along the rows. this gets complicated, because we
         only want to count twos that could be part of a future connect four.
-        thus we have to make sure that their is enough empty space around each
+        thus we have to make sure that their is enough empty cells around each
         set of two before we count it.
+        ----------------------------------------------------------------------
+        these are the options: 0011, 0101, 0110, 1001, 1010, 1100
         '''
         for row in range(self.number_rows):
-            for col in range(self.number_cols):
-                if(col == 0):
-                    if(self.board[row][col] == self.board[row][col+1] == color):
-                        if(self.board[row][col+2] == self.board[row][col+3] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                elif(col == 1):
-                    if(self.board[row][col] == self.board[row][col+1] == color):
-                        if(self.board[row][col-1] == self.board[row][col+2] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                        elif(self.board[row][col+2] == self.board[row][col+3] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                elif(col == 2 or col == 3):
-                    if(self.board[row][col] == self.board[row][col+1] == color):
-                        if(self.board[row][col-1] == self.board[row][col+2] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                        elif(self.board[row][col+2] == self.board[row][col+3] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                        elif(self.board[row][col-1] == self.board[row][col-2] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                elif(col == 4):
-                    if(self.board[row][col] == self.board[row][col+1] == color):
-                        if(self.board[row][col-1] == self.board[row][col+2] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                        elif(self.board[row][col-1] == self.board[row][col-2] == 0):
-                            number_of_twos += 1
-                            print(row,col)
-                elif(col == 5):
-                    if(self.board[row][col] == self.board[row][col+1] == color):
-                        if(self.board[row][col-1] == self.board[row][col-2] == 0):
-                            number_of_twos += 1
-                            print(row,col)
+            for col in range(self.number_cols-1):
+                if( (col-2) > -1 and (col+2 >= self.number_cols or self.board[row][col+2] != color)):
+                    if(self.board[row][col] == self.board[row][col+1] == color
+                        and self.board[row][col-1] == self.board[row][col-2] == 0):
+                        number_of_twos += 1
+                elif( (col-1) > -1 and (col+2) < self.number_cols ):
+                    if(self.board[row][col] == self.board[row][col+2] == color
+                        and (self.board[row][col-1] == self.board[row][col+1] == 0)):
+                        number_of_twos += 1
+                elif( (col-1) > -1 and (col+2) < self.number_cols):
+                    if(self.board[row][col] == self.board[row][col+1] == color
+                        and (self.board[row][col-1] == self.board[row][col+2] == 0)):
+                        number_of_twos += 1
+                elif( (col+3) < self.number_cols):
+                    if(self.board[row][col] == self.board[row][col+3] == color
+                        and self.board[row][col+1] == self.board[row][col+2] == 0):
+                        number_of_twos += 1
+                    elif(self.board[row][col] == self.board[row][col+2] == color
+                        and self.board[row][col+1] == self.board[row][col+3] == 0):
+                        number_of_twos += 1
+                    elif(self.board[row][col] == self.board[row][col+1] == color
+                        and self.board[row][col+2] == self.board[row][col+3] == 0):
+                        number_of_twos += 1
         return number_of_twos
 
     def find_twos_rows_test(self, color):
-        number_of_twos = 0
         '''
         checking for twos along the rows. this gets complicated, because we
         only want to count twos that could be part of a future connect four.
-        thus we have to make sure that their is enough empty space around each
+        thus we have to make sure that their is enough empty cells around each
         set of two before we count it.
+        ----------------------------------------------------------------------
+        these are the options: 0011, 0101, 0110, 1001, 1010, 1100
         '''
+        number_of_twos = 0
+        set_to_check = []
         for row in range(self.number_rows):
-            for col in range(self.number_cols):
-                if( (col+3) < self.number_cols):
-                    if(self.board[row][col] == self.board[row][col+1] == color
-                        and self.board[row][col+2] == self.board[row][col+3] == 0):
-                        number_of_twos += 1
-                        print(row, col)
+            for col in range(self.number_cols-3):
+                set_to_check.append([self.board[row][col+ i] for i in range(4)])
+        for set_ in set_to_check:
+            num_color = 0
+            num_empty = 0
+            for cell in set_:
+                if(cell == 0):
+                    num_empty += 1
+                elif(cell == color):
+                    num_color += 1
+            if(num_color == num_empty == 2):
+                number_of_twos += 1
         return number_of_twos
-
 
     def find_twos_cols(self, color):
         number_of_twos = 0
@@ -127,12 +122,19 @@ class minimax(object):
         '''
         for col in range(self.number_cols):
             for row in range(self.number_rows):
-                if(self.board[row][col] == self.board[row-1][col] == color):
-                    if(self.board[row-2][col] == 0):
-                        number_of_twos += 1
-                        print(row,col)
+                if(self.board[row][col] == self.board[row-1][col] == color
+                   and self.board[row-2][col] == 0):
+                    number_of_twos += 1
+        return number_of_twos
 
-    def find_twos_diag(self, color):
+    def find_twos_diags(self, color):
+        '''
+        this is similar to finding twos in rows. there are three options for
+        two in a rows that have potential to be a win. 0011, 0110, 1100. these
+        each are examined in the context of the diagonal. this is the reason
+        that the diagonal lists are necessary
+        '''
+        number_of_twos = 0
         for diag in self.diag_set:
             diagonal_length = len(diag)
             for i in range(diagonal_length-1):
@@ -140,14 +142,15 @@ class minimax(object):
                     if(diag[i] == diag[i+1] == color and diag[i+2] == diag[i+3] == 0):
                         number_of_twos += 1
                         print('found')
-                elif( (i-1) > -1 and (i+1) < diagonal_length):
-                    if(diag[i] == diag[i+1] == color and diag[i-1] == diag[i+1] == 0):
+                elif( (i-1) > -1 and (i+2) < diagonal_length):
+                    if(diag[i] == diag[i+1] == color and diag[i-1] == diag[i+2] == 0):
                         number_of_twos += 1
                         print('found')
                 elif( (i-2) > -1):
                     if(diag[i] == diag[i+1] == color and diag[i-1] == diag[i-2] == 0):
                         number_of_twos += 1
                         print('found')
+        return number_of_twos
 
 
 
@@ -162,13 +165,13 @@ class minimax(object):
 def main():
     print("\nminimax ai algorithm --- connect four\n")
     sample_board = np.array([[0,0,0,0,0,0,0],
-                             [0,0,0,1,1,0,0],
                              [0,0,0,0,0,0,0],
+                             [0,1,0,0,1,0,0],
                              [0,0,2,0,1,2,0],
                              [0,1,2,1,2,2,2],
                              [2,1,1,2,1,1,1]])
     minimax_ = minimax(sample_board, 16)
-    minimax_.find_twos_rows_test(1)
+    print(minimax_.find_twos_rows(1))
 
 
 if __name__=='__main__':
