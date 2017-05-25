@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import numpy as np
 import random as rand
-import numpy as np
 from minimax import minimax
 
 class cf(object):
@@ -131,6 +130,29 @@ class cf(object):
 
         return self.win_found
 
+    def make_move(self, row, column, color):
+        if(self.is_col_empty(column)):
+            self.board[row, column] = color
+            self.move_number += 1
+            if(self.check_win_new(row, column, color)):
+                print('win')
+                print(self.win_results)
+                # exit()
+        elif(self.is_col_full(column)):
+            print('column full')
+            pass
+        else:
+            # not empty or full
+            self.board[row-1, column] = color
+            self.move_number += 1
+            if(self.check_win_new(row-1, column, color)):
+                print('win')
+                print(self.win_results)
+
+    # def find_best_move(self):
+    #     game_tree = []
+    #     for i in range(number_cols):
+
 def main():
     cf1 = cf()
     keep_going = True
@@ -149,25 +171,7 @@ def main():
                 # move will be made
                 column_int = int(column) - 1
                 row = cf1.find_row(column_int)
-
-                if(cf1.is_col_empty(column_int)):
-                    cf1.board[row, column_int] = 1
-                    cf1.move_number += 1
-                    if(cf1.check_win_new(row, column_int, 1)):
-                        print('win')
-                        print(cf1.win_results)
-                        # exit()
-                elif(cf1.is_col_full(column_int)):
-                    print('column full')
-                    pass
-                else:
-                    # not empty or full
-                    cf1.board[row-1, column_int] = 1
-                    cf1.move_number += 1
-                    if(cf1.check_win_new(row-1, column_int, 1)):
-                        print('win')
-                        print(cf1.win_results)
-                        # exit()
+                cf1.make_move(row, column_int, 1)
         # ai plays black
         # else:
         #     ai_col = rand.randint(0,6)
@@ -205,25 +209,7 @@ def main():
                 # move will be made
                 column_int = int(column) - 1
                 row = cf1.find_row(column_int)
-
-                if(cf1.is_col_empty(column_int)):
-                    cf1.board[row, column_int] = 2
-                    cf1.move_number += 1
-                    if(cf1.check_win_new(row, column_int, 2)):
-                        print('win')
-                        print(cf1.win_results)
-                        # exit()
-                elif(cf1.is_col_full(column_int)):
-                    print('column full')
-                    pass
-                else:
-                    # not empty or full
-                    cf1.board[row-1, column_int] = 2
-                    cf1.move_number += 1
-                    if(cf1.check_win_new(row-1, column_int, 2)):
-                        print('win')
-                        print(cf1.win_results)
-                        # exit()
+                cf1.make_move(row, column_int, 2)
 
 if(__name__=='__main__'):
     main()

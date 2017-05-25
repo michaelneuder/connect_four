@@ -1,0 +1,9 @@
+﻿2017-05-25 09:52:21.627 -0600	START		Running open_app.script
+2017-05-25 09:52:22.727 -0600	click	mint_menu	at (37, 1036)	1	on_open_app	open_app.script
+2017-05-25 09:52:23.765 -0600	click	terminal	at (59, 693)	2	on_open_app	open_app.script
+2017-05-25 09:52:24.894 -0600	typetext		cd Dropbox/github/connect_four/app/bin	3	on_open_app	open_app.script
+2017-05-25 09:52:25.607 -0600	typetext		[return]	4	on_open_app	open_app.script
+2017-05-25 09:52:26.410 -0600	typetext		./main.py	5	on_open_app	open_app.script
+2017-05-25 09:52:27.123 -0600	typetext		[return]	6	on_open_app	open_app.script
+2017-05-25 09:52:27.257 -0600	EndTestCase		(Duration:"5.62406", Errors:"0", Exceptions:"0", StartTime:"2017-05-25 09:52:21 -0600", Successes:"1", TestCase:"open_app.script", Warnings:"0")
+2017-05-25 09:52:29.067 -0600	SUCCESS		Execution Time 0:00:06 open_app.script
