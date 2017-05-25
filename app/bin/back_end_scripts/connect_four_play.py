@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 import numpy as np
 import random as rand
-
-# minimax attempt
 import numpy as np
+from minimax import minimax
 
 class cf(object):
     def __init__(self):
-        self.board = np.array([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],[0,0,0,0,0,0,0]])
+        self.board = np.zeros((6,7), dtype=np.int)
         self.move_number=1
         self.move_history = []
         self.win_results = []
@@ -132,23 +130,6 @@ class cf(object):
                 self.win_results.append(potential_win)
 
         return self.win_found
-
-
-    # def find_twos(self, row, col):
-    #
-    #
-    # def find_threes(self, row, col):
-    #
-    # def get_fours(self, row, col):
-
-
-    # def evaluate_board(self):
-        # (2 in a rows)*10 + (3 in a rows)*1000 + (4 in a row)*100000
-
-    # def minimax(self):
-    #
-
-
 
 def main():
     cf1 = cf()
