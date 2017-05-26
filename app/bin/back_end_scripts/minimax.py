@@ -100,7 +100,7 @@ class minimax(object):
         set_to_check = []
         for row in range(self.number_rows):
             for col in range(self.number_cols-3):
-                set_to_check.append([self.board[row][col+ i] for i in range(4)])
+                set_to_check.append([self.board[row][col+i] for i in range(4)])
         for set_ in set_to_check:
             num_color = 0
             num_empty = 0
@@ -152,13 +152,10 @@ class minimax(object):
                         print('found')
         return number_of_twos
 
-
-
-
-    # def evaluate_board(self):
-    #     (2 in a rows)*10 + (3 in a rows)*1000 + (4 in a row)*100000
-
-
+    def evaluate_board(self):
+        # (2 in a rows)*10 + (3 in a rows)*1000 + (4 in a row)*100000
+        evaluation = 10
+        return evaluation
 
 
 
@@ -166,12 +163,12 @@ def main():
     print("\nminimax ai algorithm --- connect four\n")
     sample_board = np.array([[0,0,0,0,0,0,0],
                              [0,0,0,0,0,0,0],
-                             [0,1,0,0,1,0,0],
+                             [0,1,0,1,1,0,0],
                              [0,0,2,0,1,2,0],
                              [0,1,2,1,2,2,2],
                              [2,1,1,2,1,1,1]])
     minimax_ = minimax(sample_board, 16)
-    print(minimax_.find_twos_rows(1))
+    print(minimax_.find_twos_rows_test(1))
 
 
 if __name__=='__main__':

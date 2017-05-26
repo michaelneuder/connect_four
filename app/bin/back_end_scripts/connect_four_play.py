@@ -10,6 +10,8 @@ class cf(object):
         self.move_history = []
         self.win_results = []
         self.win_found = False
+        self.number_cols = 7
+        self.number_rows = 6
 
     def print_board(self):
         print("    "+"-"*17)
@@ -149,14 +151,18 @@ class cf(object):
                 print('win')
                 print(self.win_results)
 
-    # def find_best_move(self):
-    #     game_tree = []
-    #     for i in range(number_cols):
+    def find_best_move(self):
+        game_tree = []
+        for i in range(self.number_cols):
+            row = self.find_row(i)
+            self.make_move(row, i, 1)
 
 def main():
+
     cf1 = cf()
+    cf1.find_best_move()
     keep_going = True
-    while (keep_going):
+    while (not keep_going):
         # user plays red
         if(cf1.move_number % 2 == 1):
             cf1.print_board()
