@@ -1,0 +1,4 @@
+﻿2017-05-26 14:03:53.177 -0600	START		Running stalemate_test.script
+2017-05-26 14:03:55.283 -0600	imagefound	empty_cell	found at (553, 379)	1	on_stalemate_test	stalemate_test.script
+2017-05-26 14:03:55.439 -0600	EndTestCase		(Duration:"2.257225", Errors:"1", Exceptions:"0", StartTime:"2017-05-26 14:03:53 -0600", Successes:"0", TestCase:"stalemate_test.script", Warnings:"0")
+2017-05-26 14:03:58.948 -0600	FAILURE	Screen_Error.png	STUnknownMessage ERROR: No Such Command: 'while' -- Execution Time 0:00:02 stalemate_test.script

@@ -163,7 +163,7 @@ def main():
     print("\nminimax ai algorithm --- connect four\n")
     sample_board = np.array([[0,0,0,0,0,0,0],
                              [0,0,0,0,0,0,0],
-                             [0,1,0,1,1,0,0],
+                             [0,0,0,0,0,0,0],
                              [0,0,2,0,1,2,0],
                              [0,1,2,1,2,2,2],
                              [2,1,1,2,1,1,1]])
@@ -171,5 +171,5 @@ def main():
     print(minimax_.find_twos_rows_test(1))
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()

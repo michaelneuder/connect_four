@@ -1,0 +1,4 @@
+﻿2017-05-26 17:00:52.848 -0600	START		Running exit_checker.script
+2017-05-26 17:01:15.094 -0600	Exception	pvsp_button	No Image Found On Screen: "pvsp_button"	1	on_exit_checker	exit_checker.script
+2017-05-26 17:01:15.248 -0600	EndTestCase		(Duration:"22.39173", Errors:"1", Exceptions:"1", StartTime:"2017-05-26 17:00:52 -0600", Successes:"0", TestCase:"exit_checker.script", Warnings:"0")
+2017-05-26 17:01:15.249 -0600	ABORTED		Execution Time 0:00:23 exit_checker.script

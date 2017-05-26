@@ -26,11 +26,11 @@
  </script>
  <script name="controller">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>43</NumberOfRuns>
+  <NumberOfRuns>44</NumberOfRuns>
   <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 11:02:39 -0600</FirstRun>
-  <LastRun>2017-05-26 11:52:27 -0600</LastRun>
-  <TotalTimeOnSuccess>13502.738738</TotalTimeOnSuccess>
+  <LastRun>2017-05-26 17:09:45 -0600</LastRun>
+  <TotalTimeOnSuccess>13948.815822</TotalTimeOnSuccess>
  </script>
  <script name="pvai_script">
   <LastStatus>Success</LastStatus>
@@ -40,13 +40,21 @@
   <LastRun>2017-05-17 13:56:53 -0600</LastRun>
   <TotalTimeOnSuccess>58.255595</TotalTimeOnSuccess>
  </script>
+ <script name="stalemate_test">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-05-26 14:03:53 -0600</FirstRun>
+  <LastRun>2017-05-26 14:03:53 -0600</LastRun>
+  <TotalTimeOnSuccess>0.000000</TotalTimeOnSuccess>
+ </script>
  <script name="exit_checker">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfRuns>3</NumberOfRuns>
   <NumberOfFails>0</NumberOfFails>
   <FirstRun>2017-05-24 09:25:41 -0600</FirstRun>
-  <LastRun>2017-05-24 09:28:50 -0600</LastRun>
-  <TotalTimeOnSuccess>39.705383</TotalTimeOnSuccess>
+  <LastRun>2017-05-26 14:04:36 -0600</LastRun>
+  <TotalTimeOnSuccess>67.516153</TotalTimeOnSuccess>
  </script>
  <script name="open_app">
   <LastStatus>Success</LastStatus>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="stalemate_test">
+ <run>
+  <RunDate>2017-05-26 14:03:53.176 -0600</RunDate>
+  <Status>Failure</Status>
+  <Duration>2.260552</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170526_140353.176/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>STUnknownMessage -- ERROR: No Such Command: &#x27;while&#x27;</ErrorMessage>
+ </run>
+</runHistory>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="stalemate_test.script" package="test_suite1.suite" timestamp="2017-05-26 14:03:53.176 -0600"
+ tests="1" successes="0" errors="1" time="2.260552">
+  <properties>
+   <property name="RunDate" value="2017-05-26 14:03:53.176 -0600"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="stalemate_test.script" assertions="1" successes="0" errors="1" time="2.257225">
+  </testcase>
+ </testsuite>
+</testsuites>

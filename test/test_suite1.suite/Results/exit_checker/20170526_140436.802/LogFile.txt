@@ -1,0 +1,25 @@
+﻿2017-05-26 14:04:36.803 -0600	START		Running exit_checker.script
+2017-05-26 14:04:38.047 -0600	click	pvsp_button	at (840, 468)	1	on_exit_checker	exit_checker.script
+2017-05-26 14:04:40.179 -0600	click	file_pvp	at (366, 112)	2	on_exit_checker	exit_checker.script
+2017-05-26 14:04:42.358 -0600	click	exit_menu_item	at (445, 136)	3	on_exit_checker	exit_checker.script
+2017-05-26 14:04:43.159 -0600	typetext		./main.py	1	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:04:43.873 -0600	typetext		[return]	2	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:04:44.954 -0600	click	pvsai_button	at (836, 592)	5	on_exit_checker	exit_checker.script
+2017-05-26 14:04:47.638 -0600	click	file_pvp	at (366, 112)	6	on_exit_checker	exit_checker.script
+2017-05-26 14:04:49.014 -0600	click	exit_menu_item	at (445, 136)	7	on_exit_checker	exit_checker.script
+2017-05-26 14:04:49.815 -0600	typetext		./main.py	1	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:04:50.528 -0600	typetext		[return]	2	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:04:53.109 -0600	click	saved_games_menu_button	at (840, 716)	9	on_exit_checker	exit_checker.script
+2017-05-26 14:04:54.039 -0600	click	file_pvp	at (366, 112)	10	on_exit_checker	exit_checker.script
+2017-05-26 14:04:55.970 -0600	click	exit_menu_item	at (441, 138)	11	on_exit_checker	exit_checker.script
+2017-05-26 14:04:56.771 -0600	typetext		./main.py	1	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:04:57.484 -0600	typetext		[return]	2	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:04:58.550 -0600	click	pvsp_button	at (840, 468)	13	on_exit_checker	exit_checker.script
+2017-05-26 14:05:00.453 -0600	click	quit_button	at (1083, 962)	14	on_exit_checker	exit_checker.script
+2017-05-26 14:05:01.254 -0600	typetext		./main.py	1	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:05:01.967 -0600	typetext		[return]	2	on_open_from_terminal	open_from_terminal.script
+2017-05-26 14:05:03.011 -0600	click	quit_menu_item	at (837, 836)	16	on_exit_checker	exit_checker.script
+2017-05-26 14:05:03.755 -0600	typetext		exit	17	on_exit_checker	exit_checker.script
+2017-05-26 14:05:04.469 -0600	typetext		[return]	18	on_exit_checker	exit_checker.script
+2017-05-26 14:05:04.616 -0600	EndTestCase		(Duration:"27.807336", Errors:"0", Exceptions:"0", StartTime:"2017-05-26 14:04:36 -0600", Successes:"1", TestCase:"exit_checker.script", Warnings:"0")
+2017-05-26 14:05:05.857 -0600	SUCCESS		Execution Time 0:00:28 exit_checker.script
