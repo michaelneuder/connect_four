@@ -26,11 +26,11 @@
  </script>
  <script name="controller">
   <LastStatus>Success</LastStatus>
-  <NumberOfRuns>48</NumberOfRuns>
+  <NumberOfRuns>50</NumberOfRuns>
   <NumberOfFails>2</NumberOfFails>
   <FirstRun>2017-05-17 11:02:39 -0600</FirstRun>
-  <LastRun>2017-05-27 13:50:09 -0600</LastRun>
-  <TotalTimeOnSuccess>15617.675413</TotalTimeOnSuccess>
+  <LastRun>2017-05-29 12:31:13 -0600</LastRun>
+  <TotalTimeOnSuccess>16395.850465</TotalTimeOnSuccess>
  </script>
  <script name="pvai_script">
   <LastStatus>Success</LastStatus>
