@@ -40,7 +40,7 @@ class cf(object):
     def get_last_move(self):
         col = self.move_history.pop()
         row = self.find_row(col) + 1
-        self.board[row, col] = 0
+        self.board[row][col] = 0
         removed_cell = [row, col]
         return removed_cell
 
@@ -136,26 +136,33 @@ class cf(object):
         if(self.is_col_empty(column)):
             self.board[row, column] = color
             self.move_number += 1
+            self.move_history.append(column)
             if(self.check_win_new(row, column, color)):
-                print('win')
-                print(self.win_results)
+                # print('win')
+                # print(self.win_results)
                 # exit()
+                pass
         elif(self.is_col_full(column)):
             print('column full')
             pass
         else:
             # not empty or full
+            self.move_history.append(column)
             self.board[row-1, column] = color
             self.move_number += 1
             if(self.check_win_new(row-1, column, color)):
-                print('win')
-                print(self.win_results)
+                # print('win')
+                # print(self.win_results)
+                pass
 
     def find_best_move(self):
         game_tree = []
         for i in range(self.number_cols):
             row = self.find_row(i)
             self.make_move(row, i, 1)
+            game_tree.append(self.board)
+            self.get_last_move()
+        print(game_tree)
 
 def main():
 

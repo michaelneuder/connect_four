@@ -21,6 +21,7 @@ class minimax(object):
         self.left_diag_5 = []
         self.left_diag_6 = []
         self.diag_set = []
+        self.two_set = []
         self.update_diags()
 
     def update_diags(self):
