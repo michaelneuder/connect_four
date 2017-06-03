@@ -15,3 +15,9 @@ simply clone or download and run ./main.py to open the app.
 
 #### numpy (numerical and computation library)
 - http://www.numpy.org/
+
+## screenshots:
+![alt text](https://raw.githubusercontent.com/michaelneuder/connect_four/master/app/images/screenshot1.png)
+![alt text](https://raw.githubusercontent.com/michaelneuder/connect_four/master/app/images/screenshot2.png)
+![alt text](https://raw.githubusercontent.com/michaelneuder/connect_four/master/app/images/screenshot3.png)
+![alt text](https://raw.githubusercontent.com/michaelneuder/connect_four/master/app/images/screenshot4.png)
